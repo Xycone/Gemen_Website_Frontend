@@ -125,14 +125,14 @@ function App() {
                 <Typography sx={{ mb: 2 }}>Solutions</Typography>
                 <Box sx={{ textAlign: 'center' }}>
                   <Grid container spacing={2}>
-                    <Grid item xs={12} md={6} lg={4}>
+                    <Grid item xs={12}>
                       <Link to="/garantia" onClick={handleAppBarClose}>
                         <Box sx={{ borderRadius: 4, padding: 2, border: '1px solid #BDBDBD' }}>
                           <Typography>Garantia</Typography>
                         </Box>
                       </Link>
                     </Grid>
-                    <Grid item xs={12} md={6} lg={4}>
+                    <Grid item xs={12}>
                       <Link to="/ace" onClick={handleAppBarClose}>
                         <Box sx={{ borderRadius: 4, padding: 2, border: '1px solid #BDBDBD' }}>
                           <Typography>ACE</Typography>
