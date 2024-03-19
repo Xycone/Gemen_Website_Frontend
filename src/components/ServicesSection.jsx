@@ -15,7 +15,7 @@ function ServicesSection() {
                 <Typography variant="h5" sx={{ fontWeight: 'bold' }}>
                     Discover our services:
                     <br />
-                    <span style={{ color: '#EB1287' }}>What we can do for you...</span>
+                    What we can <span style={{ color: '#EB1287' }}>do for you...</span>
                 </Typography>
             </Box>
             <Box>
