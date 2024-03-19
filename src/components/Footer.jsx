@@ -11,7 +11,7 @@ function Footer() {
                     <Grid item xs={12}>
                         <Grid container spacing={2} sx={{ textAlign: 'center', justifyContent: 'center', mb: 1 }}>
                             {/* Quick Navigation and Contact Info Section */}
-                            <Grid item xs={12} sm={6} sx={{ textAlign: 'center', justifyContent: 'center' }}>
+                            <Grid item xs={12} sm={6} sx={{ textAlign: 'center', justifyContent: 'center', mb: 2 }}>
                                 <Typography sx={{ fontSize: '0.9rem', mb: 1 }}>Contact Us</Typography>
                                 <Container sx={{ display: 'flex', textAlign: 'center', justifyContent: 'center', mb: 1 }}>
                                     <LocationOn sx={{ fontSize: '0.9rem', mr: 0.5 }} />
@@ -31,7 +31,7 @@ function Footer() {
                                     <Typography sx={{ fontSize: '0.7rem' }}>+65 9009 0081</Typography>
                                 </Container>
                             </Grid>
-                            <Grid item xs={12} sm={6} sx={{ textAlign: 'center', justifyContent: 'center' }}>
+                            <Grid item xs={12} sm={6} sx={{ textAlign: 'center', justifyContent: 'center', mb: 2 }}>
                                 <Typography sx={{ fontSize: '0.9rem', mb: 1 }}>Quick Links</Typography>
                                 <Link to="/homepage">
                                     <Typography sx={{ fontSize: '0.7rem', mb: 1 }}>
