@@ -21,7 +21,7 @@ function ServicesSection() {
             <Box>
                 <Grid container spacing={4}>
                     <Grid item xs={12} md={4}>
-                        <Card sx={{ borderRadius: 4, padding: 1, backgroundColor: '#F2F5F8', boxShadow: 'none' }}>
+                        <Card sx={{ borderRadius: 4, padding: 1, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                             <CardContent>
                                 <Box sx={{ mb: 2 }}>
                                     <img src={ManpowerIcon} alt="Manpower Icon" style={{ width: '40px', height: '40px' }} />
@@ -34,7 +34,7 @@ function ServicesSection() {
                         </Card>
                     </Grid>
                     <Grid item xs={12} md={4}>
-                        <Card sx={{ borderRadius: 4, padding: 1, backgroundColor: '#F2F5F8', boxShadow: 'none' }}>
+                        <Card sx={{ borderRadius: 4, padding: 1, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                             <CardContent>
                                 <Box sx={{ mb: 2 }}>
                                     <img src={ConsultationIcon} alt="Manpower Icon" style={{ width: '40px', height: '40px' }} />
@@ -47,7 +47,7 @@ function ServicesSection() {
                         </Card>
                     </Grid>
                     <Grid item xs={12} md={4}>
-                        <Card sx={{ borderRadius: 4, padding: 1, backgroundColor: '#F2F5F8', boxShadow: 'none' }}>
+                        <Card sx={{ borderRadius: 4, padding: 1, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                             <CardContent>
                                 <Box sx={{ mb: 2 }}>
                                     <img src={SoftwareIcon} alt="Manpower Icon" style={{ width: '40px', height: '40px' }} />
@@ -60,7 +60,7 @@ function ServicesSection() {
                         </Card>
                     </Grid>
                     <Grid item xs={12} md={4}>
-                        <Card sx={{ borderRadius: 4, padding: 1, backgroundColor: '#F2F5F8', boxShadow: 'none' }}>
+                        <Card sx={{ borderRadius: 4, padding: 1, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                             <CardContent>
                                 <Box sx={{ mb: 2 }}>
                                     <img src={PlaceholderIcon} alt="Manpower Icon" style={{ width: '40px', height: '40px' }} />
