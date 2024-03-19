@@ -3,9 +3,6 @@ import { Container, Typography, Grid, Box } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { Email, LocationOn, Phone } from '@mui/icons-material';
 
-// Logo
-import Logo from '../assets/Logo.svg'
-
 function Footer() {
     return (
         <Box sx={{ width: '100%', backgroundColor: '#f5f5f5', marginTop: 'auto' }}>
@@ -46,7 +43,7 @@ function Footer() {
                                         Services
                                     </Typography>
                                 </Link>
-                                <Link to="#">
+                                <Link to="/contactUs">
                                     <Typography sx={{ fontSize: '0.7rem', mb: 1 }}>
                                         Contact Us
                                     </Typography>

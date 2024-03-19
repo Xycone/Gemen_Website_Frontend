@@ -10,7 +10,7 @@ function LandingSection() {
     };
 
   return (
-    <Box sx={{ mb: 30, mt: 15 }}>
+    <Box sx={{ pb: 30, pt: 15, position: 'relative', textAlign: 'center' }}>
       {/* Landing Section */}
       <Box sx={{ textAlign: 'center', mb: 3 }}>
         <Typography variant="h5" sx={{ mt: 10, mb: 2, fontWeight: 'bold' }}>
@@ -40,7 +40,6 @@ function LandingSection() {
         onClick={navigateToContact}>
         Contact Us
       </Button>
-
     </Box>
   )
 }

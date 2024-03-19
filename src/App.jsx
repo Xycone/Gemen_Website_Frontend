@@ -152,7 +152,7 @@ function App() {
           </Container>
         </AppBar>
 
-        {/* Section where page is displayed */}
+        {/* Routes */}
         <Container sx={{ padding: 10, minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
           <Routes>
             <Route path={"/homepage"} element={<Homepage />} />

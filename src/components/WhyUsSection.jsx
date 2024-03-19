@@ -1,11 +1,14 @@
-import { Typography, Box, Grid, Card } from '@mui/material'
+import { Typography, Box, Grid, Card, Container } from '@mui/material'
 import React from 'react'
+
+// Icons
+import WaveBackground from '../assets/WaveBackground.svg'
 
 function WhyUsSection() {
     return (
-        <Box sx={{ mb: 15, mt: 15 }}>
+        <Box sx={{ pb: 15, pt: 15 }}>
             {/* Why Us Section */}
-            <Box sx={{ mb: 4, fontWeight: 'bold', textAlign: 'center' }}>
+            <Box sx={{ mb: 4, textAlign: 'center' }}>
                 <Typography variant="h5" sx={{ fontWeight: 'bold' }}>
                     Why Gemen?
                     <br />
