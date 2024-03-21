@@ -11,3 +11,7 @@
     color: #0000EE;
     text-decoration: underline;
   }
+
+  .ContactUsButton:hover {
+    text-decoration: none !important;
+  }
