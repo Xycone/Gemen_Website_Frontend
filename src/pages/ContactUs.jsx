@@ -1,5 +1,6 @@
 import React from 'react';
-import { Typography, Box, Grid, Card, CardContent, Button } from '@mui/material';
+import { Typography, Box, Grid, Card, CardContent, Button, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { Link } from 'react-router-dom';
 
 function ContactUs() {
@@ -48,7 +49,7 @@ function ContactUs() {
               <CardContent sx={{ margin: 2 }}>
                 <Typography variant="h5" sx={{ mb: 3 }}>Contact Sales</Typography>
                 <Typography sx={{ mb: 2 }}>
-                  Fill in the form to contact our sales team.
+                  Fill in and submit the form to contact our sales team.
                 </Typography>
                 <Button
                   variant="contained"
@@ -75,7 +76,7 @@ function ContactUs() {
               <CardContent sx={{ margin: 2 }}>
                 <Typography variant="h5" sx={{ mb: 3 }}>Have A Question?</Typography>
                 <Typography sx={{ mb: 2 }}>
-                  View our FAQ or ask a question!
+                  Read our FAQ or ask a question!
                 </Typography>
                 <Link></Link>
                 <Button
@@ -84,6 +85,7 @@ function ContactUs() {
                     borderRadius: 2,
                     px: 3,
                     py: 1,
+                    mb: 5,
                     boxShadow: 'none',
                     '&:hover': {
                       boxShadow: 'none',
@@ -92,6 +94,77 @@ function ContactUs() {
                   }}>
                   Ask A Question
                 </Button>
+                <Typography sx={{ mb: 2 }}>
+                  Frequently Asked Questions:
+                </Typography>
+                <Accordion sx={{
+                  boxShadow: 'none',
+                }}>
+                  <AccordionSummary
+                    expandIcon={<ArrowDropDownIcon />}
+                    aria-controls="panel1-content"
+                    id="panel1-header"
+                  >
+                    <Typography>FAQ 1</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                      malesuada lacus ex, sit amet blandit leo lobortis eget.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion sx={{
+                  boxShadow: 'none',
+                }}>
+                  <AccordionSummary
+                    expandIcon={<ArrowDropDownIcon />}
+                    aria-controls="panel1-content"
+                    id="panel1-header"
+                  >
+                    <Typography>FAQ 2</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                      malesuada lacus ex, sit amet blandit leo lobortis eget.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion sx={{
+                  boxShadow: 'none',
+                }}>
+                  <AccordionSummary
+                    expandIcon={<ArrowDropDownIcon />}
+                    aria-controls="panel1-content"
+                    id="panel1-header"
+                  >
+                    <Typography>FAQ 3</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                      malesuada lacus ex, sit amet blandit leo lobortis eget.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion sx={{
+                  boxShadow: 'none',
+                }}>
+                  <AccordionSummary
+                    expandIcon={<ArrowDropDownIcon />}
+                    aria-controls="panel1-content"
+                    id="panel1-header"
+                  >
+                    <Typography>FAQ 4</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                      malesuada lacus ex, sit amet blandit leo lobortis eget.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
               </CardContent>
             </Card>
           </Grid>

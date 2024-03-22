@@ -59,7 +59,7 @@ function Garantia() {
           </Typography>
         </Grid>
 
-        <Grid item xs={12} md={6} sx={{ mb: 5, padding: 5 , display: 'flex', flexDirection: 'column'}}>
+        <Grid item xs={12} md={6} sx={{ mb: 5, padding: 5 , display: 'flex', flexDirection: 'column', order: { xs: 4, md: 3  } }}>
           <Typography variant="h5" sx={{ mb: 3 }}>
             Progressive Monitoring
           </Typography>
@@ -67,7 +67,7 @@ function Garantia() {
             Progressive Monitoring conducts scheduled tasks designated by the customer to assess the recording system's functionaility. It detects irregularities in the system in near real-time and promptly alerts the customer of any alarms detected. Moreover, Progressive Monitoring compiles historical reports of these alarms. In the event of anomalies, it takes proactive measures such as disabling affected extensions to prevent further disruptions, thus maintaining the stability and dependability of the recording system.
           </Typography>
         </Grid>
-        <Grid item xs={12} md={6} sx={{ mb: 5, display: 'flex', flexDirection: 'column' }}>
+        <Grid item xs={12} md={6} sx={{ mb: 5, display: 'flex', flexDirection: 'column', order: { xs: 3, md: 4  } }}>
           <Card sx={{ borderRadius: 4, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
             <CardContent sx={{ margin: 2 }}>
 
@@ -75,14 +75,14 @@ function Garantia() {
           </Card>
         </Grid>
 
-        <Grid item xs={12} md={6} sx={{ mb: 5, display: 'flex', flexDirection: 'column' }}>
+        <Grid item xs={12} md={6} sx={{ mb: 5, display: 'flex', flexDirection: 'column', order: { xs: 5, md: 6 } }}>
           <Card sx={{ borderRadius: 4, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
             <CardContent sx={{ margin: 2 }}>
 
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={12} md={6} sx={{ mb: 5, padding: 5, display: 'flex', flexDirection: 'column' }}>
+        <Grid item xs={12} md={6} sx={{ mb: 5, padding: 5, display: 'flex', flexDirection: 'column', order: { xs: 5, md: 6 } }}>
           <Typography variant="h5" sx={{ mb: 3 }}>
             Reconciliation
           </Typography>
