@@ -15,7 +15,7 @@ function WhyUsSection() {
             <Card sx={{ borderRadius: 4, padding: 10, backgroundColor: '#F2F5F8', boxShadow: 'none', mb: 2 }}>
                 <Grid container spacing={8}>
                     <Grid item xs={12} md={6}>
-                        <Typography variant="h4">Our company owners have over  <span style={{ color: '#00B6DD' }}>15 years of experience</span> in the IT Voice industry.</Typography>
+                        <Typography variant="h4">Our company owners have over <span style={{ color: '#00B6DD' }}>15 years of experience</span> in the IT Voice industry.</Typography>
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <Grid container spacing={4}>
