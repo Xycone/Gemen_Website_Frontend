@@ -138,6 +138,7 @@ function App() {
                       backgroundColor: '#1A06FF',
                       whiteSpace: 'nowrap',
                       textTransform: 'none',
+                      boxShadow: 'none',
                     }}
                   >
                     Contact Us

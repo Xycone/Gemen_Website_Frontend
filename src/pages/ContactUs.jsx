@@ -19,7 +19,7 @@ function ContactUs() {
       <Box>
         <Grid container spacing={4}>
 
-          <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column' }}>
+          <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <Card sx={{ borderRadius: 4, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
               <CardContent sx={{ margin: 2 }}>
                 <Typography variant="h5" sx={{ mb: 3 }}>Support</Typography>
@@ -44,7 +44,7 @@ function ContactUs() {
             </Card>
           </Grid>
 
-          <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column' }}>
+          <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <Card sx={{ borderRadius: 4, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
               <CardContent sx={{ margin: 2 }}>
                 <Typography variant="h5" sx={{ mb: 3 }}>Contact Sales</Typography>
@@ -71,7 +71,7 @@ function ContactUs() {
             </Card>
           </Grid>
 
-          <Grid item xs={12} md={12} sx={{ display: 'flex', flexDirection: 'column' }}>
+          <Grid item xs={12} md={12} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <Card sx={{ borderRadius: 4, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
               <CardContent sx={{ margin: 2 }}>
                 <Typography variant="h5" sx={{ mb: 3 }}>Have A Question?</Typography>
