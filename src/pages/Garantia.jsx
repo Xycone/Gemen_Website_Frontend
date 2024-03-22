@@ -1,6 +1,6 @@
-import React from 'react'
-import { Typography, Box, Button, Grid, Card, CardContent } from '@mui/material'
-import { useNavigate } from 'react-router-dom'
+import React from 'react';
+import { Typography, Box, Button, Grid, Card, CardContent } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 function Garantia() {
   const navigate = useNavigate();
@@ -13,11 +13,11 @@ function Garantia() {
     <Box sx={{ my: 2 }}>
       <Box sx={{ pb: 30, pt: 15, position: 'relative', textAlign: 'center' }}>
         <Box sx={{ textAlign: 'center', mb: 5 }}>
-          <Typography variant="h4" sx={{ mb: 5 }}>
+          <Typography variant="h5" sx={{ mb: 5 }}>
             Garantia
           </Typography>
           <Box>
-            <Typography variant="h3" sx={{ mb: 2 }}>
+            <Typography variant="h4" sx={{ mb: 2 }}>
               Enhance Your Business Communications:
               <br />
               Garantia, Our Complete Call Management Solution
@@ -51,7 +51,7 @@ function Garantia() {
           </Card>
         </Grid>
         <Grid item xs={12} md={6} sx={{ mb: 5, padding: 5, display: 'flex', flexDirection: 'column' }}>
-          <Typography variant="h4" sx={{ mb: 3 }}>
+          <Typography variant="h5" sx={{ mb: 3 }}>
             Integrity
           </Typography>
           <Typography>
@@ -60,7 +60,7 @@ function Garantia() {
         </Grid>
 
         <Grid item xs={12} md={6} sx={{ mb: 5, padding: 5 , display: 'flex', flexDirection: 'column'}}>
-          <Typography variant="h4" sx={{ mb: 3 }}>
+          <Typography variant="h5" sx={{ mb: 3 }}>
             Progressive Monitoring
           </Typography>
           <Typography>
@@ -83,7 +83,7 @@ function Garantia() {
           </Card>
         </Grid>
         <Grid item xs={12} md={6} sx={{ mb: 5, padding: 5, display: 'flex', flexDirection: 'column' }}>
-          <Typography variant="h4" sx={{ mb: 3 }}>
+          <Typography variant="h5" sx={{ mb: 3 }}>
             Reconciliation
           </Typography>
           <Typography>

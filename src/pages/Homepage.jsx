@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Box, Container } from '@mui/material'
 import LandingSection from '../components/LandingSection';

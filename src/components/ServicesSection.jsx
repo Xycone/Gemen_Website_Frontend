@@ -12,7 +12,7 @@ function ServicesSection() {
         <Box sx={{ pb: 15, pt: 15 }} id="services-section">
             {/* Services Section */}
             <Box sx={{ mb: 10, fontWeight: 'bold', textAlign: 'center' }}>
-                <Typography variant="h3">
+                <Typography variant="h4">
                     Discover our services:
                     <br />
                     What we can <span style={{ color: '#EB1287' }}>do for you...</span>
@@ -25,9 +25,9 @@ function ServicesSection() {
                         <Card sx={{ borderRadius: 4, padding: 1, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                             <CardContent>
                                 <Box sx={{ mb: 2 }}>
-                                    <img src={ManpowerIcon} alt="Manpower Icon" style={{ width: '40px', height: '40px' }} />
+                                    <img src={ManpowerIcon} alt="Manpower Icon" style={{ width: '45px', height: '45px' }} />
                                 </Box>
-                                <Typography variant="h6" fontWeight={600}>Lorem ipsum</Typography>
+                                <Typography variant="h6" sx={{ mb: 1 }}>Manpower Services</Typography>
                                 <Typography>
                                     Lorem ipsum dolor sit amet. Vel mollitia autem et ipsam praesentium sed
                                 </Typography>
@@ -38,9 +38,9 @@ function ServicesSection() {
                         <Card sx={{ borderRadius: 4, padding: 1, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                             <CardContent>
                                 <Box sx={{ mb: 2 }}>
-                                    <img src={ConsultationIcon} alt="Manpower Icon" style={{ width: '40px', height: '40px' }} />
+                                    <img src={ConsultationIcon} alt="Manpower Icon" style={{ width: '45px', height: '45px' }} />
                                 </Box>
-                                <Typography variant="h6" fontWeight={600}>Lorem ipsum</Typography>
+                                <Typography variant="h6" sx={{ mb: 1 }}>Consultation</Typography>
                                 <Typography>
                                     Lorem ipsum dolor sit amet. Vel mollitia autem et ipsam praesentium sed
                                 </Typography>
@@ -51,9 +51,9 @@ function ServicesSection() {
                         <Card sx={{ borderRadius: 4, padding: 1, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                             <CardContent>
                                 <Box sx={{ mb: 2 }}>
-                                    <img src={SoftwareIcon} alt="Manpower Icon" style={{ width: '40px', height: '40px' }} />
+                                    <img src={SoftwareIcon} alt="Manpower Icon" style={{ width: '45px', height: '45px' }} />
                                 </Box>
-                                <Typography variant="h6" fontWeight={600}>Lorem ipsum</Typography>
+                                <Typography variant="h6" sx={{ mb: 1 }}>Software</Typography>
                                 <Typography>
                                     Lorem ipsum dolor sit amet. Vel mollitia autem et ipsam praesentium sed
                                 </Typography>
@@ -64,9 +64,9 @@ function ServicesSection() {
                         <Card sx={{ borderRadius: 4, padding: 1, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                             <CardContent>
                                 <Box sx={{ mb: 2 }}>
-                                    <img src={PlaceholderIcon} alt="Manpower Icon" style={{ width: '40px', height: '40px' }} />
+                                    <img src={PlaceholderIcon} alt="Manpower Icon" style={{ width: '45px', height: '45px' }} />
                                 </Box>
-                                <Typography variant="h6"  fontWeight={600}>Lorem ipsum</Typography>
+                                <Typography variant="h6" sx={{ mb: 1 }}>Lorem ipsum</Typography>
                                 <Typography>
                                     Lorem ipsum dolor sit amet. Vel mollitia autem et ipsam praesentium sed
                                 </Typography>

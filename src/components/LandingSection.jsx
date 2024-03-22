@@ -13,7 +13,7 @@ function LandingSection() {
     <Box sx={{ pb: 15, pt: 15, position: 'relative', textAlign: 'center' }} id="landing-section">
       {/* Landing Section */}
       <Box sx={{ textAlign: 'center', mb: 5 }}>
-        <Typography variant="h3" sx={{ mt: 10, mb: 2 }}>
+        <Typography variant="h4" sx={{ mt: 10, mb: 2 }}>
           Streamlining Your Operations
           <br />
           Through Automated Solutions
@@ -32,7 +32,6 @@ function LandingSection() {
           borderRadius: 2,
           px: 3,
           py: 1,
-          whiteSpace: 'nowrap',
           boxShadow: 'none',
           '&:hover': {
             boxShadow: 'none',
