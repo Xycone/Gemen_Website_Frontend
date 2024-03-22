@@ -38,7 +38,7 @@ function Footer() {
                                         About Us
                                     </Typography>
                                 </Link>
-                                <Link to="/homepage#solution-section">
+                                <Link to="/homepage#solutions-section">
                                     <Typography sx={{ mb: 0.5 }}>
                                         Solutions
                                     </Typography>

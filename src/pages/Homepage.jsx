@@ -1,4 +1,5 @@
-import React, { useLayoutEffect } from 'react'
+import React, { useEffect } from 'react'
+import { useLocation } from 'react-router-dom';
 import { Box, Container } from '@mui/material'
 import LandingSection from '../components/LandingSection';
 import WhyUsSection from '../components/WhyUsSection';
@@ -6,18 +7,17 @@ import ServicesSection from '../components/ServicesSection';
 import SolutionsSection from '../components/SolutionsSection';
 
 function Homepage() {
-  useLayoutEffect(() => {
+  const location = useLocation();
+
+  useEffect(() => {
     const href = window.location.href.substring(
       window.location.href.lastIndexOf('#') + 1
     );
-    console.log("Href:", href);
     const element = document.getElementById(href);
-    console.log("Element:", element);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      console.log("Scrolled to element:", element);
     }
-  }, []);
+  }, [location]);
 
   return (
     <Box sx={{ my: 2 }}>
