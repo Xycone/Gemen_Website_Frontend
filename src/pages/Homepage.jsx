@@ -5,6 +5,7 @@ import LandingSection from '../components/LandingSection';
 import WhyUsSection from '../components/WhyUsSection';
 import ServicesSection from '../components/ServicesSection';
 import SolutionsSection from '../components/SolutionsSection';
+import Partners from '../components/Partners';
 
 function Homepage() {
   const location = useLocation();
@@ -22,10 +23,11 @@ function Homepage() {
   return (
     <Box sx={{ my: 2 }}>
       <Container>
-        <LandingSection />
+        <LandingSection id="landing-section"/>
         <WhyUsSection id="aboutus-section" />
         <SolutionsSection id="solutions-section" />
         <ServicesSection id="services-section" />
+        <Partners />
       </Container>
     </Box>
   )

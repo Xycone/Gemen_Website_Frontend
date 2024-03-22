@@ -6,12 +6,12 @@ import { Email, LocationOn, Phone } from '@mui/icons-material';
 function Footer() {
     return (
         <Box sx={{ width: '100%', backgroundColor: '#f5f5f5', marginTop: 'auto' }}>
-            <Container maxWidth="lg" sx={{ padding: 1 }} >
+            <Container maxWidth="lg" sx={{ padding: 2 }} >
                 <Grid container spacing={2} sx={{ textAlign: 'center' }}>
                     <Grid item xs={12}>
                         <Grid container spacing={2} sx={{ textAlign: 'center', justifyContent: 'center', mb: 1 }}>
                             {/* Quick Navigation and Contact Info Section */}
-                            <Grid item xs={12} sm={6} sx={{ textAlign: 'center', justifyContent: 'center', mb: 2 }}>
+                            <Grid item xs={12} sm={6} sx={{ textAlign: 'center', justifyContent: 'center', my: 3 }}>
                                 <Typography variant="h6" sx={{ mb: 1 }}>Contact Us</Typography>
                                 <Container sx={{ display: 'flex', alignItems: 'center', textAlign: 'center', justifyContent: 'center', mb: 1 }}>
                                     <LocationOn sx={{ fontSize: '1.2rem', mr: 0.5 }} />
@@ -31,7 +31,7 @@ function Footer() {
                                     <Typography>+65 9009 0081</Typography>
                                 </Container>
                             </Grid>
-                            <Grid item xs={12} sm={6} sx={{ textAlign: 'center', justifyContent: 'center', mb: 2 }}>
+                            <Grid item xs={12} sm={6} sx={{ textAlign: 'center', justifyContent: 'center', my: 3 }}>
                                 <Typography variant="h6" sx={{ mb: 1 }}>Quick Links</Typography>
                                 <Link to="/homepage#aboutus-section">
                                     <Typography sx={{ mb: 0.5 }}>

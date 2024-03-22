@@ -10,7 +10,7 @@ function LandingSection() {
   };
 
   return (
-    <Box sx={{ pb: 15, pt: 15, position: 'relative', textAlign: 'center' }}>
+    <Box sx={{ pb: 15, pt: 15, position: 'relative', textAlign: 'center' }} id="landing-section">
       {/* Landing Section */}
       <Box sx={{ textAlign: 'center', mb: 5 }}>
         <Typography variant="h3" sx={{ mt: 10, mb: 2 }}>

@@ -14,9 +14,10 @@ function SolutionsSection() {
     };
     return (
         <Box sx={{ pb: 15, pt: 15 }} id="solutions-section">
+            {/* Solutions Section */}
             <Box sx={{ mb: 10, textAlign: 'center' }}>
                 <Typography variant="h3">
-                    See how our solutions
+                    Explore how our solutions
                     <br />
                     could <span style={{ color: '#00B6DD' }}>help you</span>
                 </Typography>

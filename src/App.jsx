@@ -63,7 +63,7 @@ function App() {
           <AppBar position="fixed" className='AppBar' sx={{ backgroundColor: 'white', color: 'black', padding: 1 }}>
             <Container>
               <Toolbar disableGutters={true}>
-                <Link to="/homepage" style={{ display: 'flex', alignItems: 'center' }}>
+                <Link to="/homepage#landing-section" style={{ display: 'flex', alignItems: 'center' }}>
                   <img src={Logo} alt="Gemen Logo" style={{ height: '60px' }} />
                 </Link>
 
@@ -153,7 +153,7 @@ function App() {
 
               {isAppBarOpen && (
                 <Box sx={{ mt: 2, display: { xs: 'block', md: 'none' }, maxHeight: '60vh', overflowY: 'auto', pr: 2 }}>
-                  <Link to="/" onClick={handleAppBarClose}>
+                  <Link to="/homepage#aboutus-section" onClick={handleAppBarClose}>
                     <Typography>About Us</Typography>
                   </Link>
                   <Typography sx={{ mb: 2 }}>Solutions:</Typography>
@@ -198,7 +198,6 @@ function App() {
         </Container>
 
         {/* Footer Section */}
-        <Partners />
         <Footer />
         <CopyrightSection />
 
