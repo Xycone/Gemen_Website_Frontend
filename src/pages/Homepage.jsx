@@ -27,7 +27,7 @@ function Homepage() {
         <WhyUsSection id="aboutus-section" />
         <SolutionsSection id="solutions-section" />
         <ServicesSection id="services-section" />
-        <Partners />
+        <Partners id="partners-section"/>
       </Container>
     </Box>
   )

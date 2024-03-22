@@ -12,7 +12,7 @@ function Footer() {
                         <Grid container spacing={2} sx={{ textAlign: 'center', justifyContent: 'center', mb: 1 }}>
                             {/* Quick Navigation and Contact Info Section */}
                             <Grid item xs={12} sm={6} sx={{ textAlign: 'center', justifyContent: 'center', my: 3 }}>
-                                <Typography variant="h6" sx={{ mb: 1 }}>Contact Us</Typography>
+                                <Typography variant="h6" sx={{ mb: 1 }}>Our Contact</Typography>
                                 <Container sx={{ display: 'flex', alignItems: 'center', textAlign: 'center', justifyContent: 'center', mb: 1 }}>
                                     <LocationOn sx={{ fontSize: '1.2rem', mr: 0.5 }} />
                                     <Typography>
@@ -31,13 +31,8 @@ function Footer() {
                                     <Typography>+65 9009 0081</Typography>
                                 </Container>
                             </Grid>
-                            <Grid item xs={12} sm={6} sx={{ textAlign: 'center', justifyContent: 'center', my: 3 }}>
-                                <Typography variant="h6" sx={{ mb: 1 }}>Quick Links</Typography>
-                                <Link to="/homepage#aboutus-section">
-                                    <Typography sx={{ mb: 0.5 }}>
-                                        About Us
-                                    </Typography>
-                                </Link>
+                            <Grid item xs={12} sm={3} sx={{ textAlign: 'center', justifyContent: 'center', my: 3 }}>
+                                <Typography variant="h6" sx={{ mb: 1 }}>Explore</Typography>
                                 <Link to="/homepage#solutions-section">
                                     <Typography sx={{ mb: 0.5 }}>
                                         Solutions
@@ -46,6 +41,19 @@ function Footer() {
                                 <Link to="/homepage#services-section">
                                     <Typography sx={{ mb: 0.5 }}>
                                         Services
+                                    </Typography>
+                                </Link>
+                                <Link to="/homepage#partners-section">
+                                    <Typography sx={{ mb: 0.5 }}>
+                                        Our Partners
+                                    </Typography>
+                                </Link>
+                            </Grid>
+                            <Grid item xs={12} sm={3} sx={{ textAlign: 'center', justifyContent: 'center', my: 3 }}>
+                                <Typography variant="h6" sx={{ mb: 1 }}>Company</Typography>
+                                <Link to="/homepage#aboutus-section">
+                                    <Typography sx={{ mb: 0.5 }}>
+                                        About Us
                                     </Typography>
                                 </Link>
                                 <Link to="/contactUs">

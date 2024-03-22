@@ -6,7 +6,7 @@ import Logo from '../assets/Logo.svg'
 
 function Partners() {
     return (
-        <Box sx={{ pb: 15, pt: 15 }}>
+        <Box sx={{ pb: 15, pt: 15 }} id="partners-section">
             {/* Partners Section */}
             <Box sx={{ mb: 10, fontWeight: 'bold', textAlign: 'center' }}>
                 <Typography variant="h3">
