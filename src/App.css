@@ -14,4 +14,5 @@
 
   .ContactUsButton:hover {
     text-decoration: none !important;
+    box-shadow: none !important;
   }

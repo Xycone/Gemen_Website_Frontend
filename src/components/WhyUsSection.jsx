@@ -3,13 +3,13 @@ import React from 'react'
 
 function WhyUsSection() {
     return (
-        <Box sx={{ pb: 15, pt: 15 }}>
+        <Box sx={{ pb: 15, pt: 15 }} id="aboutus-section">
             {/* Why Us Section */}
             <Box sx={{ mb: 10, textAlign: 'center' }}>
                 <Typography variant="h3">
                     Why Gemen?
                     <br />
-                    We're <span style={{ color: '#A2C94F' }}>glad you asked...</span>
+                    We're <span style={{ color: '#A2C94F' }}>happy to share...</span>
                 </Typography>
             </Box>
             <Card sx={{ borderRadius: 4, padding: 10, backgroundColor: '#F2F5F8', boxShadow: 'none', mb: 2 }}>

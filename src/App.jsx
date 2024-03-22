@@ -71,7 +71,7 @@ function App() {
 
                 <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', textAlign: 'center' }}>
 
-                  <Link to="/" sx={{ mr: 2, ml: 2 }}>
+                  <Link to="/homepage#aboutus-section" sx={{ mr: 2, ml: 2 }}>
                     <Typography>About Us</Typography>
                   </Link>
 

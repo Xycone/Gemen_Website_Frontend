@@ -9,7 +9,7 @@ import PlaceholderIcon from '../assets/PlaceholderIcon.svg'
 
 function ServicesSection() {
     return (
-        <Box sx={{ pb: 15, pt: 15 }}>
+        <Box sx={{ pb: 15, pt: 15 }} id="services-section">
             {/* Services Section */}
             <Box sx={{ mb: 10, fontWeight: 'bold', textAlign: 'center' }}>
                 <Typography variant="h3">

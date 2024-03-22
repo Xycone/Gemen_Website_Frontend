@@ -33,18 +33,23 @@ function Footer() {
                             </Grid>
                             <Grid item xs={12} sm={6} sx={{ textAlign: 'center', justifyContent: 'center', mb: 2 }}>
                                 <Typography variant="h6" sx={{ mb: 1 }}>Quick Links</Typography>
-                                <Link to="/homepage">
-                                    <Typography sx={{ mb: 1 }}>
-                                        Home
+                                <Link to="/homepage#aboutus-section">
+                                    <Typography sx={{ mb: 0.5 }}>
+                                        About Us
+                                    </Typography>
+                                </Link>
+                                <Link to="/homepage#solution-section">
+                                    <Typography sx={{ mb: 0.5 }}>
+                                        Solutions
                                     </Typography>
                                 </Link>
                                 <Link to="/homepage#services-section">
-                                    <Typography sx={{ mb: 1 }}>
+                                    <Typography sx={{ mb: 0.5 }}>
                                         Services
                                     </Typography>
                                 </Link>
                                 <Link to="/contactUs">
-                                    <Typography sx={{ mb: 1 }}>
+                                    <Typography sx={{ mb: 0.5 }}>
                                         Contact Us
                                     </Typography>
                                 </Link>

@@ -13,7 +13,7 @@ function SolutionsSection() {
         navigate('/ace');
     };
     return (
-        <Box sx={{ pb: 15, pt: 15 }}>
+        <Box sx={{ pb: 15, pt: 15 }} id="solutions-section">
             <Box sx={{ mb: 10, textAlign: 'center' }}>
                 <Typography variant="h3">
                     See how our solutions
