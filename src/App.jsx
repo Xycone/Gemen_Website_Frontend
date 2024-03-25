@@ -154,8 +154,8 @@ function App() {
 
               {isAppBarOpen && (
                 <Box sx={{ mt: 2, display: { xs: 'block', md: 'none' }, maxHeight: '60vh', overflowY: 'auto', pr: 2 }}>
-                  <Link to="/homepage#aboutus-section" onClick={handleAppBarClose}>
-                    <Typography>About Us</Typography>
+                  <Link to="/homepage#whyus-section" onClick={handleAppBarClose}>
+                    <Typography>Why Us</Typography>
                   </Link>
                   <Typography sx={{ mb: 2 }}>Solutions:</Typography>
                   <Box sx={{ textAlign: 'center' }}>
@@ -189,7 +189,7 @@ function App() {
         </HideOnScroll>
 
         {/* Routes */}
-        <Container sx={{ padding: 10, minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+        <Container sx={{ padding: 10, minHeight: '100vh', display: 'flex', flexDirection: 'column', minWidth: 'fit-content' }}>
           <Routes>
             <Route path={"/homepage"} element={<Homepage />} />
             <Route path={"/ace"} element={<Ace />} />

@@ -24,7 +24,7 @@ function Homepage() {
     <Box sx={{ my: 2 }}>
       <Container>
         <LandingSection id="landing-section"/>
-        <WhyUsSection id="aboutus-section" />
+        <WhyUsSection id="whyus-section" />
         <SolutionsSection id="solutions-section" />
         <ServicesSection id="services-section" />
         <Partners id="partners-section"/>

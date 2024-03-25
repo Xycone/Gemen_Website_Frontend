@@ -51,9 +51,9 @@ function Footer() {
                             </Grid>
                             <Grid item xs={12} sm={3} sx={{ textAlign: 'center', justifyContent: 'center', my: 3 }}>
                                 <Typography variant="h6" sx={{ mb: 1 }}>Company</Typography>
-                                <Link to="/homepage#aboutus-section">
+                                <Link to="/homepage#whyus-section">
                                     <Typography sx={{ mb: 0.5 }}>
-                                        About Us
+                                        Why Us
                                     </Typography>
                                 </Link>
                                 <Link to="/contactUs">
