@@ -37,15 +37,15 @@ function ContactUs() {
   // Form to send an email to support
   const formikContactSupport = useFormik({
     initialValues: {
-      branch: "singapore",
+      // branch: "singapore",
       firstName: "",
       lastName: "",
       email: "",
       message: "",
     },
     validationSchema: yup.object({
-      branch: yup.string().trim()
-        .required('Branch is required'),
+      // branch: yup.string().trim()
+      //   .required('Branch is required'),
       firstName: yup.string().trim()
         .min(1, 'First name must be at least 1 character long')
         .max(50, 'First name must be at most 50 characters long')
@@ -66,6 +66,7 @@ function ContactUs() {
         .max(320, 'Email must be at most 320 characters'),
     }),
     onSubmit: (data) => {
+      // data.branch = data.branch.trim();
       data.firstName = data.firstName.trim();
       data.lastName = data.firstName.trim();
       data.email = data.email.trim();
@@ -78,7 +79,7 @@ function ContactUs() {
   });
 
   return (
-    <Box sx={{ my: 2, padding: 4  }}>
+    <Box sx={{ my: 2, padding: 4 }}>
       <Box sx={{ pb: 15, pt: 15 }}>
         <Box sx={{ mb: 10, fontWeight: 'bold', textAlign: 'center' }}>
           <Typography variant="h4">
@@ -95,8 +96,8 @@ function ContactUs() {
           <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <Card sx={{ borderRadius: 4, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
               <CardContent sx={{ margin: 2 }}>
-                <Typography variant="h5" sx={{ mb: 3 }}>Product Support</Typography>
-                <Typography sx={{ mb: 2 }}>
+                <Typography variant="h5" sx={{ mb: 2 }}>Product Support</Typography>
+                <Typography sx={{ mb: 4 }}>
                   Send an email to reach support by completing the form.
                 </Typography>
                 <Button
@@ -129,7 +130,7 @@ function ContactUs() {
                       <Box sx={{ mt: 5 }}>
                         <Grid container spacing={2}>
 
-                          <Grid item xs={12}>
+                          {/* <Grid item xs={12}>
                             <FormControl fullWidth error={formikContactSupport.touched.branch && Boolean(formikContactSupport.errors.branch)}>
                               <InputLabel>Branch</InputLabel>
                               <Select
@@ -146,7 +147,7 @@ function ContactUs() {
                                 <FormHelperText>{formikContactSupport.errors.branch}</FormHelperText>
                               )}
                             </FormControl>
-                          </Grid>
+                          </Grid> */}
 
                           <Grid item xs={12}>
                             <Grid container spacing={2}>
@@ -225,26 +226,50 @@ function ContactUs() {
           <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <Card sx={{ borderRadius: 4, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
               <CardContent sx={{ margin: 2 }}>
-                <Typography variant="h5" sx={{ mb: 3 }}>Contact Us</Typography>
-                <Typography sx={{ mb: 2 }}>
-                  Reach out to us here, feel free to head down to our office:
+                <Typography variant="h5" sx={{ mb: 2 }}>Contact Us</Typography>
+                <Typography sx={{ mb: 4 }}>
+                  Reach out to us via phone, email or feel free to head down to our office:
                 </Typography>
-                <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'left', mb: 1 }}>
-                  <LocationOn sx={{ fontSize: '1.2rem', mr: 1 }} />
-                  <Typography>
-                    <a href="https://www.google.com/maps/place/Gemen+Pte+Ltd/@1.3102084,103.8389323,17z/data=!3m2!4b1!5s0x31da19fc08c4d9fb:0x4f3412b3621c50dc!4m6!3m5!1s0x31da19461c78640f:0xed591bfcac18c41f!8m2!3d1.310203!4d103.8415072!16s%2Fg%2F11fct8jl5g?entry=ttu"
-                      target="_blank" rel="noopener noreferrer">
-                      10 Winstedt Rd, #03-30A, Singapore 227977
-                    </a>
-                  </Typography>
+                <Box sx={{ my: 4 }}>
+                  <Typography variant="h6" sx={{ mb: 2 }}>Singapore</Typography>
+                  <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'left', mb: 1 }}>
+                    <LocationOn sx={{ fontSize: '1.2rem', mr: 1 }} />
+                    <Typography>
+                      <a href="https://www.google.com/maps/place/Gemen+Pte+Ltd/@1.3102084,103.8389323,17z/data=!3m2!4b1!5s0x31da19fc08c4d9fb:0x4f3412b3621c50dc!4m6!3m5!1s0x31da19461c78640f:0xed591bfcac18c41f!8m2!3d1.310203!4d103.8415072!16s%2Fg%2F11fct8jl5g?entry=ttu"
+                        target="_blank" rel="noopener noreferrer">
+                        10 Winstedt Rd, #03-30A, Singapore 227977
+                      </a>
+                    </Typography>
+                  </Box>
+                  <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'left', mb: 1 }}>
+                    <Email sx={{ fontSize: '1.2rem', mr: 1 }} />
+                    <Typography>sales@gemen.tech</Typography>
+                  </Box>
+                  <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'left', mb: 1 }}>
+                    <Phone sx={{ fontSize: '1.2rem', mr: 0.5 }} />
+                    <Typography>+65 9009 0081</Typography>
+                  </Box>
                 </Box>
-                <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'left', mb: 1 }}>
-                  <Email sx={{ fontSize: '1.2rem', mr: 1 }} />
-                  <Typography>sales@gemen.tech</Typography>
-                </Box>
-                <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'left', mb: 1 }}>
-                  <Phone sx={{ fontSize: '1.2rem', mr: 0.5 }} />
-                  <Typography>+65 9009 0081</Typography>
+
+                <Box sx={{ my: 4 }}>
+                  <Typography variant="h6" sx={{ mb: 2 }}>Shanghai</Typography>
+                  <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'left', mb: 1 }}>
+                    <LocationOn sx={{ fontSize: '1.2rem', mr: 1 }} />
+                    <Typography>
+                      <a href="https://www.google.com/maps/place/China,+Shang+Hai+Shi,+Pu+Tuo+Qu,+%E5%87%AF%E6%97%8B%E5%8C%97%E8%B7%AF1188%E5%8F%B7+%E9%82%AE%E6%94%BF%E7%BC%96%E7%A0%81:+200063/@31.2325631,121.4081907,17z/data=!4m10!1m2!2m1!1z5LiK5rW35biC5pmu6ZmA5Yy65Yev5peL5YyX6LevMTE4OOWPt-eOr-eQg-a4r0LluqflhpnlrZfmpbwxNealvCAxNTA4LTY!3m6!1s0x35b26f88c63104eb:0x779e243b30a787ac!8m2!3d31.23255!4d121.41272!15sCkfkuIrmtbfluILmma7pmYDljLrlh6_ml4vljJfot68xMTg45Y-3546v55CD5rivQuW6p-WGmeWtl-alvDE15qW8IDE1MDgtNpIBEGdlb2NvZGVkX2FkZHJlc3PgAQA!16s%2Fg%2F11r8d5tf4x?entry=ttu"
+                        target="_blank" rel="noopener noreferrer">
+                        1508-6, 15th Floor, Office Building, Block B, Global Harbor, No. 1188 Kaixuan  North Road, Putuo District, Shanghai
+                      </a>
+                    </Typography>
+                  </Box>
+                  <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'left', mb: 1 }}>
+                    <Email sx={{ fontSize: '1.2rem', mr: 1 }} />
+                    <Typography>sales@gemen.tech</Typography>
+                  </Box>
+                  <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'left', mb: 1 }}>
+                    <Phone sx={{ fontSize: '1.2rem', mr: 0.5 }} />
+                    <Typography>+86 137 0197 5843</Typography>
+                  </Box>
                 </Box>
               </CardContent>
             </Card>
