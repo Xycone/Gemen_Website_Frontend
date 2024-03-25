@@ -22,7 +22,7 @@ function Ace() {
   }, [pathname]);
 
   return (
-    <Box sx={{ my: 2, padding: 2  }}>
+    <Box sx={{ my: 2, padding: 4 }}>
       <Box sx={{ pb: 30, pt: 15, position: 'relative', textAlign: 'center' }}>
         <Box sx={{ textAlign: 'center', mb: 5 }}>
           <Typography variant="h5" sx={{ mb: 5 }}>

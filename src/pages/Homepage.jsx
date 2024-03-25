@@ -21,7 +21,7 @@ function Homepage() {
   }, [location]);
 
   return (
-    <Box sx={{ my: 2, padding: 2 }}>
+    <Box sx={{ my: 2, padding: 4 }}>
       <LandingSection id="landing-section" />
       <WhyUsSection id="whyus-section" />
       <SolutionsSection id="solutions-section" />

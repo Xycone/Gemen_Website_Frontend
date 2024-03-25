@@ -78,7 +78,7 @@ function ContactUs() {
   });
 
   return (
-    <Box sx={{ my: 2, padding: 2  }}>
+    <Box sx={{ my: 2, padding: 4  }}>
       <Box sx={{ pb: 15, pt: 15 }}>
         <Box sx={{ mb: 10, fontWeight: 'bold', textAlign: 'center' }}>
           <Typography variant="h4">
@@ -112,7 +112,7 @@ function ContactUs() {
                     textTransform: 'none',
                   }}
                   onClick={handleContactSupportFormOpen}>
-                  <Typography>Support</Typography>
+                  <Typography>Get In Touch</Typography>
                 </Button>
                 <Dialog
                   fullWidth
