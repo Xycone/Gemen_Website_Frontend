@@ -1,6 +1,6 @@
 import './App.css';
 import { useState } from 'react';
-import { AppBar, Toolbar, Container, Typography, Button, Box, Menu, MenuItem, IconButton, Grid, useScrollTrigger } from '@mui/material';
+import { AppBar, Toolbar, Container, Typography, Button, Box, IconButton, Grid, useScrollTrigger } from '@mui/material';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 // Material UI Theme
@@ -22,8 +22,8 @@ import Partners from './components/Partners';
 import Logo from './assets/Logo.svg'
 
 // Material UI Icons
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { Menu as MenuIcon } from '@mui/icons-material';
+import SolutionsDropdown from './components/SolutionsDropdown';
 
 
 function HideOnScroll(props) {
@@ -38,13 +38,6 @@ function HideOnScroll(props) {
 }
 
 function App() {
-  const [solutionsMenuAnchorEl, setSolutionsMenuAnchorEl] = useState(null);
-  const handleSolutionsMenuOpen = (event) => {
-    setSolutionsMenuAnchorEl(event.currentTarget);
-  }
-  const handleSolutionsMenuClose = () => {
-    setSolutionsMenuAnchorEl(null);
-  }
 
   const [isAppBarOpen, setIsAppBarOpen] = useState(false);
   const handleAppBarToggle = () => {
@@ -75,50 +68,7 @@ function App() {
                     <Typography>Why Us</Typography>
                   </Link>
 
-                  <Button
-                    onClick={handleSolutionsMenuOpen}
-                    sx={{
-                      textTransform: 'none',
-                      mr: 2,
-                      padding: 0,
-                      color: 'black',
-                      '&:hover': {
-                        backgroundColor: 'transparent',
-                      },
-                    }}
-                    disableRipple
-                  >
-                    <Typography>
-                      Solutions
-                    </Typography>
-                    <ArrowDropDownIcon />
-                  </Button>
-                  <Menu
-                    anchorEl={solutionsMenuAnchorEl}
-                    open={Boolean(solutionsMenuAnchorEl)}
-                    onClose={handleSolutionsMenuClose}
-                    anchorOrigin={{
-                      vertical: 'bottom',
-                      horizontal: 'center',
-                    }}
-                    transformOrigin={{
-                      vertical: 'top',
-                      horizontal: 'center',
-                    }}
-                    sx={{ display: { xs: 'none', md: 'flex' } }}
-                  >
-                    <Link to="/garantia" style={{ textDecoration: 'none', color: 'black' }}>
-                      <MenuItem onClick={handleSolutionsMenuClose}>
-                        <Typography>Garantia</Typography>
-                      </MenuItem>
-                    </Link>
-
-                    <Link to="/ace" style={{ textDecoration: 'none', color: 'black' }}>
-                      <MenuItem onClick={handleSolutionsMenuClose}>
-                        <Typography>ACE</Typography>
-                      </MenuItem>
-                    </Link>
-                  </Menu>
+                  <SolutionsDropdown />
 
                   <Link to="/homepage#services-section" sx={{ mr: 2, ml: 2 }}>
                     <Typography>Services</Typography>

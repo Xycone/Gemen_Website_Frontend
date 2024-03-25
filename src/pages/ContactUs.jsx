@@ -225,9 +225,9 @@ function ContactUs() {
           <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <Card sx={{ borderRadius: 4, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
               <CardContent sx={{ margin: 2 }}>
-                <Typography variant="h5" sx={{ mb: 3 }}>Contact Sales</Typography>
+                <Typography variant="h5" sx={{ mb: 3 }}>Contact Us</Typography>
                 <Typography sx={{ mb: 2 }}>
-                  Reach out to our sales team here:
+                  Reach out to us here, feel free to head down to our office:
                 </Typography>
                 <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'left', mb: 1 }}>
                   <LocationOn sx={{ fontSize: '1.2rem', mr: 1 }} />
