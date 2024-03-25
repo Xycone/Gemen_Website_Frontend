@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Box, Container } from '@mui/material'
+import { Box } from '@mui/material'
 import LandingSection from '../components/LandingSection';
 import WhyUsSection from '../components/WhyUsSection';
 import ServicesSection from '../components/ServicesSection';
@@ -19,18 +19,6 @@ function Homepage() {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   }, [location]);
-
-  // Scroll to top 
-  // Fix for react saving scroll position when navigating to different pages
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    document.documentElement.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "instant",
-    });
-  }, [pathname]);
 
   return (
     <Box sx={{ my: 2, padding: 2 }}>
