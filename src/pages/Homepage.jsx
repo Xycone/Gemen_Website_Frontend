@@ -20,15 +20,25 @@ function Homepage() {
     }
   }, [location]);
 
+  // Scroll to top 
+  // Fix for react saving scroll position when navigating to different pages
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    document.documentElement.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+    });
+  }, [pathname]);
+
   return (
-    <Box sx={{ my: 2 }}>
-      <Container>
-        <LandingSection id="landing-section"/>
-        <WhyUsSection id="whyus-section" />
-        <SolutionsSection id="solutions-section" />
-        <ServicesSection id="services-section" />
-        <Partners id="partners-section"/>
-      </Container>
+    <Box sx={{ my: 2, padding: 2 }}>
+      <LandingSection id="landing-section" />
+      <WhyUsSection id="whyus-section" />
+      <SolutionsSection id="solutions-section" />
+      <ServicesSection id="services-section" />
+      <Partners id="partners-section" />
     </Box>
   )
 }

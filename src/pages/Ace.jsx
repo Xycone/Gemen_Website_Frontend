@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Typography, Box, Button, Grid, Card, CardContent } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
 
 function Ace() {
   const navigate = useNavigate();
@@ -9,8 +9,20 @@ function Ace() {
     navigate('/contactUs');
   };
 
+  // Scroll to top 
+  // Fix for react saving scroll position when navigating to different pages
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    document.documentElement.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+    });
+  }, [pathname]);
+
   return (
-    <Box sx={{ my: 2 }}>
+    <Box sx={{ my: 2, padding: 2  }}>
       <Box sx={{ pb: 30, pt: 15, position: 'relative', textAlign: 'center' }}>
         <Box sx={{ textAlign: 'center', mb: 5 }}>
           <Typography variant="h5" sx={{ mb: 5 }}>

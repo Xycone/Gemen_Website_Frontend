@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Typography, Box, Button, Grid, Card, CardContent } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
 
 function Garantia() {
   const navigate = useNavigate();
@@ -9,8 +9,20 @@ function Garantia() {
     navigate('/contactUs');
   };
 
+  // Scroll to top 
+  // Fix for react saving scroll position when navigating to different pages
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    document.documentElement.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+    });
+  }, [pathname]);
+
   return (
-    <Box sx={{ my: 2 }}>
+    <Box sx={{ my: 2, padding: 2 }}>
       <Box sx={{ pb: 30, pt: 15, position: 'relative', textAlign: 'center' }}>
         <Box sx={{ textAlign: 'center', mb: 5 }}>
           <Typography variant="h5" sx={{ mb: 5 }}>
@@ -59,7 +71,7 @@ function Garantia() {
           </Typography>
         </Grid>
 
-        <Grid item xs={12} md={6} sx={{ mb: 5, padding: 5 , display: 'flex', flexDirection: 'column', order: { xs: 4, md: 3  } }}>
+        <Grid item xs={12} md={6} sx={{ mb: 5, padding: 5, display: 'flex', flexDirection: 'column', order: { xs: 4, md: 3 } }}>
           <Typography variant="h5" sx={{ mb: 3 }}>
             Progressive Monitoring
           </Typography>
@@ -67,7 +79,7 @@ function Garantia() {
             Progressive Monitoring conducts scheduled tasks designated by the customer to assess the recording system's functionaility. It detects irregularities in the system in near real-time and promptly alerts the customer of any alarms detected. Moreover, Progressive Monitoring compiles historical reports of these alarms. In the event of anomalies, it takes proactive measures such as disabling affected extensions to prevent further disruptions, thus maintaining the stability and dependability of the recording system.
           </Typography>
         </Grid>
-        <Grid item xs={12} md={6} sx={{ mb: 5, display: 'flex', flexDirection: 'column', order: { xs: 3, md: 4  } }}>
+        <Grid item xs={12} md={6} sx={{ mb: 5, display: 'flex', flexDirection: 'column', order: { xs: 3, md: 4 } }}>
           <Card sx={{ borderRadius: 4, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
             <CardContent sx={{ margin: 2 }}>
 
