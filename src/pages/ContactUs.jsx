@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import {
   Typography, Box, Container, Grid, Card, CardContent, Button, TextField, Select, MenuItem, FormControl, FormHelperText, InputLabel, Accordion, AccordionSummary,
@@ -12,17 +12,30 @@ import { useFormik } from 'formik';
 import * as yup from 'yup';
 
 function ContactUs() {
-  // Scroll to top 
-  // Fix for react saving scroll position when navigating to different pages
-  const { pathname } = useLocation();
+  const navigate = useNavigate();
+
+  const navigateToFaqSection = () => {
+    navigate('/contactUs#faq-section');
+  };
+
+  const location = useLocation();
 
   useEffect(() => {
-    document.documentElement.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "instant",
-    });
-  }, [pathname]);
+    const href = window.location.href.substring(
+      window.location.href.lastIndexOf('#') + 1
+    );
+    const element = document.getElementById(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    else {
+      document.documentElement.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "instant",
+      });
+    }
+  }, [location]);
 
   // Contact Support Form
   const [contactSupportOpen, setContactSupportOpen] = useState(false);
@@ -80,7 +93,7 @@ function ContactUs() {
 
   return (
     <Box sx={{ my: 2, padding: 4 }}>
-      <Box sx={{ pb: 15, pt: 15 }}>
+      <Box sx={{ pt: 15 }}>
         <Box sx={{ mb: 10, fontWeight: 'bold', textAlign: 'center' }}>
           <Typography variant="h4">
             Let's Talk!
@@ -90,11 +103,12 @@ function ContactUs() {
         </Box>
       </Box>
 
-      <Box sx={{ pb: 15 }}>
+      <Box sx={{ pb: 15, pt: 15}}>
         <Grid container spacing={4}>
 
           <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-            <Card sx={{ borderRadius: 4, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+
+            <Card sx={{ borderRadius: 4, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1, mb: 4 }}>
               <CardContent sx={{ margin: 2 }}>
                 <Typography variant="h5" sx={{ mb: 2 }}>Product Support</Typography>
                 <Typography sx={{ mb: 4 }}>
@@ -221,6 +235,30 @@ function ContactUs() {
                 </Dialog>
               </CardContent>
             </Card>
+
+            <Card sx={{ borderRadius: 4, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+              <CardContent sx={{ margin: 2 }}>
+                <Typography variant="h5" sx={{ mb: 2 }}>Have a question?</Typography>
+                <Typography sx={{ mb: 4 }}>
+                  Email us or have a look at our FAQ
+                </Typography>
+                <Button
+                  variant="contained"
+                  sx={{
+                    borderRadius: 2,
+                    px: 3,
+                    py: 1,
+                    boxShadow: 'none',
+                    '&:hover': {
+                      boxShadow: 'none',
+                    },
+                    textTransform: 'none',
+                  }}
+                  onClick={navigateToFaqSection}>
+                  <Typography>Read FAQ</Typography>
+                </Button>
+              </CardContent>
+            </Card>
           </Grid>
 
           <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
@@ -256,7 +294,7 @@ function ContactUs() {
                   <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'left', mb: 1 }}>
                     <LocationOn sx={{ fontSize: '1.2rem', mr: 1 }} />
                     <Typography>
-                      <a href="https://www.google.com/maps/place/China,+Shang+Hai+Shi,+Pu+Tuo+Qu,+%E5%87%AF%E6%97%8B%E5%8C%97%E8%B7%AF1188%E5%8F%B7+%E9%82%AE%E6%94%BF%E7%BC%96%E7%A0%81:+200063/@31.2325631,121.4081907,17z/data=!4m10!1m2!2m1!1z5LiK5rW35biC5pmu6ZmA5Yy65Yev5peL5YyX6LevMTE4OOWPt-eOr-eQg-a4r0LluqflhpnlrZfmpbwxNealvCAxNTA4LTY!3m6!1s0x35b26f88c63104eb:0x779e243b30a787ac!8m2!3d31.23255!4d121.41272!15sCkfkuIrmtbfluILmma7pmYDljLrlh6_ml4vljJfot68xMTg45Y-3546v55CD5rivQuW6p-WGmeWtl-alvDE15qW8IDE1MDgtNpIBEGdlb2NvZGVkX2FkZHJlc3PgAQA!16s%2Fg%2F11r8d5tf4x?entry=ttu"
+                      <a href=""
                         target="_blank" rel="noopener noreferrer">
                         1508-6, 15th Floor, Office Building, Block B, Global Harbor, No. 1188 Kaixuan  North Road, Putuo District, Shanghai
                       </a>
@@ -275,79 +313,80 @@ function ContactUs() {
             </Card>
           </Grid>
 
-          <Grid item xs={12} md={12} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', margin: 5, mt: 10 }}>
-            <Typography variant="h5" sx={{ mb: 3 }}>Frequently Asked Questions:</Typography>
-            <Accordion sx={{
-              boxShadow: 'none',
-            }}>
-              <AccordionSummary
-                expandIcon={<ArrowDropDownIcon />}
-                aria-controls="panel1-content"
-                id="panel1-header"
-              >
-                <Typography>FAQ 1</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                  malesuada lacus ex, sit amet blandit leo lobortis eget.
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-            <Accordion sx={{
-              boxShadow: 'none',
-            }}>
-              <AccordionSummary
-                expandIcon={<ArrowDropDownIcon />}
-                aria-controls="panel1-content"
-                id="panel1-header"
-              >
-                <Typography>FAQ 2</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                  malesuada lacus ex, sit amet blandit leo lobortis eget.
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-            <Accordion sx={{
-              boxShadow: 'none',
-            }}>
-              <AccordionSummary
-                expandIcon={<ArrowDropDownIcon />}
-                aria-controls="panel1-content"
-                id="panel1-header"
-              >
-                <Typography>FAQ 3</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                  malesuada lacus ex, sit amet blandit leo lobortis eget.
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-            <Accordion sx={{
-              boxShadow: 'none',
-            }}>
-              <AccordionSummary
-                expandIcon={<ArrowDropDownIcon />}
-                aria-controls="panel1-content"
-                id="panel1-header"
-              >
-                <Typography>FAQ 4</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                  malesuada lacus ex, sit amet blandit leo lobortis eget.
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-          </Grid>
-
         </Grid>
+        
+        <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', pb: 15, pt: 15 }} id="faq-section">
+          <Typography variant="h5" sx={{ mb: 3 }}>Frequently Asked Questions:</Typography>
+          <Accordion sx={{
+            boxShadow: 'none',
+          }}>
+            <AccordionSummary
+              expandIcon={<ArrowDropDownIcon />}
+              aria-controls="panel1-content"
+              id="panel1-header"
+            >
+              <Typography>FAQ 1</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                malesuada lacus ex, sit amet blandit leo lobortis eget.
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion sx={{
+            boxShadow: 'none',
+          }}>
+            <AccordionSummary
+              expandIcon={<ArrowDropDownIcon />}
+              aria-controls="panel1-content"
+              id="panel1-header"
+            >
+              <Typography>FAQ 2</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                malesuada lacus ex, sit amet blandit leo lobortis eget.
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion sx={{
+            boxShadow: 'none',
+          }}>
+            <AccordionSummary
+              expandIcon={<ArrowDropDownIcon />}
+              aria-controls="panel1-content"
+              id="panel1-header"
+            >
+              <Typography>FAQ 3</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                malesuada lacus ex, sit amet blandit leo lobortis eget.
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion sx={{
+            boxShadow: 'none',
+          }}>
+            <AccordionSummary
+              expandIcon={<ArrowDropDownIcon />}
+              aria-controls="panel1-content"
+              id="panel1-header"
+            >
+              <Typography>FAQ 4</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                malesuada lacus ex, sit amet blandit leo lobortis eget.
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+        </Box>
+
       </Box >
     </Box >
   )

@@ -56,7 +56,7 @@ function App() {
           <AppBar position="fixed" className='AppBar' sx={{ backgroundColor: 'white', color: 'black', padding: 1 }}>
             <Container>
               <Toolbar disableGutters={true}>
-                <Link to="/homepage#landing-section" style={{ display: 'flex', alignItems: 'center' }}>
+                <Link to="/homepage" style={{ display: 'flex', alignItems: 'center' }}>
                   <img src={Logo} alt="Gemen Logo" style={{ height: '60px' }} />
                 </Link>
 
@@ -139,7 +139,8 @@ function App() {
         </HideOnScroll>
 
         {/* Routes */}
-        <Container sx={{ padding: 10, minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', minWidth: 'fit-content' }}>
+        {/* <Container sx={{ padding: 10, minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', minWidth: 'fit-content' }}> */}
+        <Container sx={{ padding: 'auto', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
           <Routes>
             <Route path={"/homepage"} element={<Homepage />} />
             <Route path={"/ace"} element={<Ace />} />

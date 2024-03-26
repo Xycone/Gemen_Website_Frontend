@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
-import { Box, Button, Typography, Menu, MenuItem } from '@mui/material';
+import { Button, Typography, Menu, MenuItem } from '@mui/material';
 
 // Material UI Icons
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
@@ -48,13 +48,13 @@ function SolutionsDropdown() {
                 }}
                 sx={{ display: { xs: 'none', md: 'flex' } }}
             >
-                <Link to="/garantia" style={{ textDecoration: 'none', color: 'black' }}>
+                <Link to="/garantia" className="dropdown-link" style={{ textDecoration: 'none', color: 'black' }}>
                     <MenuItem onClick={handleSolutionsMenuClose}>
                         <Typography>Garantia</Typography>
                     </MenuItem>
                 </Link>
 
-                <Link to="/ace" style={{ textDecoration: 'none', color: 'black' }}>
+                <Link to="/ace" className="dropdown-link" style={{ textDecoration: 'none', color: 'black' }}>
                     <MenuItem onClick={handleSolutionsMenuClose}>
                         <Typography>ACE</Typography>
                     </MenuItem>
