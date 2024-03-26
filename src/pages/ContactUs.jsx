@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+
 import {
-  Typography, Box, Container, Grid, Card, CardContent, Button, TextField, Select, MenuItem, FormControl, FormHelperText, InputLabel, Accordion, AccordionSummary,
+  Typography, Box, Grid, Card, CardContent, Button, TextField, Select, MenuItem, FormControl, FormHelperText, InputLabel, Accordion, AccordionSummary,
   AccordionDetails, Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions
 } from '@mui/material';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
@@ -103,7 +104,7 @@ function ContactUs() {
         </Box>
       </Box>
 
-      <Box sx={{ pb: 15, pt: 15}}>
+      <Box sx={{ pb: 15, pt: 15 }}>
         <Grid container spacing={4}>
 
           <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
@@ -314,7 +315,7 @@ function ContactUs() {
           </Grid>
 
         </Grid>
-        
+
         <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', pb: 15, pt: 15 }} id="faq-section">
           <Typography variant="h5" sx={{ mb: 3 }}>Frequently Asked Questions:</Typography>
           <Accordion sx={{
