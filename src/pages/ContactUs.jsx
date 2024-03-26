@@ -12,6 +12,10 @@ import { Email, LocationOn, Phone } from '@mui/icons-material';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 
+// Recaptcha v3
+import useReCaptchaV3 from '../components/hooks/reCaptchaV3/useReCaptchaV3';
+
+
 function ContactUs() {
   const navigate = useNavigate();
 
@@ -38,6 +42,9 @@ function ContactUs() {
     }
   }, [location]);
 
+  // Recaptcha v3
+  const executeRecaptcha = useReCaptchaV3('6LdgwKQpAAAAABhTZeCYaXqjOHqjJG8cOLFSjVdC')
+
   // Contact Support Form
   const [contactSupportOpen, setContactSupportOpen] = useState(false);
   const handleContactSupportFormOpen = () => {
@@ -51,15 +58,12 @@ function ContactUs() {
   // Form to send an email to support
   const formikContactSupport = useFormik({
     initialValues: {
-      // branch: "singapore",
       firstName: "",
       lastName: "",
       email: "",
       message: "",
     },
     validationSchema: yup.object({
-      // branch: yup.string().trim()
-      //   .required('Branch is required'),
       firstName: yup.string().trim()
         .min(1, 'First name must be at least 1 character long')
         .max(50, 'First name must be at most 50 characters long')
@@ -79,16 +83,25 @@ function ContactUs() {
       message: yup.string().trim()
         .max(320, 'Email must be at most 320 characters'),
     }),
-    onSubmit: (data) => {
-      // data.branch = data.branch.trim();
-      data.firstName = data.firstName.trim();
-      data.lastName = data.firstName.trim();
-      data.email = data.email.trim();
-      data.message = data.message.trim();
-      http.post("/support", data).then((res) => {
-        console.log(res)
-        handleContactSupportFormClose();
-      });
+    onSubmit: async (data) => {
+      try {
+        const recaptchaToken = await executeRecaptcha('contact_support_form');
+
+        console.log("Google Recaptcha Token: ", recaptchaToken);
+
+        data.firstName = data.firstName.trim();
+        data.lastName = data.lastName.trim();
+        data.email = data.email.trim();
+        data.message = data.message.trim();
+        data.recaptchaToken = recaptchaToken;
+
+        // http.post("/support", data).then((res) => {
+        //   console.log(res)
+        //   handleContactSupportFormClose();
+        // });
+      } catch (error) {
+        console.error("Error calling function ", error)
+      }
     }
   });
 
@@ -144,25 +157,6 @@ function ContactUs() {
 
                       <Box sx={{ mt: 5 }}>
                         <Grid container spacing={2}>
-
-                          {/* <Grid item xs={12}>
-                            <FormControl fullWidth error={formikContactSupport.touched.branch && Boolean(formikContactSupport.errors.branch)}>
-                              <InputLabel>Branch</InputLabel>
-                              <Select
-                                label="Branch"
-                                name="branch"
-                                value={formikContactSupport.values.branch}
-                                onChange={formikContactSupport.handleChange}
-                                onBlur={formikContactSupport.handleBlur}
-                              >
-                                <MenuItem value="singapore">Singapore</MenuItem>
-                                <MenuItem value="shanghai">Shanghai</MenuItem>
-                              </Select>
-                              {formikContactSupport.touched.branch && formikContactSupport.errors.branch && (
-                                <FormHelperText>{formikContactSupport.errors.branch}</FormHelperText>
-                              )}
-                            </FormControl>
-                          </Grid> */}
 
                           <Grid item xs={12}>
                             <Grid container spacing={2}>
@@ -222,6 +216,9 @@ function ContactUs() {
                               error={formikContactSupport.touched.message && Boolean(formikContactSupport.errors.message)}
                               helperText={formikContactSupport.touched.message && formikContactSupport.errors.message}
                             />
+                          </Grid>
+                          <Grid item xs={12}>
+                            This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.
                           </Grid>
 
                         </Grid>

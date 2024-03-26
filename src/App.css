@@ -16,3 +16,6 @@
   text-decoration: none !important;
   box-shadow: none !important;
 }
+
+/* Google Recaptcha V3 badge */
+.grecaptcha-badge { visibility: hidden; }
