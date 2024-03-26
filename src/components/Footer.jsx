@@ -5,8 +5,8 @@ import { Email, LocationOn, Phone } from '@mui/icons-material';
 
 function Footer() {
     return (
-        <Box sx={{ width: '100%', backgroundColor: '#f5f5f5', marginTop: 'auto' }}>
-            <Container maxWidth="lg" sx={{ padding: 2 }} >
+        <Box sx={{ width: '100%', backgroundColor: '#F2F5F8', marginTop: 'auto' }}>
+            <Container maxWidth="lg" sx={{ padding: 5 }} >
                 <Grid container spacing={2} sx={{ textAlign: 'center' }}>
                     <Grid item xs={12}>
                         <Grid container spacing={2} sx={{ textAlign: 'center', justifyContent: 'center', mb: 1 }}>
