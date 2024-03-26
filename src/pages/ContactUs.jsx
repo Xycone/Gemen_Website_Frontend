@@ -228,7 +228,7 @@ function ContactUs() {
               <CardContent sx={{ margin: 2 }}>
                 <Typography variant="h5" sx={{ mb: 2 }}>Contact Us</Typography>
                 <Typography sx={{ mb: 4 }}>
-                  Reach out to us via phone, email or feel free to head down to our office:
+                  Reach out to us via phone, email or find us by heading down to our office:
                 </Typography>
                 <Box sx={{ my: 4 }}>
                   <Typography variant="h6" sx={{ mb: 2 }}>Singapore</Typography>

@@ -100,7 +100,7 @@ function App() {
                     <MenuIcon />
                   </IconButton>
                 </Box>
-              </Toolbar>  
+              </Toolbar>
 
               {isAppBarOpen && (
                 <Box sx={{ mt: 2, display: { xs: 'block', md: 'none' }, maxHeight: '60vh', overflowY: 'auto', pr: 2 }}>
@@ -139,7 +139,7 @@ function App() {
         </HideOnScroll>
 
         {/* Routes */}
-        <Container sx={{ padding: 10, minHeight: '100vh', display: 'flex', flexDirection: 'column', minWidth: 'fit-content' }}>
+        <Container sx={{ padding: 10, minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', minWidth: 'fit-content' }}>
           <Routes>
             <Route path={"/homepage"} element={<Homepage />} />
             <Route path={"/ace"} element={<Ace />} />
