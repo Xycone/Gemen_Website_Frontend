@@ -10,7 +10,7 @@ function Partners() {
             {/* Partners Section */}
             <Box sx={{ mb: 10, fontWeight: 'bold', textAlign: 'center' }}>
                 <Typography variant="h4">
-                    We Grow <span style={{ color: '#FF9900' }}>Together</span>
+                    As Partners, We <span style={{ color: '#FF9900' }}>Grow Together</span>
                 </Typography>
             </Box>
             <Grid container spacing={2} sx={{ textAlign: 'center', borderRadius: 4, py: 5 }}>
