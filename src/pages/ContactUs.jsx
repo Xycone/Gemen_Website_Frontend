@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import http from '../http';
 
 import {
   Typography, Box, Grid, Card, CardContent, Button, TextField, Select, MenuItem, FormControl, FormHelperText, InputLabel, Accordion, AccordionSummary,
@@ -14,6 +15,8 @@ import * as yup from 'yup';
 
 // Recaptcha v3
 import useReCaptchaV3 from '../components/hooks/reCaptchaV3/useReCaptchaV3';
+
+
 
 
 function ContactUs() {
@@ -42,7 +45,7 @@ function ContactUs() {
     }
   }, [location]);
 
-  // Recaptcha v3
+  // Google Recaptcha v3
   const executeRecaptcha = useReCaptchaV3('6LdgwKQpAAAAABhTZeCYaXqjOHqjJG8cOLFSjVdC')
 
   // Contact Support Form
@@ -93,12 +96,12 @@ function ContactUs() {
         data.lastName = data.lastName.trim();
         data.email = data.email.trim();
         data.message = data.message.trim();
-        data.recaptchaToken = recaptchaToken;
+        data.token = recaptchaToken;
 
-        // http.post("/support", data).then((res) => {
-        //   console.log(res)
-        //   handleContactSupportFormClose();
-        // });
+        http.post("/email", data).then((res) => {
+          console.log(res)
+          handleContactSupportFormClose();
+        });
       } catch (error) {
         console.error("Error calling function ", error)
       }
