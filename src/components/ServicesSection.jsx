@@ -27,7 +27,7 @@ function ServicesSection() {
                                 <Box sx={{ mb: 2 }}>
                                     <img src={ManpowerIcon} alt="Manpower Icon" style={{ width: '45px', height: '45px' }} />
                                 </Box>
-                                <Typography variant="h6" sx={{ mb: 1 }}>Manpower Services</Typography>
+                                <Typography variant="h6" sx={{ mb: 1 }}>Lorem ipsum</Typography>
                                 <Typography>
                                     Lorem ipsum dolor sit amet. Vel mollitia autem et ipsam praesentium sed
                                 </Typography>
@@ -40,7 +40,7 @@ function ServicesSection() {
                                 <Box sx={{ mb: 2 }}>
                                     <img src={ConsultationIcon} alt="Manpower Icon" style={{ width: '45px', height: '45px' }} />
                                 </Box>
-                                <Typography variant="h6" sx={{ mb: 1 }}>Consultation</Typography>
+                                <Typography variant="h6" sx={{ mb: 1 }}>Lorem ipsum</Typography>
                                 <Typography>
                                     Lorem ipsum dolor sit amet. Vel mollitia autem et ipsam praesentium sed
                                 </Typography>
@@ -53,7 +53,7 @@ function ServicesSection() {
                                 <Box sx={{ mb: 2 }}>
                                     <img src={SoftwareIcon} alt="Manpower Icon" style={{ width: '45px', height: '45px' }} />
                                 </Box>
-                                <Typography variant="h6" sx={{ mb: 1 }}>Software</Typography>
+                                <Typography variant="h6" sx={{ mb: 1 }}>Lorem ipsum</Typography>
                                 <Typography>
                                     Lorem ipsum dolor sit amet. Vel mollitia autem et ipsam praesentium sed
                                 </Typography>
