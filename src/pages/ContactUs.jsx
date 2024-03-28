@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import http from '../http';
 
 import {
@@ -10,13 +9,13 @@ import {
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { Email, LocationOn, Phone } from '@mui/icons-material';
 
-import { useFormik } from 'formik';
+// Form and form validation
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 
 // Recaptcha v3
 import useReCaptchaV3 from '../components/hooks/reCaptchaV3/useReCaptchaV3';
-
-
 
 
 function ContactUs() {
@@ -55,41 +54,40 @@ function ContactUs() {
   };
   const handleContactSupportFormClose = () => {
     setContactSupportOpen(false);
-    formikContactSupport.resetForm();
+    reset();
   };
 
   // Form to send an email to support
-  const formikContactSupport = useFormik({
-    initialValues: {
-      firstName: "",
-      lastName: "",
-      email: "",
-      message: "",
-    },
-    validationSchema: yup.object({
-      firstName: yup.string().trim()
-        .min(1, 'First name must be at least 1 character long')
-        .max(50, 'First name must be at most 50 characters long')
-        .required('First name is required')
-        .matches(/^[a-zA-Z]+$/,
-          "Only allow letters and characters: ' - , ."),
-      lastName: yup.string().trim()
-        .min(1, 'Last name must be at least 1 character long')
-        .max(50, 'Last name must be at most 50 characters long')
-        .required('Last name is required')
-        .matches(/^[a-zA-Z]+$/,
-          "Only allow letters and characters: ' - , ."),
-      email: yup.string().trim()
-        .email('Enter a valid email')
-        .max(50, 'Email must be at most 50 characters')
-        .required('Email is required'),
-      message: yup.string().trim()
-        .max(320, 'Email must be at most 320 characters'),
-    }),
-    onSubmit: async (data) => {
+
+  // yup validation schema
+  const validationSchema = yup.object({
+    firstName: yup.string().trim()
+      .min(1, 'First name must be at least 1 character long')
+      .max(50, 'First name must be at most 50 characters long')
+      .required('First name is required')
+      .matches(/^[a-zA-Z]+$/, "Only allow letters and characters: ' - , ."),
+    lastName: yup.string().trim()
+      .min(1, 'Last name must be at least 1 character long')
+      .max(50, 'Last name must be at most 50 characters long')
+      .required('Last name is required')
+      .matches(/^[a-zA-Z]+$/, "Only allow letters and characters: ' - , ."),
+    email: yup.string().trim()
+      .email('Enter a valid email')
+      .max(50, 'Email must be at most 50 characters')
+      .required('Email is required'),
+    message: yup.string().trim()
+      .max(320, 'Email must be at most 320 characters'),
+  });
+
+    // React Hook Form
+    const { register, handleSubmit, formState: { errors }, reset } = useForm({
+      mode: "all",
+      resolver: yupResolver(validationSchema)
+    });
+
+    const onSubmit = async (data) => {
       try {
         const recaptchaToken = await executeRecaptcha('contact_support_form');
-
         console.log("Google Recaptcha Token: ", recaptchaToken);
 
         data.firstName = data.firstName.trim();
@@ -98,15 +96,14 @@ function ContactUs() {
         data.message = data.message.trim();
         data.token = recaptchaToken;
 
-        http.post("/email", data).then((res) => {
-          console.log(res)
+        http.post("/email", data).then(() => {
+          console.log("Email sent successfully")
           handleContactSupportFormClose();
         });
       } catch (error) {
         console.error("Error calling function ", error)
       }
-    }
-  });
+    };
 
   return (
     <Box sx={{ my: 2, padding: 4 }}>
@@ -151,7 +148,7 @@ function ContactUs() {
                   maxWidth="md"
                   open={contactSupportOpen}
                 >
-                  <Box component="form" onSubmit={formikContactSupport.handleSubmit} sx={{ margin: 5 }}>
+                  <Box component="form" onSubmit={handleSubmit(onSubmit)} sx={{ margin: 5 }}>
                     <DialogTitle variant="h5">Contact Support</DialogTitle>
                     <DialogContent>
                       <DialogContentText>
@@ -168,12 +165,9 @@ function ContactUs() {
                                 <TextField
                                   fullWidth margin="dense" autoComplete="off"
                                   label="First Name"
-                                  name="firstName"
-                                  value={formikContactSupport.values.firstName}
-                                  onChange={formikContactSupport.handleChange}
-                                  onBlur={formikContactSupport.handleBlur}
-                                  error={formikContactSupport.touched.firstName && Boolean(formikContactSupport.errors.firstName)}
-                                  helperText={formikContactSupport.touched.firstName && formikContactSupport.errors.firstName}
+                                  {...register("firstName")}
+                                  error={!!errors.firstName}
+                                  helperText={errors.firstName && errors.firstName.message}
                                 />
                               </Grid>
 
@@ -181,12 +175,9 @@ function ContactUs() {
                                 <TextField
                                   fullWidth margin="dense" autoComplete="off"
                                   label="Last Name"
-                                  name="lastName"
-                                  value={formikContactSupport.values.lastName}
-                                  onChange={formikContactSupport.handleChange}
-                                  onBlur={formikContactSupport.handleBlur}
-                                  error={formikContactSupport.touched.lastName && Boolean(formikContactSupport.errors.lastName)}
-                                  helperText={formikContactSupport.touched.lastName && formikContactSupport.errors.lastName}
+                                  {...register("lastName")}
+                                  error={!!errors.lastName}
+                                  helperText={errors.lastName && errors.lastName.message}
                                 />
                               </Grid>
 
@@ -197,12 +188,9 @@ function ContactUs() {
                             <TextField
                               fullWidth margin="dense" autoComplete="off"
                               label="Email"
-                              name="email"
-                              value={formikContactSupport.values.email}
-                              onChange={formikContactSupport.handleChange}
-                              onBlur={formikContactSupport.handleBlur}
-                              error={formikContactSupport.touched.email && Boolean(formikContactSupport.errors.email)}
-                              helperText={formikContactSupport.touched.email && formikContactSupport.errors.email}
+                              {...register("email")}
+                              error={!!errors.email}
+                              helperText={errors.email && errors.email.message}
                             />
                           </Grid>
 
@@ -212,12 +200,9 @@ function ContactUs() {
                               rows={4}
                               multiline
                               label="Message"
-                              name="message"
-                              value={formikContactSupport.values.message}
-                              onChange={formikContactSupport.handleChange}
-                              onBlur={formikContactSupport.handleBlur}
-                              error={formikContactSupport.touched.message && Boolean(formikContactSupport.errors.message)}
-                              helperText={formikContactSupport.touched.message && formikContactSupport.errors.message}
+                              {...register("message")}
+                              error={!!errors.message}
+                              helperText={errors.message && errors.message.message}
                             />
                           </Grid>
                           <Grid item xs={12}>
