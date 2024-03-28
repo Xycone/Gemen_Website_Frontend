@@ -4,7 +4,7 @@ import http from '../http';
 
 import {
   Typography, Box, Grid, Card, CardContent, Button, TextField, Select, MenuItem, FormControl, FormHelperText, InputLabel, Accordion, AccordionSummary,
-  AccordionDetails, Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions
+  AccordionDetails, Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions, CircularProgress
 } from '@mui/material';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { Email, LocationOn, Phone } from '@mui/icons-material';
@@ -104,9 +104,9 @@ function ContactUs() {
         handleContactSupportFormClose();
         setIsDisabled(false);
       })
-      .catch(() => {
-        setIsDisabled(false);
-      });
+        .catch(() => {
+          setIsDisabled(false);
+        });
 
     } catch (error) {
       setIsDisabled(false);
@@ -157,76 +157,86 @@ function ContactUs() {
                   maxWidth="md"
                   open={contactSupportOpen}
                 >
-                  <Box component="form" onSubmit={handleSubmit(onSubmit)} sx={{ margin: 5 }}>
-                    <DialogTitle variant="h5">Contact Support</DialogTitle>
-                    <DialogContent>
-                      <DialogContentText>
-                        Fill in the form to contact support.
-                      </DialogContentText>
+                  {!isDisabled ? (
+                    <Box component="form" onSubmit={handleSubmit(onSubmit)} sx={{ margin: 5 }}>
+                      <DialogTitle variant="h5">Contact Support</DialogTitle>
+                      <DialogContent>
+                        <DialogContentText>
+                          Fill in the form to contact support.
+                        </DialogContentText>
 
-                      <Box sx={{ mt: 5 }}>
-                        <Grid container spacing={2}>
+                        <Box sx={{ mt: 5 }}>
+                          <Grid container spacing={2}>
 
-                          <Grid item xs={12}>
-                            <Grid container spacing={2}>
+                            <Grid item xs={12}>
+                              <Grid container spacing={2}>
 
-                              <Grid item xs={12} md={6}>
-                                <TextField
-                                  fullWidth margin="dense" autoComplete="off"
-                                  label="First Name"
-                                  {...register("firstName")}
-                                  error={!!errors.firstName}
-                                  helperText={errors.firstName && errors.firstName.message}
-                                />
+                                <Grid item xs={12} md={6}>
+                                  <TextField
+                                    fullWidth margin="dense" autoComplete="off"
+                                    label="First Name"
+                                    {...register("firstName")}
+                                    error={!!errors.firstName}
+                                    helperText={errors.firstName && errors.firstName.message}
+                                  />
+                                </Grid>
+
+                                <Grid item xs={12} md={6}>
+                                  <TextField
+                                    fullWidth margin="dense" autoComplete="off"
+                                    label="Last Name"
+                                    {...register("lastName")}
+                                    error={!!errors.lastName}
+                                    helperText={errors.lastName && errors.lastName.message}
+                                  />
+                                </Grid>
+
                               </Grid>
-
-                              <Grid item xs={12} md={6}>
-                                <TextField
-                                  fullWidth margin="dense" autoComplete="off"
-                                  label="Last Name"
-                                  {...register("lastName")}
-                                  error={!!errors.lastName}
-                                  helperText={errors.lastName && errors.lastName.message}
-                                />
-                              </Grid>
-
                             </Grid>
-                          </Grid>
 
-                          <Grid item xs={12}>
-                            <TextField
-                              fullWidth margin="dense" autoComplete="off"
-                              label="Email"
-                              {...register("email")}
-                              error={!!errors.email}
-                              helperText={errors.email && errors.email.message}
-                            />
-                          </Grid>
+                            <Grid item xs={12}>
+                              <TextField
+                                fullWidth margin="dense" autoComplete="off"
+                                label="Email"
+                                {...register("email")}
+                                error={!!errors.email}
+                                helperText={errors.email && errors.email.message}
+                              />
+                            </Grid>
 
-                          <Grid item xs={12}>
-                            <TextField
-                              fullWidth margin="dense" autoComplete="off"
-                              rows={4}
-                              multiline
-                              label="Message"
-                              {...register("message")}
-                              error={!!errors.message}
-                              helperText={errors.message && errors.message.message}
-                            />
-                          </Grid>
-                          <Grid item xs={12}>
-                            This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer">Terms of Service</a> apply.
-                          </Grid>
+                            <Grid item xs={12}>
+                              <TextField
+                                fullWidth margin="dense" autoComplete="off"
+                                rows={4}
+                                multiline
+                                label="Message"
+                                {...register("message")}
+                                error={!!errors.message}
+                                helperText={errors.message && errors.message.message}
+                              />
+                            </Grid>
+                            <Grid item xs={12}>
+                              This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer">Terms of Service</a> apply.
+                            </Grid>
 
-                        </Grid>
-                      </Box>
+                          </Grid>
+                        </Box>
 
-                    </DialogContent>
-                    <DialogActions>
-                      <Button onClick={handleContactSupportFormClose}>Cancel</Button>
-                      <Button type="submit" disabled={isDisabled}>Submit</Button>
-                    </DialogActions>
-                  </Box>
+                      </DialogContent>
+                      <DialogActions>
+                        <Button onClick={handleContactSupportFormClose}>Cancel</Button>
+                        <Button type="submit" disabled={isDisabled}>Submit</Button>
+                      </DialogActions>
+                    </Box>
+                  ) : (
+                    <Box sx={{ margin: 5, textAlign: 'center' }}>
+                      <CircularProgress sx={{ mb: 5 }}/>
+                      <Typography variant="h5" sx={{ mb: 2 }}>Attempting to send email</Typography>
+                      <Typography sx={{ mb: 4 }}>
+                        Please Wait A Moment...
+                      </Typography>
+                    </Box>
+                  )}
                 </Dialog>
               </CardContent>
             </Card>
