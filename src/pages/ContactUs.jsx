@@ -59,6 +59,9 @@ function ContactUs() {
 
   // Form to send an email to support
 
+  // Logic to prevent multiple form submission by rapidly clicking
+  const [isDisabled, setIsDisabled] = useState(false);
+
   // yup validation schema
   const validationSchema = yup.object({
     firstName: yup.string().trim()
@@ -79,31 +82,37 @@ function ContactUs() {
       .max(320, 'Email must be at most 320 characters'),
   });
 
-    // React Hook Form
-    const { register, handleSubmit, formState: { errors }, reset } = useForm({
-      mode: "all",
-      resolver: yupResolver(validationSchema)
-    });
+  // React Hook Form
+  const { register, handleSubmit, formState: { errors }, reset } = useForm({
+    mode: "all",
+    resolver: yupResolver(validationSchema)
+  });
 
-    const onSubmit = async (data) => {
-      try {
-        const recaptchaToken = await executeRecaptcha('contact_support_form');
-        console.log("Google Recaptcha Token: ", recaptchaToken);
+  const onSubmit = async (data) => {
+    try {
+      setIsDisabled(true);
+      const recaptchaToken = await executeRecaptcha('contact_support_form');
 
-        data.firstName = data.firstName.trim();
-        data.lastName = data.lastName.trim();
-        data.email = data.email.trim();
-        data.message = data.message.trim();
-        data.token = recaptchaToken;
+      data.firstName = data.firstName.trim();
+      data.lastName = data.lastName.trim();
+      data.email = data.email.trim();
+      data.message = data.message.trim();
+      data.token = recaptchaToken;
 
-        http.post("/email", data).then(() => {
-          console.log("Email sent successfully")
-          handleContactSupportFormClose();
-        });
-      } catch (error) {
-        console.error("Error calling function ", error)
-      }
-    };
+      http.post("/email", data).then(() => {
+        console.log("Email sent successfully");
+        handleContactSupportFormClose();
+        setIsDisabled(false);
+      })
+      .catch(() => {
+        setIsDisabled(false);
+      });
+
+    } catch (error) {
+      setIsDisabled(false);
+      console.error("Error calling function ", error);
+    }
+  };
 
   return (
     <Box sx={{ my: 2, padding: 4 }}>
@@ -215,7 +224,7 @@ function ContactUs() {
                     </DialogContent>
                     <DialogActions>
                       <Button onClick={handleContactSupportFormClose}>Cancel</Button>
-                      <Button type="submit">Submit</Button>
+                      <Button type="submit" disabled={isDisabled}>Submit</Button>
                     </DialogActions>
                   </Box>
                 </Dialog>
