@@ -22,7 +22,7 @@ function Garantia() {
   }, [pathname]);
 
   return (
-    <Box sx={{ my: 2, padding: 4 }}>
+    <Box sx={{ my: 4, justifyContent: 'center', alignItems: 'center' }}>
       <Box sx={{ pb: 30, pt: 15, position: 'relative', textAlign: 'center' }}>
         <Box sx={{ textAlign: 'center', mb: 5 }}>
           <Typography variant="h5" sx={{ mb: 5 }}>
@@ -55,52 +55,58 @@ function Garantia() {
         </Button>
       </Box>
       <Grid container spacing={4}>
-        <Grid item xs={12} md={6} sx={{ mb: 5, display: 'flex', flexDirection: 'column' }}>
-          <Card sx={{ borderRadius: 4, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-            <CardContent sx={{ margin: 2 }}>
+        <Grid item xs={12} md={6} sx={{ mb: 5, display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+          <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 10, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+            <CardContent>
 
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={12} md={6} sx={{ mb: 5, padding: 5, display: 'flex', flexDirection: 'column' }}>
-          <Typography variant="h5" sx={{ mb: 3 }}>
-            Integrity
-          </Typography>
-          <Typography>
-            "Integrity" specialises in automated checks of recorded extensions within an organisation's communication system. It ensures the integrity of recorded communications by implemeneting algorithms defined by the customer. Addtionally, Integrity can automatically disable non-compliant phone extensions, guaranteeing the functionaility and compliance of the recording system before the organisation's operations commence.
-          </Typography>
+        <Grid item xs={12} md={6} sx={{ mb: 5, display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+          <Box sx={{ padding: 10, textAlign: 'center' }}>
+            <Typography variant="h5" sx={{ mb: 3 }}>
+              Integrity
+            </Typography>
+            <Typography>
+              "Integrity" specialises in automated checks of recorded extensions within an organisation's communication system. It ensures the integrity of recorded communications by implemeneting algorithms defined by the customer. Addtionally, Integrity can automatically disable non-compliant phone extensions, guaranteeing the functionaility and compliance of the recording system before the organisation's operations commence.
+            </Typography>
+          </Box>
         </Grid>
 
-        <Grid item xs={12} md={6} sx={{ mb: 5, padding: 5, display: 'flex', flexDirection: 'column', order: { xs: 4, md: 3 } }}>
-          <Typography variant="h5" sx={{ mb: 3 }}>
-            Progressive Monitoring
-          </Typography>
-          <Typography>
-            Progressive Monitoring conducts scheduled tasks designated by the customer to assess the recording system's functionaility. It detects irregularities in the system in near real-time and promptly alerts the customer of any alarms detected. Moreover, Progressive Monitoring compiles historical reports of these alarms. In the event of anomalies, it takes proactive measures such as disabling affected extensions to prevent further disruptions, thus maintaining the stability and dependability of the recording system.
-          </Typography>
+        <Grid item xs={12} md={6} sx={{ mb: 5, display: 'flex', flexDirection: 'column', flexGrow: 1, order: { xs: 4, md: 3 } }}>
+          <Box sx={{ padding: 10, textAlign: 'center' }}>
+            <Typography variant="h5" sx={{ mb: 3 }}>
+              Progressive Monitoring
+            </Typography>
+            <Typography>
+              Progressive Monitoring conducts scheduled tasks designated by the customer to assess the recording system's functionaility. It detects irregularities in the system in near real-time and promptly alerts the customer of any alarms detected. Moreover, Progressive Monitoring compiles historical reports of these alarms. In the event of anomalies, it takes proactive measures such as disabling affected extensions to prevent further disruptions, thus maintaining the stability and dependability of the recording system.
+            </Typography>
+          </Box>
         </Grid>
-        <Grid item xs={12} md={6} sx={{ mb: 5, display: 'flex', flexDirection: 'column', order: { xs: 3, md: 4 } }}>
-          <Card sx={{ borderRadius: 4, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-            <CardContent sx={{ margin: 2 }}>
-
-            </CardContent>
-          </Card>
-        </Grid>
-
-        <Grid item xs={12} md={6} sx={{ mb: 5, display: 'flex', flexDirection: 'column', order: { xs: 5, md: 6 } }}>
-          <Card sx={{ borderRadius: 4, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-            <CardContent sx={{ margin: 2 }}>
+        <Grid item xs={12} md={6} sx={{ mb: 5, display: 'flex', flexDirection: 'column', flexGrow: 1, order: { xs: 3, md: 4 } }}>
+          <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 10, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+            <CardContent>
 
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={12} md={6} sx={{ mb: 5, padding: 5, display: 'flex', flexDirection: 'column', order: { xs: 5, md: 6 } }}>
-          <Typography variant="h5" sx={{ mb: 3 }}>
-            Reconciliation
-          </Typography>
-          <Typography>
-            Reconciliation provides capabilities to generate daily reports that compare the number of calls made with the number of calls recorded in the recording system. This process helps ensure that the recorded data aligns with the actual usage of the communications system.
-          </Typography>
+
+        <Grid item xs={12} md={6} sx={{ mb: 5, display: 'flex', flexDirection: 'column', flexGrow: 1, order: { xs: 5, md: 6 } }}>
+          <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 10, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+            <CardContent>
+
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item xs={12} md={6} sx={{ mb: 5, display: 'flex', flexDirection: 'column', flexGrow: 1, order: { xs: 5, md: 6 } }}>
+          <Box sx={{ padding: 10, textAlign: 'center' }}>
+            <Typography variant="h5" sx={{ mb: 3 }}>
+              Reconciliation
+            </Typography>
+            <Typography>
+              Reconciliation provides capabilities to generate daily reports that compare the number of calls made with the number of calls recorded in the recording system. This process helps ensure that the recorded data aligns with the actual usage of the communications system.
+            </Typography>
+          </Box>
         </Grid>
       </Grid>
 

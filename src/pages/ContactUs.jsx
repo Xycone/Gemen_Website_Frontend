@@ -115,7 +115,7 @@ function ContactUs() {
   };
 
   return (
-    <Box sx={{ my: 2, padding: 4 }}>
+    <Box sx={{ my: 4, justifyContent: 'center', alignItems: 'center' }}>
       <Box sx={{ pt: 15 }}>
         <Box sx={{ mb: 10, fontWeight: 'bold', textAlign: 'center' }}>
           <Typography variant="h4">

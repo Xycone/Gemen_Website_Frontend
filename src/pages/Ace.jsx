@@ -22,7 +22,7 @@ function Ace() {
   }, [pathname]);
 
   return (
-    <Box sx={{ my: 2, padding: 4 }}>
+    <Box sx={{ my: 4, justifyContent: 'center', alignItems: 'center' }}>
       <Box sx={{ pb: 30, pt: 15, position: 'relative', textAlign: 'center' }}>
         <Box sx={{ textAlign: 'center', mb: 5 }}>
           <Typography variant="h5" sx={{ mb: 5 }}>
@@ -53,20 +53,22 @@ function Ace() {
         </Button>
       </Box>
       <Grid container spacing={4}>
-        <Grid item xs={12} md={6} sx={{ mb: 5, display: 'flex', flexDirection: 'column' }}>
-          <Card sx={{ borderRadius: 4, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+        <Grid item xs={12} md={6} sx={{ mb: 5, display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+          <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 10, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
             <CardContent sx={{ margin: 2 }}>
 
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={12} md={6} sx={{ mb: 5, padding: 5, display: 'flex', flexDirection: 'column' }}>
-          <Typography variant="h5" sx={{ mb: 3 }}>
-            Ace
-          </Typography>
-          <Typography>
-            Ace provides voice recording media extraction, digitalisation and conversion into modern long term storage. Ace is able to read and extract media records from voice logger tapes and archive them in newer, long-term storage solutions. This ensures the preservation and accessibility of important voice data.
-          </Typography>
+        <Grid item xs={12} md={6} sx={{ mb: 5, display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+          <Box sx={{ padding: 10, textAlign: 'center' }}>
+            <Typography variant="h5" sx={{ mb: 3 }}>
+              Ace
+            </Typography>
+            <Typography>
+              Ace provides voice recording media extraction, digitalisation and conversion into modern long term storage. Ace is able to read and extract media records from voice logger tapes and archive them in newer, long-term storage solutions. This ensures the preservation and accessibility of important voice data.
+            </Typography>
+          </Box>
         </Grid>
       </Grid>
 

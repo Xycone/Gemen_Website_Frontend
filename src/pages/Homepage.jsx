@@ -28,7 +28,7 @@ function Homepage() {
   }, [location]);
 
   return (
-    <Box sx={{ my: 2, padding: 4 }}>
+    <Box sx={{ my: 4, justifyContent: 'center', alignItems: 'center' }}>
       <LandingSection id="landing-section" />
       <WhyUsSection id="whyus-section" />
       <SolutionsSection id="solutions-section" />

@@ -14,7 +14,7 @@ function SolutionsSection() {
     };
     return (
         <Box sx={{ pb: 15, pt: 15 }} id="solutions-section">
-            {/* Solutions Section */}
+            {/* Solutions Section */}s  
             <Box sx={{ mb: 10, textAlign: 'center' }}>
                 <Typography variant="h4">
                     Explore how our solutions
@@ -26,13 +26,13 @@ function SolutionsSection() {
             <Box>
                 <Grid container spacing={4}>
                     <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column' }}>
-                        <Card sx={{ borderRadius: 4, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                        <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                             <CardContent sx={{ margin: 2 }}>
                             </CardContent>
                         </Card> 
                     </Grid>
                     <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column' }}>
-                        <Card sx={{ borderRadius: 4, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                        <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                             <CardContent sx={{ margin: 2 }}>
                                 <Typography variant="h5" sx={{ mb: 3 }}>Enhance Your Business Communications</Typography>
                                 <Typography sx={{ mb: 2 }}>
@@ -58,7 +58,7 @@ function SolutionsSection() {
                     </Grid>
 
                     <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', order: { xs: 3, md: 2 } }}>
-                        <Card sx={{ borderRadius: 4, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                        <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                             <CardContent sx={{ margin: 2 }}>
                                 <Typography variant="h5" sx={{ mb: 3 }}>Archive Your Old Voices</Typography>
                                 <Typography sx={{ mb: 2 }}>
@@ -83,7 +83,7 @@ function SolutionsSection() {
                         </Card>
                     </Grid>
                     <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', order: { xs: 2, md: 3 } }}>
-                        <Card sx={{ borderRadius: 4, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                        <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                             <CardContent sx={{ margin: 2 }}>
                             </CardContent>
                         </Card>
