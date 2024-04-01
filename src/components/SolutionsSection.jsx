@@ -14,7 +14,7 @@ function SolutionsSection() {
     };
     return (
         <Box sx={{ pb: 15, pt: 15 }} id="solutions-section">
-            {/* Solutions Section */}s  
+            {/* Solutions Section */}
             <Box sx={{ mb: 10, textAlign: 'center' }}>
                 <Typography variant="h4">
                     Explore how our solutions
