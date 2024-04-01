@@ -280,9 +280,9 @@ function ContactUs() {
                     <Typography>
                       <a href="https://www.google.com/maps/place/Gemen+Pte+Ltd/@1.3102084,103.8389323,17z/data=!3m2!4b1!5s0x31da19fc08c4d9fb:0x4f3412b3621c50dc!4m6!3m5!1s0x31da19461c78640f:0xed591bfcac18c41f!8m2!3d1.310203!4d103.8415072!16s%2Fg%2F11fct8jl5g?entry=ttu"
                         target="_blank" rel="noopener noreferrer">
-                        10 Winstedt Rd, #03-30A, Singapore 227977
+                        10 Winstedt Rd #03-03A Singapore 227977
                       </a>
-                    </Typography>
+                    </Typography> 
                   </Box>
                   <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'left', mb: 1 }}>
                     <Email sx={{ fontSize: '1.2rem', mr: 1 }} />
@@ -301,7 +301,7 @@ function ContactUs() {
                     <Typography>
                       <a href=""
                         target="_blank" rel="noopener noreferrer">
-                        1508-6, 15th Floor, Office Building, Block B, Global Harbor, No. 1188 Kaixuan  North Road, Putuo District, Shanghai
+                        1508-6 15th Floor Office Building Block B Global Harbor No.1188 Kaixuan North Road Putuo District Shanghai
                       </a>
                     </Typography>
                   </Box>

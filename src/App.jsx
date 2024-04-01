@@ -103,7 +103,7 @@ function App() {
               </Toolbar>
 
               {isAppBarOpen && (
-                <Box sx={{ mt: 2, display: { xs: 'block', md: 'none' }, maxHeight: '60vh', overflowY: 'auto', pr: 2 }}>
+                <Box sx={{ mt: 2, display: { xs: 'block', md: 'none' }, maxHeight: '55vh', overflowY: 'auto', pr: 2 }}>
                   <Link to="/homepage#whyus-section" onClick={handleAppBarClose}>
                     <Typography>Why Us</Typography>
                   </Link>

@@ -1,11 +1,11 @@
-import { Box, Typography, Grid, Card, CardContent, Avatar } from '@mui/material'
-import React from 'react'
+import { Box, Typography, Grid, Card, CardContent, Avatar } from '@mui/material';
+import React from 'react';
 
 // Icons
-import ManpowerIcon from '../assets/ManpowerIcon.svg'
-import ConsultationIcon from '../assets/ConsultationIcon.svg'
-import SoftwareIcon from '../assets/SoftwareIcon.svg'
-import PlaceholderIcon from '../assets/PlaceholderIcon.svg'
+import ManpowerIcon from '../assets/ManpowerIcon.svg';
+import SoftwareIcon from '../assets/SoftwareIcon.svg';
+import APIIcon from '../assets/APIIcon.svg'
+import RestackingIcon from '../assets/RestackingIcon.svg';
 
 function ServicesSection() {
     return (
@@ -18,16 +18,29 @@ function ServicesSection() {
                     What we can <span style={{ color: '#EB1287' }}>do for you...</span>
                 </Typography>
             </Box>
-            
+
             <Box>
                 <Grid container spacing={4}>
                     <Grid item xs={12} md={6} lg={4}>
                         <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 1, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                             <CardContent>
                                 <Box sx={{ mb: 2 }}>
+                                    <img src={APIIcon} alt="API Icon" style={{ width: '45px', height: '45px' }} />
+                                </Box>
+                                <Typography variant="h6" sx={{ mb: 1 }}>API Integration</Typography>
+                                <Typography>
+                                    Lorem ipsum dolor sit amet. Vel mollitia autem et ipsam praesentium sed
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    </Grid>
+                    <Grid item xs={12} md={6} lg={4}>
+                        <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 1, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                            <CardContent>
+                                <Box sx={{ mb: 2 }}>
                                     <img src={ManpowerIcon} alt="Manpower Icon" style={{ width: '45px', height: '45px' }} />
                                 </Box>
-                                <Typography variant="h6" sx={{ mb: 1 }}>Lorem ipsum</Typography>
+                                <Typography variant="h6" sx={{ mb: 1 }}>Manpower Resource</Typography>
                                 <Typography>
                                     Lorem ipsum dolor sit amet. Vel mollitia autem et ipsam praesentium sed
                                 </Typography>
@@ -38,9 +51,9 @@ function ServicesSection() {
                         <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 1, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                             <CardContent>
                                 <Box sx={{ mb: 2 }}>
-                                    <img src={ConsultationIcon} alt="Manpower Icon" style={{ width: '45px', height: '45px' }} />
+                                    <img src={SoftwareIcon} alt="Software Icon" style={{ width: '45px', height: '45px' }} />
                                 </Box>
-                                <Typography variant="h6" sx={{ mb: 1 }}>Lorem ipsum</Typography>
+                                <Typography variant="h6" sx={{ mb: 1 }}>System Discovery</Typography>
                                 <Typography>
                                     Lorem ipsum dolor sit amet. Vel mollitia autem et ipsam praesentium sed
                                 </Typography>
@@ -51,22 +64,9 @@ function ServicesSection() {
                         <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 1, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                             <CardContent>
                                 <Box sx={{ mb: 2 }}>
-                                    <img src={SoftwareIcon} alt="Manpower Icon" style={{ width: '45px', height: '45px' }} />
+                                    <img src={RestackingIcon} alt="Restacking Icon" style={{ width: '45px', height: '45px' }} />
                                 </Box>
-                                <Typography variant="h6" sx={{ mb: 1 }}>Lorem ipsum</Typography>
-                                <Typography>
-                                    Lorem ipsum dolor sit amet. Vel mollitia autem et ipsam praesentium sed
-                                </Typography>
-                            </CardContent>
-                        </Card>
-                    </Grid>
-                    <Grid item xs={12} md={6} lg={4}>
-                        <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 1, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-                            <CardContent>
-                                <Box sx={{ mb: 2 }}>
-                                    <img src={PlaceholderIcon} alt="Manpower Icon" style={{ width: '45px', height: '45px' }} />
-                                </Box>
-                                <Typography variant="h6" sx={{ mb: 1 }}>Lorem ipsum</Typography>
+                                <Typography variant="h6" sx={{ mb: 1 }}>Restacking</Typography>
                                 <Typography>
                                     Lorem ipsum dolor sit amet. Vel mollitia autem et ipsam praesentium sed
                                 </Typography>
