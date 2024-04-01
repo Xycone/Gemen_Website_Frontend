@@ -9,15 +9,15 @@ const theme = createTheme({
             main: '#F2F5F8',
         },
     },
-    // components: {
-    //     MuiAppBar: {
-    //         styleOverrides: {
-    //             root: {
-    //                 boxShadow: 'none',
-    //             },
-    //         },
-    //     },
-    // },
+    components: {
+        MuiAppBar: {
+            styleOverrides: {
+                root: {
+                    boxShadow: 'none',
+                },
+            },
+        },
+    },
 });
 
 export default theme;
