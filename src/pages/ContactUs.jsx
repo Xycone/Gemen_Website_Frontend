@@ -117,7 +117,7 @@ function ContactUs() {
   return (
     <Box sx={{ my: 4, justifyContent: 'center', alignItems: 'center' }}>
       <Box sx={{ pt: 15 }}>
-        <Box sx={{ mb: 10, fontWeight: 'bold', textAlign: 'center' }}>
+        <Box sx={{ mb: 10, textAlign: 'center' }}>
           <Typography variant="h4">
             Let's Talk!
             <br />
@@ -126,7 +126,7 @@ function ContactUs() {
         </Box>
       </Box>
 
-      <Box sx={{ pb: 15, pt: 15 }}>
+      <Box sx={{ py: 15 }}>
         <Grid container spacing={4}>
 
           <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
@@ -320,7 +320,7 @@ function ContactUs() {
 
         </Grid>
 
-        <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', pb: 15, pt: 15, padding: 5 }} id="faq-section">
+        <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', py: 15, padding: 5 }} id="faq-section">
           <Typography variant="h5" sx={{ mb: 3 }}>Frequently Asked Questions:</Typography>
           <Accordion sx={{
             boxShadow: 'none',

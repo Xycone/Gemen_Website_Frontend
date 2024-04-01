@@ -23,9 +23,9 @@ function Garantia() {
 
   return (
     <Box sx={{ my: 4, justifyContent: 'center', alignItems: 'center' }}>
-      <Box sx={{ pb: 30, pt: 15, position: 'relative', textAlign: 'center' }}>
+      <Box sx={{ py: 15, position: 'relative', textAlign: 'center' }}>
         <Box sx={{ textAlign: 'center', mb: 5 }}>
-          <Typography variant="h5" sx={{ mb: 5 }}>
+          <Typography variant="h5" sx={{ mt: 10, mb: 5 }}>
             Garantia
           </Typography>
           <Box>
@@ -56,9 +56,9 @@ function Garantia() {
       </Box>
       <Grid container spacing={{ xs: 0, md: 4 }}>
         <Grid item xs={12} md={6} sx={{ mb: 5, display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-          <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-            <CardContent>
-
+          <Card sx={{ borderRadius: { xs: 0, md: 4 }, backgroundColor: '#D9D9D9', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'center' }}>
+            <CardContent sx={{ margin: 2 }}>
+              <Typography sx={{ textAlign: 'center' }}>[ Image Placeholder ]</Typography>
             </CardContent>
           </Card>
         </Grid>
@@ -84,17 +84,17 @@ function Garantia() {
           </Box>
         </Grid>
         <Grid item xs={12} md={6} sx={{ mb: 5, display: 'flex', flexDirection: 'column', flexGrow: 1, order: { xs: 3, md: 4 } }}>
-          <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-            <CardContent>
-
+          <Card sx={{ borderRadius: { xs: 0, md: 4 }, backgroundColor: '#D9D9D9', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'center' }}>
+            <CardContent sx={{ margin: 2 }}>
+              <Typography sx={{ textAlign: 'center' }}>[ Image Placeholder ]</Typography>
             </CardContent>
           </Card>
         </Grid>
 
         <Grid item xs={12} md={6} sx={{ mb: 5, display: 'flex', flexDirection: 'column', flexGrow: 1, order: { xs: 5, md: 6 } }}>
-          <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-            <CardContent>
-
+          <Card sx={{ borderRadius: { xs: 0, md: 4 }, backgroundColor: '#D9D9D9', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'center' }}>
+            <CardContent sx={{ margin: 2 }}>
+              <Typography sx={{ textAlign: 'center' }}>[ Image Placeholder ]</Typography>
             </CardContent>
           </Card>
         </Grid>

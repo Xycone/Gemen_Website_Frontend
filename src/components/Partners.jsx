@@ -6,9 +6,9 @@ import Logo from '../assets/Logo.svg'
 
 function Partners() {
     return (
-        <Box sx={{ pb: 15, pt: 15 }} id="partners-section">
+        <Box sx={{ py: 15 }} id="partners-section">
             {/* Partners Section */}
-            <Box sx={{ mb: 10, fontWeight: 'bold', textAlign: 'center' }}>
+            <Box sx={{ mb: 10, textAlign: 'center' }}>
                 <Typography variant="h4">
                     As Partners, We <span style={{ color: '#FF9900' }}>Grow Together</span>
                 </Typography>

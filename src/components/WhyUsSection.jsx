@@ -3,7 +3,7 @@ import React from 'react'
 
 function WhyUsSection() {
     return (
-        <Box sx={{ pb: 15, pt: 15 }} id="whyus-section">
+        <Box sx={{ py: 15 }} id="whyus-section">
             {/* Why Us Section */}
             <Box sx={{ mb: 10, textAlign: 'center' }}>
                 <Typography variant="h4">
