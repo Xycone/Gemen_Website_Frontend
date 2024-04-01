@@ -1,7 +1,4 @@
 import { createTheme } from '@mui/material/styles';
-import JustSansRegularWoff from '../Website_font/JUSTSans-Rg.woff';
-import JustSansRegularWoff2 from '../Website_font/JUSTSans-Rg.woff2';
-
 const theme = createTheme({
     palette: {
         primary: {
@@ -12,7 +9,7 @@ const theme = createTheme({
         },
     },
     typography: {
-        fontFamily: 'Just Sans',
+        // fontFamily: 'Just Sans',
     },
     components: {
         MuiAppBar: {
