@@ -131,7 +131,7 @@ function ContactUs() {
 
           <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
 
-            <Card sx={{ borderRadius: 4, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1, mb: 4 }}>
+            <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1, mb: 4 }}>
               <CardContent sx={{ margin: 2 }}>
                 <Typography variant="h5" sx={{ mb: 2 }}>Product Support</Typography>
                 <Typography sx={{ mb: 4 }}>
@@ -241,7 +241,7 @@ function ContactUs() {
               </CardContent>
             </Card>
 
-            <Card sx={{ borderRadius: 4, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+            <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
               <CardContent sx={{ margin: 2 }}>
                 <Typography variant="h5" sx={{ mb: 2 }}>Have a question?</Typography>
                 <Typography sx={{ mb: 4 }}>
@@ -267,7 +267,7 @@ function ContactUs() {
           </Grid>
 
           <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-            <Card sx={{ borderRadius: 4, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+            <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
               <CardContent sx={{ margin: 2 }}>
                 <Typography variant="h5" sx={{ mb: 2 }}>Contact Us</Typography>
                 <Typography sx={{ mb: 4 }}>
@@ -320,7 +320,7 @@ function ContactUs() {
 
         </Grid>
 
-        <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', pb: 15, pt: 15 }} id="faq-section">
+        <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', pb: 15, pt: 15, padding: 5 }} id="faq-section">
           <Typography variant="h5" sx={{ mb: 3 }}>Frequently Asked Questions:</Typography>
           <Accordion sx={{
             boxShadow: 'none',

@@ -54,16 +54,16 @@ function Garantia() {
           Contact us
         </Button>
       </Box>
-      <Grid container spacing={4}>
+      <Grid container spacing={{ xs: 0, md: 4 }}>
         <Grid item xs={12} md={6} sx={{ mb: 5, display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-          <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 10, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+          <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
             <CardContent>
 
             </CardContent>
           </Card>
         </Grid>
         <Grid item xs={12} md={6} sx={{ mb: 5, display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-          <Box sx={{ padding: 10, textAlign: 'center' }}>
+          <Box sx={{ padding: 5 }}>
             <Typography variant="h5" sx={{ mb: 3 }}>
               Integrity
             </Typography>
@@ -74,7 +74,7 @@ function Garantia() {
         </Grid>
 
         <Grid item xs={12} md={6} sx={{ mb: 5, display: 'flex', flexDirection: 'column', flexGrow: 1, order: { xs: 4, md: 3 } }}>
-          <Box sx={{ padding: 10, textAlign: 'center' }}>
+          <Box sx={{ padding: 5 }}>
             <Typography variant="h5" sx={{ mb: 3 }}>
               Progressive Monitoring
             </Typography>
@@ -84,7 +84,7 @@ function Garantia() {
           </Box>
         </Grid>
         <Grid item xs={12} md={6} sx={{ mb: 5, display: 'flex', flexDirection: 'column', flexGrow: 1, order: { xs: 3, md: 4 } }}>
-          <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 10, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+          <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
             <CardContent>
 
             </CardContent>
@@ -92,14 +92,14 @@ function Garantia() {
         </Grid>
 
         <Grid item xs={12} md={6} sx={{ mb: 5, display: 'flex', flexDirection: 'column', flexGrow: 1, order: { xs: 5, md: 6 } }}>
-          <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 10, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+          <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
             <CardContent>
 
             </CardContent>
           </Card>
         </Grid>
         <Grid item xs={12} md={6} sx={{ mb: 5, display: 'flex', flexDirection: 'column', flexGrow: 1, order: { xs: 5, md: 6 } }}>
-          <Box sx={{ padding: 10, textAlign: 'center' }}>
+          <Box sx={{ padding: 5 }}>
             <Typography variant="h5" sx={{ mb: 3 }}>
               Reconciliation
             </Typography>

@@ -24,7 +24,7 @@ function SolutionsSection() {
             </Box>
 
             <Box>
-                <Grid container spacing={4}>
+                <Grid container spacing={{ xs: 0, md: 4 }}>
                     <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column' }}>
                         <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                             <CardContent sx={{ margin: 2 }}>
