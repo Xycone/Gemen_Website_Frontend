@@ -31,7 +31,7 @@ function HideOnScroll(props) {
   const trigger = useScrollTrigger();
 
   return (
-    <AppBar position="fixed" sx={{ display: { xs: trigger ? 'none' : 'block' } }}>
+    <AppBar position="fixed" sx={{ display: { xs: trigger ? 'none' : 'block', md: 'block' } }}>
       {children}
     </AppBar>
   );
