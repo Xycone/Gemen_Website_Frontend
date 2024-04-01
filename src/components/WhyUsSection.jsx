@@ -18,7 +18,7 @@ function WhyUsSection() {
                         <Typography variant="h5">Our company owners have over <span style={{ color: '#00B6DD' }}>15 years of experience</span> in the IT Voice industry.</Typography>
                     </Grid>
                     <Grid item xs={12} md={6}>
-                        <Typography variant="h5"><span style={{ color: '#FF9900' }}>300+</span> total projects to meet every voice needs</Typography>
+                        <Typography variant="h5"><span style={{ color: '#FF9900' }}>100+</span> total projects to meet every voice needs</Typography>
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <Typography variant="h5">Experienced collaborating with <span style={{ color: '#EB1287' }}>governments and banks</span></Typography>
