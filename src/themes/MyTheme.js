@@ -8,9 +8,9 @@ const theme = createTheme({
             main: '#F2F5F8',
         },
     },
-    typography: {
-        // fontFamily: 'Just Sans',
-    },
+    // typography: {
+    //     // fontFamily: 'Just Sans',
+    // },
     components: {
         MuiAppBar: {
             styleOverrides: {
