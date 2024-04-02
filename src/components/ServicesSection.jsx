@@ -11,7 +11,7 @@ import RestackingIcon from '../assets/RestackingIcon.svg';
 function ServicesSection() {
     return (
         <Box sx={{ py: 15 }} id="services-section">
-            <Container sx={{ padding: { xs: 0, md: 5 } }}>
+            <Container sx={{ padding: { xs: 0, sm: 5 } }}>
                 <Box sx={{ mb: 10, textAlign: 'center' }}>
                     <Typography variant="h4">
                         Discover our services:
@@ -21,13 +21,13 @@ function ServicesSection() {
                 </Box>
 
                 <Grid container spacing={4}>
-                    <Grid item xs={12} md={6} lg={4}>
-                        <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 1, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                    <Grid item xs={12} sm={6} md={4}>
+                        <Card sx={{ borderRadius: { xs: 0, sm: 4 }, padding: 1, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                             <CardContent>
                                 <Box sx={{ mb: 2 }}>
                                     <img src={APIIcon} alt="API Icon" style={{ width: '45px', height: '45px' }} />
                                 </Box>
-                                <Typography variant="h6" sx={{ mb: 1 }}>API Integration</Typography>
+                                <Typography variant="h5" sx={{ mb: 1 }}>API Integration</Typography>
                                 <Typography>
                                     Lorem ipsum dolor sit amet. Vel mollitia autem et ipsam praesentium sed
                                 </Typography>
@@ -35,13 +35,13 @@ function ServicesSection() {
                         </Card>
                     </Grid>
 
-                    <Grid item xs={12} md={6} lg={4}>
-                        <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 1, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                    <Grid item xs={12} sm={6} md={4}>
+                        <Card sx={{ borderRadius: { xs: 0, sm: 4 }, padding: 1, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                             <CardContent>
                                 <Box sx={{ mb: 2 }}>
                                     <img src={ManpowerIcon} alt="Manpower Icon" style={{ width: '45px', height: '45px' }} />
                                 </Box>
-                                <Typography variant="h6" sx={{ mb: 1 }}>Manpower Resource</Typography>
+                                <Typography variant="h5" sx={{ mb: 1 }}>Manpower Resource</Typography>
                                 <Typography>
                                     Lorem ipsum dolor sit amet. Vel mollitia autem et ipsam praesentium sed
                                 </Typography>
@@ -49,13 +49,13 @@ function ServicesSection() {
                         </Card>
                     </Grid>
 
-                    <Grid item xs={12} md={6} lg={4}>
-                        <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 1, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                    <Grid item xs={12} sm={6} md={4}>
+                        <Card sx={{ borderRadius: { xs: 0, sm: 4 }, padding: 1, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                             <CardContent>
                                 <Box sx={{ mb: 2 }}>
                                     <img src={SoftwareIcon} alt="Software Icon" style={{ width: '45px', height: '45px' }} />
                                 </Box>
-                                <Typography variant="h6" sx={{ mb: 1 }}>System Discovery</Typography>
+                                <Typography variant="h5" sx={{ mb: 1 }}>System Discovery</Typography>
                                 <Typography>
                                     Lorem ipsum dolor sit amet. Vel mollitia autem et ipsam praesentium sed
                                 </Typography>
@@ -63,13 +63,13 @@ function ServicesSection() {
                         </Card>
                     </Grid>
 
-                    <Grid item xs={12} md={6} lg={4}>
-                        <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 1, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                    <Grid item xs={12} sm={6} md={4}>
+                        <Card sx={{ borderRadius: { xs: 0, sm: 4 }, padding: 1, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                             <CardContent>
                                 <Box sx={{ mb: 2 }}>
                                     <img src={RestackingIcon} alt="Restacking Icon" style={{ width: '45px', height: '45px' }} />
                                 </Box>
-                                <Typography variant="h6" sx={{ mb: 1 }}>Restacking</Typography>
+                                <Typography variant="h5" sx={{ mb: 1 }}>Restacking</Typography>
                                 <Typography>
                                     Lorem ipsum dolor sit amet. Vel mollitia autem et ipsam praesentium sed
                                 </Typography>

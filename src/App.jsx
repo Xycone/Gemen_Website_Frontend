@@ -16,13 +16,13 @@ import ContactUs from './pages/ContactUs';
 // Components
 import Footer from './components/Footer';
 import CopyrightSection from './components/CopyrightSection';
+import SolutionsDropdown from './components/SolutionsDropdown';
 
 // Logo
-import Logo from './assets/Logo.svg'
+import Logo from './assets/Logo.svg';
 
 // Material UI Icons
 import { Menu as MenuIcon } from '@mui/icons-material';
-import SolutionsDropdown from './components/SolutionsDropdown';
 
 // Hide navbar when scrolling down on screen sizes below md 
 // Navbar reappears when scrolling up
@@ -38,7 +38,7 @@ function HideOnScroll(props) {
 }
 
 function App() {
-
+  // Appbar Dropdown
   const [isAppBarOpen, setIsAppBarOpen] = useState(false);
   const handleAppBarToggle = () => {
     setIsAppBarOpen(!isAppBarOpen);
@@ -50,7 +50,6 @@ function App() {
   return (
     <Router>
       <ThemeProvider theme={MyTheme}>
-
         {/* NavBar */}
         <HideOnScroll>
           <AppBar position="fixed" className='AppBar' sx={{ backgroundColor: 'white', color: 'black', padding: 1 }}>
@@ -103,7 +102,7 @@ function App() {
                 </Box>
               </Toolbar>
 
-              {/* Dropdown Menu */}
+              {/* Appbar Dropdown */}
               {isAppBarOpen && (
                 <Box sx={{ mt: 2, display: { xs: 'block', md: 'none' }, maxHeight: '40vh', overflowY: 'auto', pr: 2 }}>
                   <Link to="/homepage#whyus-section" onClick={handleAppBarClose}>
@@ -128,7 +127,6 @@ function App() {
         </HideOnScroll>
 
         {/* Routes */}
-        {/* <Container sx={{ padding: 10, minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', minWidth: 'fit-content' }}> */}
         <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', minWidth: { xs: 'fit-content', md: 0 } }}>
           <Routes>
             <Route path={"/homepage"} element={<Homepage />} />
