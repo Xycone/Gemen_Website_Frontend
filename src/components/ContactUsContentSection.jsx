@@ -23,7 +23,7 @@ function ContactUsContentSection() {
     const [isDisabled, setIsDisabled] = useState(false);
 
     return (
-        <Box>
+        <Box sx={{ pb: 15 }}>
             <Container sx={{ padding: { xs: 0, md: 5 } }}>
                 <Grid container spacing={4}>
                     <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>

@@ -11,7 +11,7 @@ function LandingSection() {
 
   return (
     <Box sx={{ pb: 15, pt: 10 }}>
-      <Container sx={{ position: 'relative', textAlign: 'center', padding: { xs: 0, md: 5 } }} id="landing-section">
+      <Container sx={{ position: 'relative', textAlign: 'center', padding: { xs: 0, md: 5 } }}>
         <Box sx={{ mb: 5 }}>
           <Typography variant="h4" sx={{ mt: 10, mb: 2 }}>
             Streamlining Your Operations  

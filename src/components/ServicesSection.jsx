@@ -10,8 +10,8 @@ import RestackingIcon from '../assets/RestackingIcon.svg';
 
 function ServicesSection() {
     return (
-        <Box sx={{ py: 15 }}>
-            <Container sx={{ padding: { xs: 0, md: 5 } }} id="services-section">
+        <Box sx={{ py: 15 }} id="services-section">
+            <Container sx={{ padding: { xs: 0, md: 5 } }}>
                 <Box sx={{ mb: 10, textAlign: 'center' }}>
                     <Typography variant="h4">
                         Discover our services:

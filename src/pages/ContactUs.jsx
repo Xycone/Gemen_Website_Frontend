@@ -33,7 +33,7 @@ function ContactUs() {
     <Box sx={{ my: 4, py: 15, justifyContent: 'center', alignItems: 'center' }}>
       <ContactUsLandingSection />
       <ContactUsContentSection />
-      <ContactUsFAQSection />
+      <ContactUsFAQSection id="faq-section"/>
     </Box >
   )
 }

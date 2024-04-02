@@ -3,8 +3,8 @@ import { Typography, Box, Grid, Card, Container } from '@mui/material';
 
 function WhyUsSection() {
     return (
-        <Box sx={{ py: 15 }}>
-            <Container sx={{ padding: { xs: 0, md: 5 } }} id="whyus-section">
+        <Box sx={{ py: 15 }} id="whyus-section">
+            <Container sx={{ padding: { xs: 0, md: 5 } }}>
                 <Box sx={{ mb: 10, textAlign: 'center' }}>
                     <Typography variant="h4">
                         Why Gemen?
