@@ -1,6 +1,6 @@
-import React from 'react'
-import { Container, Typography, Grid, Box } from '@mui/material';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { Container, Typography, Grid, Box } from '@mui/material';
 import { Email, LocationOn, Phone } from '@mui/icons-material';
 
 function Footer() {

@@ -1,6 +1,6 @@
-import React from 'react'
-import { Box, Typography, Grid, Card, CardContent, Button } from '@mui/material'
-import { useNavigate } from 'react-router-dom'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Box, Typography, Grid, Card, CardContent, Button, Container } from '@mui/material';
 
 function SolutionsSection() {
     const navigate = useNavigate();
@@ -12,18 +12,19 @@ function SolutionsSection() {
     const navigateToAce = () => {
         navigate('/ace');
     };
-    return (
-        <Box sx={{ py: 15 }} id="solutions-section">
-            {/* Solutions Section */}
-            <Box sx={{ mb: 10, textAlign: 'center' }}>
-                <Typography variant="h4">
-                    Explore how our solutions
-                    <br />
-                    could <span style={{ color: '#00B6DD' }}>help you</span>
-                </Typography>
-            </Box>
 
-            <Box>
+
+    return (
+        <Box sx={{ py: 15 }}>
+            <Container sx={{ padding: { xs: 0, md: 5 } }} id="solutions-section">
+                <Box sx={{ mb: 10, textAlign: 'center' }}>
+                    <Typography variant="h4">
+                        Explore how our solutions
+                        <br />
+                        could <span style={{ color: '#00B6DD' }}>help you</span>
+                    </Typography>
+                </Box>
+
                 <Grid container spacing={{ xs: 0, md: 4 }}>
                     <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column' }}>
                         <Card sx={{ borderRadius: { xs: 0, md: 4 }, backgroundColor: '#D9D9D9', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'center' }}>
@@ -32,6 +33,7 @@ function SolutionsSection() {
                             </CardContent>
                         </Card>
                     </Grid>
+
                     <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column' }}>
                         <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'center' }}>
                             <CardContent sx={{ margin: 2 }}>
@@ -83,6 +85,7 @@ function SolutionsSection() {
                             </CardContent>
                         </Card>
                     </Grid>
+
                     <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', order: { xs: 2, md: 3 } }}>
                         <Card sx={{ borderRadius: { xs: 0, md: 4 }, backgroundColor: '#D9D9D9', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'center' }}>
                             <CardContent sx={{ margin: 2 }}>
@@ -91,7 +94,7 @@ function SolutionsSection() {
                         </Card>
                     </Grid>
                 </Grid>
-            </Box>
+            </Container>
         </Box>
     )
 }

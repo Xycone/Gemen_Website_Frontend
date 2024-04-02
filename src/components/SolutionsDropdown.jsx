@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Typography, Menu, MenuItem } from '@mui/material';
 

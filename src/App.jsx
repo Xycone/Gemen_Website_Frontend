@@ -140,14 +140,14 @@ function App() {
 
         {/* Routes */}
         {/* <Container sx={{ padding: 10, minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', minWidth: 'fit-content' }}> */}
-        <Container sx={{ padding: { xs: 0, md: 5 }, minHeight: '100vh', display: 'flex', flexDirection: 'column', minWidth: { xs: 'fit-content', md: 0 } }}>
+        <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', minWidth: { xs: 'fit-content', md: 0 } }}>
           <Routes>
             <Route path={"/homepage"} element={<Homepage />} /> 
             <Route path={"/ace"} element={<Ace />} />
             <Route path={"/garantia"} element={<Garantia />} />
             <Route path={"/contactUs"} element={<ContactUs />} />
           </Routes>
-        </Container>
+        </Box>
 
         {/* Footer Section */}
         <Footer />

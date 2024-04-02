@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 function useReCaptchaV3(sitekey) {
     const [isReCaptchaReady, setIsReCaptchaReady] = useState(false)
@@ -21,6 +21,7 @@ function useReCaptchaV3(sitekey) {
             return token;
         }
     })
+    
     return executeRecaptcha
 }
 

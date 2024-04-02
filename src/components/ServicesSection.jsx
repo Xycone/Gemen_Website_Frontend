@@ -1,5 +1,5 @@
-import { Box, Typography, Grid, Card, CardContent, Avatar } from '@mui/material';
 import React from 'react';
+import { Box, Typography, Grid, Card, CardContent, Container } from '@mui/material';
 
 // Icons
 import ManpowerIcon from '../assets/ManpowerIcon.svg';
@@ -7,19 +7,19 @@ import SoftwareIcon from '../assets/SoftwareIcon.svg';
 import APIIcon from '../assets/APIIcon.svg'
 import RestackingIcon from '../assets/RestackingIcon.svg';
 
+
 function ServicesSection() {
     return (
-        <Box sx={{ py: 15 }} id="services-section">
-            {/* Services Section */}
-            <Box sx={{ mb: 10, textAlign: 'center' }}>
-                <Typography variant="h4">
-                    Discover our services:
-                    <br />
-                    What we can <span style={{ color: '#EB1287' }}>do for you...</span>
-                </Typography>
-            </Box>
+        <Box sx={{ py: 15 }}>
+            <Container sx={{ padding: { xs: 0, md: 5 } }} id="services-section">
+                <Box sx={{ mb: 10, textAlign: 'center' }}>
+                    <Typography variant="h4">
+                        Discover our services:
+                        <br />
+                        What we can <span style={{ color: '#EB1287' }}>do for you...</span>
+                    </Typography>
+                </Box>
 
-            <Box>
                 <Grid container spacing={4}>
                     <Grid item xs={12} md={6} lg={4}>
                         <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 1, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
@@ -34,6 +34,7 @@ function ServicesSection() {
                             </CardContent>
                         </Card>
                     </Grid>
+
                     <Grid item xs={12} md={6} lg={4}>
                         <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 1, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                             <CardContent>
@@ -47,6 +48,7 @@ function ServicesSection() {
                             </CardContent>
                         </Card>
                     </Grid>
+
                     <Grid item xs={12} md={6} lg={4}>
                         <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 1, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                             <CardContent>
@@ -60,6 +62,7 @@ function ServicesSection() {
                             </CardContent>
                         </Card>
                     </Grid>
+
                     <Grid item xs={12} md={6} lg={4}>
                         <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 1, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                             <CardContent>
@@ -74,7 +77,7 @@ function ServicesSection() {
                         </Card>
                     </Grid>
                 </Grid>
-            </Box>
+            </Container>
         </Box>
     )
 }

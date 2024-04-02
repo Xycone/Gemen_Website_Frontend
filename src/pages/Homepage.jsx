@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Box } from '@mui/material'
+import { Box } from '@mui/material';
+
+// Components
 import LandingSection from '../components/LandingSection';
 import WhyUsSection from '../components/WhyUsSection';
 import ServicesSection from '../components/ServicesSection';
@@ -8,6 +10,7 @@ import SolutionsSection from '../components/SolutionsSection';
 import Partners from '../components/Partners';
 
 function Homepage() {
+  // Scroll to section, scroll to top if there is no section tag
   const location = useLocation();
 
   useEffect(() => {
