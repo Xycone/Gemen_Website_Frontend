@@ -1,6 +1,6 @@
 import './App.css';
 import { useState } from 'react';
-import { AppBar, Toolbar, Container, Typography, Button, Box, IconButton, Grid, useScrollTrigger } from '@mui/material';
+import { AppBar, Toolbar, Container, Typography, Button, Box, IconButton, useScrollTrigger } from '@mui/material';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 // Material UI Theme
@@ -16,7 +16,6 @@ import ContactUs from './pages/ContactUs';
 // Components
 import Footer from './components/Footer';
 import CopyrightSection from './components/CopyrightSection';
-import Partners from './components/Partners';
 
 // Logo
 import Logo from './assets/Logo.svg'
@@ -25,7 +24,8 @@ import Logo from './assets/Logo.svg'
 import { Menu as MenuIcon } from '@mui/icons-material';
 import SolutionsDropdown from './components/SolutionsDropdown';
 
-
+// Hide navbar when scrolling down on screen sizes below md 
+// Navbar reappears when scrolling up
 function HideOnScroll(props) {
   const { children } = props;
   const trigger = useScrollTrigger();
@@ -55,9 +55,10 @@ function App() {
         <HideOnScroll>
           <AppBar position="fixed" className='AppBar' sx={{ backgroundColor: 'white', color: 'black', padding: 1 }}>
             <Container>
+              {/* Navbar Menu */}
               <Toolbar disableGutters={true}>
                 <Link to="/homepage" style={{ display: 'flex', alignItems: 'center' }}>
-                  <img src={Logo} alt="Gemen Logo" style={{ height: '60px' }} />
+                  <img src={Logo} alt="Gemen Logo" style={{ height: '80px' }} />
                 </Link>
 
                 <Box sx={{ flexGrow: 1 }} />
@@ -102,30 +103,18 @@ function App() {
                 </Box>
               </Toolbar>
 
+              {/* Dropdown Menu */}
               {isAppBarOpen && (
-                <Box sx={{ mt: 2, display: { xs: 'block', md: 'none' }, maxHeight: '55vh', overflowY: 'auto', pr: 2 }}>
+                <Box sx={{ mt: 2, display: { xs: 'block', md: 'none' }, maxHeight: '40vh', overflowY: 'auto', pr: 2 }}>
                   <Link to="/homepage#whyus-section" onClick={handleAppBarClose}>
                     <Typography>Why Us</Typography>
                   </Link>
-                  <Typography sx={{ mb: 2 }}>Solutions:</Typography>
-                  <Box sx={{ textAlign: 'center' }}>
-                    <Grid container spacing={2}>
-                      <Grid item xs={12}>
-                        <Link to="/garantia" onClick={handleAppBarClose}>
-                          <Box sx={{ borderRadius: 4, padding: 2, border: '1px solid #BDBDBD' }}>
-                            <Typography>Garantia</Typography>
-                          </Box>
-                        </Link>
-                      </Grid>
-                      <Grid item xs={12}>
-                        <Link to="/ace" onClick={handleAppBarClose}>
-                          <Box sx={{ borderRadius: 4, padding: 2, border: '1px solid #BDBDBD' }}>
-                            <Typography>ACE</Typography>
-                          </Box>
-                        </Link>
-                      </Grid>
-                    </Grid>
-                  </Box>
+                  <Link to="/garantia" onClick={handleAppBarClose}>
+                    <Typography>Garantia</Typography>
+                  </Link>
+                  <Link to="/ace" onClick={handleAppBarClose}>
+                    <Typography>ACE</Typography>
+                  </Link>
                   <Link to="/homepage#services-section" onClick={handleAppBarClose}>
                     <Typography>Services</Typography>
                   </Link>
@@ -142,7 +131,7 @@ function App() {
         {/* <Container sx={{ padding: 10, minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', minWidth: 'fit-content' }}> */}
         <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', minWidth: { xs: 'fit-content', md: 0 } }}>
           <Routes>
-            <Route path={"/homepage"} element={<Homepage />} /> 
+            <Route path={"/homepage"} element={<Homepage />} />
             <Route path={"/ace"} element={<Ace />} />
             <Route path={"/garantia"} element={<Garantia />} />
             <Route path={"/contactUs"} element={<ContactUs />} />
