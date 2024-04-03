@@ -29,6 +29,7 @@ function Footer() {
                     {/* About Us */}
                     <Box sx={gridItemStyle}>
                         <Box>
+                            <Typography variant="h5" sx={{ mb: 3 }}>Gemen Technology</Typography>
                             <Typography variant="h6" sx={{ mb: 3 }}>About Us</Typography>
 
                             <Box>
