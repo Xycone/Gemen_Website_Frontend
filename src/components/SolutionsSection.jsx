@@ -25,16 +25,36 @@ function SolutionsSection() {
                     </Typography>
                 </Box>
 
-                <Grid container spacing={{ xs: 0, md: 4 }}>
-                    <Grid item xs={12} md={6} sx={{ display: 'flex' }}>
+                <Box sx={{
+                    display: 'grid',
+                    gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' },
+                    gridAutoRows: "1fr",
+                    gridAutoFlow: "row",
+                    gap: { xs: 0, md: 4 }
+                }}>
+                    <Box
+                        sx={{
+                            borderRadius: { xs: 0, md: 4 },
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center',
+                        }}
+                    >
                         <Card sx={{ borderRadius: { xs: 0, md: 4 }, backgroundColor: '#D9D9D9', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'center' }}>
                             <CardContent sx={{ margin: 2 }}>
                                 <Typography sx={{ textAlign: 'center' }}>[ Image Placeholder ]</Typography>
                             </CardContent>
                         </Card>
-                    </Grid>
+                    </Box>
 
-                    <Grid item xs={12} md={6} sx={{ display: 'flex' }}>
+                    <Box
+                        sx={{
+                            borderRadius: { xs: 0, md: 4 },
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center',
+                        }}
+                    >
                         <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'center' }}>
                             <CardContent sx={{ margin: 2 }}>
                                 <Typography variant="h5" sx={{ mb: 3 }}>Enhance Your Business Communications</Typography>
@@ -58,9 +78,17 @@ function SolutionsSection() {
                                 </Button>
                             </CardContent>
                         </Card>
-                    </Grid>
+                    </Box>
 
-                    <Grid item xs={12} md={6} sx={{ display: 'flex' }}>
+                    <Box
+                        sx={{
+                            borderRadius: { xs: 0, md: 4 },
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center',
+                            order: { xs: 4, md: 3 },
+                        }}
+                    >
                         <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'center' }}>
                             <CardContent sx={{ margin: 2 }}>
                                 <Typography variant="h5" sx={{ mb: 3 }}>Archive Your Old Voices</Typography>
@@ -84,16 +112,24 @@ function SolutionsSection() {
                                 </Button>
                             </CardContent>
                         </Card>
-                    </Grid>
+                    </Box>
 
-                    <Grid item xs={12} md={6} sx={{ display: 'flex' }}>
+                    <Box
+                        sx={{
+                            borderRadius: { xs: 0, md: 4 },
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center',
+                            order: { xs: 3, md: 4 },
+                        }}
+                    >
                         <Card sx={{ borderRadius: { xs: 0, md: 4 }, backgroundColor: '#D9D9D9', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'center' }}>
                             <CardContent sx={{ margin: 2 }}>
                                 <Typography sx={{ textAlign: 'center' }}>[ Image Placeholder ]</Typography>
                             </CardContent>
                         </Card>
-                    </Grid>
-                </Grid>
+                    </Box>
+                </Box>
             </Container>
         </Box>
     )
