@@ -45,6 +45,11 @@ function Footer() {
                             <Typography variant="h6" sx={{ mb: 3 }}>Explore</Typography>
 
                             <Box>
+                                <Link to="/homepage#whyus-section">
+                                    <Typography sx={{ mb: 0.5 }}>
+                                        Why Us
+                                    </Typography>
+                                </Link>
                                 <Link to="/homepage#solutions-section">
                                     <Typography sx={{ mb: 0.5 }}>
                                         Solutions
@@ -57,7 +62,7 @@ function Footer() {
                                 </Link>
                                 <Link to="/homepage#partners-section">
                                     <Typography sx={{ mb: 0.5 }}>
-                                        Our Partners
+                                        Partners
                                     </Typography>
                                 </Link>
                             </Box>
@@ -70,11 +75,6 @@ function Footer() {
                             <Typography variant="h6" sx={{ mb: 3 }}>Company</Typography>
 
                             <Box>
-                                <Link to="/homepage#whyus-section">
-                                    <Typography sx={{ mb: 0.5 }}>
-                                        Why Us
-                                    </Typography>
-                                </Link>
                                 <Link to="/contactUs">
                                     <Typography sx={{ mb: 0.5 }}>
                                         Contact Us
