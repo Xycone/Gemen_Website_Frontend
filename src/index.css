@@ -10,6 +10,7 @@
   -webkit-text-size-adjust: 100%;
 }
 
+/* Define downloaded fonts here */
 @font-face {
   font-family: 'Just Sans';
   src: url('../Website_font/JUSTSans-Rg.woff2') format('woff2'),
