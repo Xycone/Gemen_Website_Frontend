@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Grid, Card, CardContent, Container } from '@mui/material';
+import { Box, Typography, Card, CardContent, Container } from '@mui/material';
 
 // Icons
 import ManpowerIcon from '../assets/ManpowerIcon.svg';
@@ -9,6 +9,37 @@ import RestackingIcon from '../assets/RestackingIcon.svg';
 
 
 function ServicesSection() {
+    // Styling
+    const gridContainerStyle = {
+        display: 'grid',
+        gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' },
+        gridAutoRows: "1fr",
+        gridAutoFlow: "row",
+        gap: 4
+    };
+
+    const gridItemStyle = {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center'
+    };
+
+    const cardStyle = {
+        padding: 1,
+        borderRadius: { xs: 0, sm: 4 },
+        backgroundColor: '#F2F5F8',
+        boxShadow: 'none',
+        display: 'flex',
+        flexDirection: 'column',
+        flexGrow: 1,
+        justifyContent: 'center'
+    };
+
+    const imageStyle = {
+        width: '45px',
+        height: '45px'
+    };
+
     return (
         <Box sx={{ py: 15 }} id="services-section">
             <Container sx={{ padding: { xs: 0, sm: 5 } }}>
@@ -20,12 +51,12 @@ function ServicesSection() {
                     </Typography>
                 </Box>
 
-                <Grid container spacing={4}>
-                    <Grid item xs={12} sm={6} md={4}>
-                        <Card sx={{ borderRadius: { xs: 0, sm: 4 }, padding: 1, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                <Box sx={gridContainerStyle}>
+                    <Box sx={gridItemStyle}>
+                        <Card sx={cardStyle}>
                             <CardContent>
                                 <Box sx={{ mb: 2 }}>
-                                    <img src={APIIcon} alt="API Icon" style={{ width: '45px', height: '45px' }} />
+                                    <img src={APIIcon} alt="API Icon" style={imageStyle} />
                                 </Box>
                                 <Typography variant="h5" sx={{ mb: 1 }}>API Integration</Typography>
                                 <Typography>
@@ -33,13 +64,13 @@ function ServicesSection() {
                                 </Typography>
                             </CardContent>
                         </Card>
-                    </Grid>
+                    </Box>
 
-                    <Grid item xs={12} sm={6} md={4}>
-                        <Card sx={{ borderRadius: { xs: 0, sm: 4 }, padding: 1, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                    <Box sx={gridItemStyle}>
+                        <Card sx={cardStyle}>
                             <CardContent>
                                 <Box sx={{ mb: 2 }}>
-                                    <img src={ManpowerIcon} alt="Manpower Icon" style={{ width: '45px', height: '45px' }} />
+                                    <img src={ManpowerIcon} alt="Manpower Icon" style={imageStyle} />
                                 </Box>
                                 <Typography variant="h5" sx={{ mb: 1 }}>Manpower Resource</Typography>
                                 <Typography>
@@ -47,13 +78,13 @@ function ServicesSection() {
                                 </Typography>
                             </CardContent>
                         </Card>
-                    </Grid>
+                    </Box>
 
-                    <Grid item xs={12} sm={6} md={4}>
-                        <Card sx={{ borderRadius: { xs: 0, sm: 4 }, padding: 1, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                    <Box sx={gridItemStyle}>
+                        <Card sx={cardStyle}>
                             <CardContent>
                                 <Box sx={{ mb: 2 }}>
-                                    <img src={SoftwareIcon} alt="Software Icon" style={{ width: '45px', height: '45px' }} />
+                                    <img src={SoftwareIcon} alt="Software Icon" style={imageStyle} />
                                 </Box>
                                 <Typography variant="h5" sx={{ mb: 1 }}>System Discovery</Typography>
                                 <Typography>
@@ -61,13 +92,13 @@ function ServicesSection() {
                                 </Typography>
                             </CardContent>
                         </Card>
-                    </Grid>
+                    </Box>
 
-                    <Grid item xs={12} sm={6} md={4}>
-                        <Card sx={{ borderRadius: { xs: 0, sm: 4 }, padding: 1, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                    <Box sx={gridItemStyle}>
+                        <Card sx={cardStyle}>
                             <CardContent>
                                 <Box sx={{ mb: 2 }}>
-                                    <img src={RestackingIcon} alt="Restacking Icon" style={{ width: '45px', height: '45px' }} />
+                                    <img src={RestackingIcon} alt="Restacking Icon" style={imageStyle} />
                                 </Box>
                                 <Typography variant="h5" sx={{ mb: 1 }}>Restacking</Typography>
                                 <Typography>
@@ -75,8 +106,8 @@ function ServicesSection() {
                                 </Typography>
                             </CardContent>
                         </Card>
-                    </Grid>
-                </Grid>
+                    </Box>
+                </Box>
             </Container>
         </Box>
     )
