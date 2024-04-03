@@ -38,7 +38,7 @@ function SolutionsSection() {
         flexDirection: 'column',
         flexGrow: 1,
         justifyContent: 'center',
-        textAlign: { xs: 'center', lg: 'left' }
+        // textAlign: { xs: 'center', lg: 'left' }
     };
 
     const buttonStyle = {

@@ -1,38 +1,50 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Typography, Grid, Box } from '@mui/material';
-import { Email, LocationOn, Phone } from '@mui/icons-material';
+import { Container, Typography, Box } from '@mui/material';
+
+// Logo
+import Logo from '../assets/Logo.svg'
 
 function Footer() {
+    // Styling 
+    const gridContainerStyle = {
+        padding: 5,
+        display: 'grid',
+        gridTemplateColumns: { xs: '1fr', md: 'repeat(3, 1fr)' },
+        gridAutoRows: "1fr",
+        gridAutoFlow: "row",
+    };
+
+    const gridItemStyle = {
+        padding: 3,
+        display: 'flex',
+        justifyContent: { md: 'center' }
+    };
+
     return (
-        <Box sx={{ width: '100%', backgroundColor: '#F2F5F8', marginTop: 'auto' }}>
-            <Container maxWidth="lg" sx={{ padding: 5 }} >
-                <Grid container spacing={2} sx={{ textAlign: 'center' }}>
-                    <Grid item xs={12}>
-                        <Grid container spacing={2} sx={{ textAlign: 'center', justifyContent: 'center', mb: 1 }}>
-                            {/* Quick Navigation and Contact Info Section */}
-                            <Grid item xs={12} sm={6} sx={{ textAlign: 'center', justifyContent: 'center', my: 3 }}>
-                                <Typography variant="h6" sx={{ mb: 1 }}>Our Contact</Typography>
-                                <Container sx={{ display: 'flex', alignItems: 'center', textAlign: 'center', justifyContent: 'center', mb: 1 }}>
-                                    <LocationOn sx={{ fontSize: '1.2rem', mr: 0.5 }} />
-                                    <Typography>
-                                        <a href="https://www.google.com/maps/place/Gemen+Pte+Ltd/@1.3102084,103.8389323,17z/data=!3m2!4b1!5s0x31da19fc08c4d9fb:0x4f3412b3621c50dc!4m6!3m5!1s0x31da19461c78640f:0xed591bfcac18c41f!8m2!3d1.310203!4d103.8415072!16s%2Fg%2F11fct8jl5g?entry=ttu"
-                                            target="_blank" rel="noopener noreferrer">
-                                            10 Winstedt Rd, #03-03A, Singapore 227977
-                                        </a>
-                                    </Typography>
-                                </Container>
-                                <Container sx={{ display: 'flex', alignItems: 'center', textAlign: 'center', justifyContent: 'center', mb: 1 }}>
-                                    <Email sx={{ fontSize: '1.2rem', mr: 0.5 }} />
-                                    <Typography>sales@gemen.tech</Typography>
-                                </Container>
-                                <Container sx={{ display: 'flex', alignItems: 'center', textAlign: 'center', justifyContent: 'center', mb: 1 }}>
-                                    <Phone sx={{ fontSize: '1.2rem', mr: 0.5 }} />
-                                    <Typography>+65 9009 0081</Typography>
-                                </Container>
-                            </Grid>
-                            <Grid item xs={12} sm={3} sx={{ textAlign: 'center', justifyContent: 'center', my: 3 }}>
-                                <Typography variant="h6" sx={{ mb: 1 }}>Explore</Typography>
+        <Box sx={{ backgroundColor: '#F2F5F8' }}>
+            <Container>
+                {/* Main Footer Section */}
+                <Box sx={gridContainerStyle}>
+                    {/* About Us */}
+                    <Box sx={gridItemStyle}>
+                        <Box>
+                            <Typography variant="h6" sx={{ mb: 3 }}>About Us</Typography>
+
+                            <Box>
+                                <Typography>
+                                    Lorem ipsum dolor sit amet. Est suscipit Quis ad animi nostrum ex reprehenderit veniam hic blanditiis ipsa et earum provident in doloremque exercitationem est consequatur voluptas.
+                                </Typography>
+                            </Box>
+                        </Box>
+                    </Box>
+
+                    {/* Explore */}
+                    <Box sx={gridItemStyle}>
+                        <Box>
+                            <Typography variant="h6" sx={{ mb: 3 }}>Explore</Typography>
+
+                            <Box>
                                 <Link to="/homepage#solutions-section">
                                     <Typography sx={{ mb: 0.5 }}>
                                         Solutions
@@ -48,9 +60,16 @@ function Footer() {
                                         Our Partners
                                     </Typography>
                                 </Link>
-                            </Grid>
-                            <Grid item xs={12} sm={3} sx={{ textAlign: 'center', justifyContent: 'center', my: 3 }}>
-                                <Typography variant="h6" sx={{ mb: 1 }}>Company</Typography>
+                            </Box>
+                        </Box>
+                    </Box>
+
+                    {/* Company */}
+                    <Box sx={gridItemStyle}>
+                        <Box>
+                            <Typography variant="h6" sx={{ mb: 3 }}>Company</Typography>
+
+                            <Box>
                                 <Link to="/homepage#whyus-section">
                                     <Typography sx={{ mb: 0.5 }}>
                                         Why Us
@@ -61,10 +80,17 @@ function Footer() {
                                         Contact Us
                                     </Typography>
                                 </Link>
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                </Grid>
+                            </Box>
+                        </Box>
+                    </Box>
+                </Box>
+
+                <hr />
+
+                {/* Copyright Section */}
+                <Typography sx={{ textAlign: 'center', padding: 2 }}>
+                    © Gemen Pte Ltd | All Rights Reserved 2018
+                </Typography>
             </Container>
         </Box>
     )

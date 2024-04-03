@@ -19,6 +19,7 @@ function GarantiaContentSection() {
     };
 
     const cardStyle = {
+        padding: 2,
         borderRadius: { xs: 0, md: 4 },
         backgroundColor: '#D9D9D9',
         boxShadow: 'none',
@@ -34,7 +35,7 @@ function GarantiaContentSection() {
                 <Box sx={gridContainerStyle}>
                     <Box sx={gridItemStyle}>
                         <Card sx={cardStyle}>
-                            <CardContent sx={{ margin: 2 }}>
+                            <CardContent>
                                 <Typography sx={{ textAlign: 'center' }}>[ Image Placeholder ]</Typography>
                             </CardContent>
                         </Card>
@@ -77,7 +78,7 @@ function GarantiaContentSection() {
 
                     <Box sx={{ ...gridItemStyle, order: { xs: 3, md: 4 } }}>
                         <Card sx={cardStyle}>
-                            <CardContent sx={{ margin: 2 }}>
+                            <CardContent>
                                 <Typography sx={{ textAlign: 'center' }}>[ Image Placeholder ]</Typography>
                             </CardContent>
                         </Card>

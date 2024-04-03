@@ -32,7 +32,6 @@ function ServicesSection() {
         display: 'flex',
         flexDirection: 'column',
         flexGrow: 1,
-        justifyContent: 'center'
     };
 
     const imageStyle = {
@@ -58,9 +57,14 @@ function ServicesSection() {
                                 <Box sx={{ mb: 2 }}>
                                     <img src={APIIcon} alt="API Icon" style={imageStyle} />
                                 </Box>
-                                <Typography variant="h5" sx={{ mb: 1 }}>API Integration</Typography>
+                                <Typography variant="h5" sx={{ mb: 3 }}>API Integration</Typography>
                                 <Typography>
-                                    Lorem ipsum dolor sit amet. Vel mollitia autem et ipsam praesentium sed
+                                    Facilitates the establishment of a network comprising 
+                                    interconnected applications through their APIs.
+                                    <br />
+                                    <br />
+                                    This allows for the seamless flow of operations across your different applications,
+                                    enhancing their functionality and making them more efficient.
                                 </Typography>
                             </CardContent>
                         </Card>
@@ -72,9 +76,14 @@ function ServicesSection() {
                                 <Box sx={{ mb: 2 }}>
                                     <img src={ManpowerIcon} alt="Manpower Icon" style={imageStyle} />
                                 </Box>
-                                <Typography variant="h5" sx={{ mb: 1 }}>Manpower Resource</Typography>
+                                <Typography variant="h5" sx={{ mb: 3 }}>Manpower Resource</Typography>
                                 <Typography>
-                                    Lorem ipsum dolor sit amet. Vel mollitia autem et ipsam praesentium sed
+                                    Eliminates the hassle of strategic planning, recruitment, training, 
+                                    and development. 
+                                    <br/>
+                                    <br/>
+                                    We ensure that the right people are in the right jobs equipped with 
+                                    the necessary skills and knowledge to perform their tasks efficiently and effectively.
                                 </Typography>
                             </CardContent>
                         </Card>
@@ -86,9 +95,13 @@ function ServicesSection() {
                                 <Box sx={{ mb: 2 }}>
                                     <img src={SoftwareIcon} alt="Software Icon" style={imageStyle} />
                                 </Box>
-                                <Typography variant="h5" sx={{ mb: 1 }}>System Discovery</Typography>
+                                <Typography variant="h5" sx={{ mb: 3 }}>System Discovery</Typography>
                                 <Typography>
-                                    Lorem ipsum dolor sit amet. Vel mollitia autem et ipsam praesentium sed
+                                    Automates the manual task of identifying and cataloging 
+                                    recorded voice calls from various legacy recorders within your network.
+                                    <br />
+                                    <br />
+                                    This enhances accuracy and efficiency in maintaining a precise inventory of voice recordings.
                                 </Typography>
                             </CardContent>
                         </Card>
@@ -100,9 +113,15 @@ function ServicesSection() {
                                 <Box sx={{ mb: 2 }}>
                                     <img src={RestackingIcon} alt="Restacking Icon" style={imageStyle} />
                                 </Box>
-                                <Typography variant="h5" sx={{ mb: 1 }}>Restacking</Typography>
+                                <Typography variant="h5" sx={{ mb: 3 }}>Restacking</Typography>
                                 <Typography>
-                                    Lorem ipsum dolor sit amet. Vel mollitia autem et ipsam praesentium sed
+                                    Involves reallocating hardware, software, 
+                                    and other IT assets to different departments or individuals
+                                    based on their specific needs and usage patterns.
+                                    <br />
+                                    <br />
+                                    This ensures that the utilisation of every resource is optimised, 
+                                    increasing efficiency and productivity within your organisation.
                                 </Typography>
                             </CardContent>
                         </Card>

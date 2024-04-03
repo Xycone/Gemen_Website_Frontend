@@ -15,7 +15,6 @@ import ContactUs from './pages/ContactUs';
 
 // Components
 import Footer from './components/Footer';
-import CopyrightSection from './components/CopyrightSection';
 import SolutionsDropdown from './components/SolutionsDropdown';
 
 // Logo
@@ -138,7 +137,6 @@ function App() {
 
         {/* Footer Section */}
         <Footer />
-        <CopyrightSection />
 
       </ThemeProvider>
     </Router>
