@@ -25,7 +25,7 @@ function ServicesSection() {
     };
 
     const cardStyle = {
-        padding: 1,
+        padding: 2,
         borderRadius: { xs: 0, sm: 4 },
         backgroundColor: '#F2F5F8',
         boxShadow: 'none',

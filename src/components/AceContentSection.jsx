@@ -19,7 +19,6 @@ function AceContentSection() {
     };
 
     const cardStyle = {
-        padding: 1,
         borderRadius: { xs: 0, md: 4 },
         backgroundColor: '#D9D9D9',
         boxShadow: 'none',
@@ -27,7 +26,7 @@ function AceContentSection() {
         flexDirection: 'column', 
         flexGrow: 1, 
         justifyContent: 'center'
-    }
+    };
 
     return (
         <Box sx={{ py: 15 }}>

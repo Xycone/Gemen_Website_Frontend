@@ -22,13 +22,25 @@ function ContactUsContentSection() {
     // Logic to prevent multiple form submission by rapidly clicking
     const [isDisabled, setIsDisabled] = useState(false);
 
+
+    // Styling
+    const cardStyle = {
+        padding: 5, 
+        borderRadius: { xs: 0, md: 4 }, 
+        backgroundColor: '#F2F5F8', 
+        boxShadow: 'none', 
+        display: 'flex', 
+        flexDirection: 'column', 
+        flexGrow: 1
+    };
+
     return (
         <Box sx={{ pb: 5 }}>
             <Container sx={{ padding: { xs: 0, md: 5 } }}>
                 <Grid container spacing={4}>
                     <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                         {/* Product Support */}
-                        <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1, mb: 4 }}>
+                        <Card sx={{ ...cardStyle, mb: 4 }}>
                             <CardContent sx={{ margin: 2 }}>
                                 <Typography variant="h5" sx={{ mb: 2 }}>Product Support</Typography>
                                 <Typography sx={{ mb: 4 }}>
@@ -53,7 +65,7 @@ function ContactUsContentSection() {
                         </Card>
 
                         {/* Questions */}
-                        <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                        <Card sx={cardStyle}>
                             <CardContent sx={{ margin: 2 }}>
                                 <Typography variant="h5" sx={{ mb: 2 }}>Have a question?</Typography>
                                 <Typography sx={{ mb: 4 }}>
@@ -80,7 +92,7 @@ function ContactUsContentSection() {
 
                     {/* Gemen Contact Info */}
                     <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                        <Card sx={{ borderRadius: { xs: 0, md: 4 }, padding: 5, backgroundColor: '#F2F5F8', boxShadow: 'none', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                        <Card sx={cardStyle}>
                             <CardContent sx={{ margin: 2 }}>
                                 <Typography variant="h5" sx={{ mb: 2 }}>Contact Us</Typography>
                                 <Typography sx={{ mb: 4 }}>
