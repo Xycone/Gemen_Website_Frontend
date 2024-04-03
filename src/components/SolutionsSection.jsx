@@ -17,10 +17,10 @@ function SolutionsSection() {
     // Styling
     const gridContainerStyle = {
         display: 'grid',
-        gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' },
+        gridTemplateColumns: { xs: '1fr', lg: 'repeat(2, 1fr)' },
         gridAutoRows: "1fr",
         gridAutoFlow: "row",
-        gap: { xs: 0, md: 4 }
+        gap: { xs: 0, lg: 4 }
     };
 
     const gridItemStyle = {
@@ -30,14 +30,15 @@ function SolutionsSection() {
     };
 
     const cardStyle = {
-        borderRadius: { xs: 0, md: 4 },
+        borderRadius: { xs: 0, lg: 4 },
         padding: 5,
         backgroundColor: '#F2F5F8',
         boxShadow: 'none',
         display: 'flex',
         flexDirection: 'column',
         flexGrow: 1,
-        justifyContent: 'center'
+        justifyContent: 'center',
+        textAlign: { xs: 'center', lg: 'left' }
     };
 
     const buttonStyle = {
@@ -53,7 +54,7 @@ function SolutionsSection() {
 
     return (
         <Box sx={{ py: 15 }} id="solutions-section">
-            <Container sx={{ padding: { xs: 0, md: 5 } }}>
+            <Container sx={{ padding: { xs: 0, lg: 5 } }}>
                 <Box sx={{ mb: 10, textAlign: 'center' }}>
                     <Typography variant="h4">
                         Explore how our solutions
@@ -64,7 +65,7 @@ function SolutionsSection() {
 
                 <Box sx={gridContainerStyle}>
                     <Box sx={gridItemStyle}>
-                        <Card sx={cardStyle}>
+                        <Card sx={{ ...cardStyle, backgroundColor: '#D9D9D9' }}>
                             <CardContent sx={{ margin: 3 }}>
                                 <Typography sx={{ textAlign: 'center' }}>[ Image Placeholder ]</Typography>
                             </CardContent>
@@ -88,7 +89,7 @@ function SolutionsSection() {
                         </Card>
                     </Box>
 
-                    <Box sx={{ ...gridItemStyle, order: { xs: 4, md: 3 } }}>
+                    <Box sx={{ ...gridItemStyle, order: { xs: 4, lg: 3 } }}>
                         <Card sx={cardStyle}>
                             <CardContent sx={{ margin: 3 }}>
                                 <Typography variant="h5" sx={{ mb: 3 }}>Archive Your Old Voices</Typography>
@@ -105,8 +106,8 @@ function SolutionsSection() {
                         </Card>
                     </Box>
 
-                    <Box sx={{ ...gridItemStyle, order: { xs: 3, md: 4 } }}>
-                        <Card sx={cardStyle}>
+                    <Box sx={{ ...gridItemStyle, order: { xs: 3, lg: 4 } }}>
+                        <Card sx={{ ...cardStyle, backgroundColor: '#D9D9D9' }}>
                             <CardContent sx={{ margin: 3 }}>
                                 <Typography sx={{ textAlign: 'center' }}>[ Image Placeholder ]</Typography>
                             </CardContent>
