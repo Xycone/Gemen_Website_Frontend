@@ -75,7 +75,7 @@ function Footer() {
                         <Box sx={gridItemStyle}>
                             <Box flexGrow={1} sx={{ display: { xs: 'none', md: 'flex' } }} />
                             <Box>
-                                <Typography variant="h5" sx={{ mb: 2 }}>Navigation</Typography>
+                                <Typography variant="h5" sx={{ mb: 3 }}>Navigation</Typography>
                                 <Typography>
                                     <Link to="/homepage#whyus-section" className='FooterNavLink'>
                                         Why Us
@@ -103,7 +103,7 @@ function Footer() {
                         <Box sx={gridItemStyle}>
                             <Box flexGrow={1} sx={{ display: { xs: 'none', md: 'flex' } }} />
                             <Box>
-                                <Typography variant="h5" sx={{ mb: 2 }}>Get In Touch</Typography>
+                                <Typography variant="h5" sx={{ mb: 3 }}>Get In Touch</Typography>
                                 <Typography sx={{ mb: 4 }}>
                                     Interested in asking a question or getting in touch with support?
                                 </Typography>
