@@ -1,99 +1,145 @@
+import '../App.css';
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Container, Typography, Box } from '@mui/material';
+import { Link, useNavigate } from 'react-router-dom';
+import { Container, Typography, Box, Button } from '@mui/material';
 
 // Logo
 import Logo from '../assets/Logo.svg'
 
 function Footer() {
+    const navigate = useNavigate();
+
+    const navigateToContact = () => {
+        navigate('/contactUs');
+    };
+
     // Styling 
     const gridContainerStyle = {
-        padding: 5,
+        mb: 6,
         display: 'grid',
         gridTemplateColumns: { xs: '1fr', md: 'repeat(3, 1fr)' },
+        gridAutoFlow: "row"
+    };
+
+    const gridContainerStyle2 = {
+        display: 'grid',
+        gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' },
         gridAutoRows: "1fr",
-        gridAutoFlow: "row",
+        gridAutoFlow: "row"
     };
 
     const gridItemStyle = {
-        padding: 3,
-        display: 'flex',
-        justifyContent: { md: 'center' }
+        padding: 2,
+        display: { xs: 'block', md: 'flex' }
+    };
+
+    const gridItemStyle2 = {
+        padding: 1,
+        display: { xs: 'block', md: 'flex' }
+    };
+
+    const buttonStyle = {
+        boxShadow: 'none',
+        '&:hover': {
+            boxShadow: 'none',
+            border: '2px solid transparent',
+            backgroundColor: '#89D6FB',
+            color: '#01303F',
+            transform: 'scale(1.1)'
+        },
+        textTransform: 'none',
+        border: '2px solid white',
+        background: 'transparent',
+        transition: 'background-color 0.3s ease, color 0.3s ease'
     };
 
     return (
-        <Box sx={{ backgroundColor: '#F2F5F8' }}>
+        <Box sx={{ backgroundColor: '#01303F', color: 'white' }}>
             <Container>
-                {/* Main Footer Section */}
-                <Box sx={gridContainerStyle}>
-                    {/* About Us */}
-                    <Box sx={gridItemStyle}>
-                        <Box>
-                            <Typography variant="h5" sx={{ mb: 3 }}>Gemen Technology</Typography>
-                            <Typography variant="h6" sx={{ mb: 3 }}>About Us</Typography>
-
+                <Box sx={{ padding: 5 }}>
+                    {/* Main Footer Section */}
+                    <Box sx={gridContainerStyle}>
+                        {/* About Us */}
+                        <Box sx={gridItemStyle}>
                             <Box>
+                                <Typography variant="h5" sx={{ mb: 2 }}>Gemen Technology</Typography>
+
+                                <Box>
+                                    <Typography>
+                                        Lorem ipsum dolor sit amet. Est suscipit Quis ad animi nostrum ex reprehenderit veniam hic blanditiis ipsa et earum provident in doloremque exercitationem est consequatur voluptas.
+                                    </Typography>
+                                </Box>
+                            </Box>
+                        </Box>
+
+                        <Box sx={gridItemStyle}>
+                            <Box flexGrow={1} sx={{ display: { xs: 'none', md: 'flex' } }} />
+                            <Box>
+                                <Typography variant="h5" sx={{ mb: 2 }}>Navigation</Typography>
                                 <Typography>
-                                    Lorem ipsum dolor sit amet. Est suscipit Quis ad animi nostrum ex reprehenderit veniam hic blanditiis ipsa et earum provident in doloremque exercitationem est consequatur voluptas.
+                                    <Link to="/homepage#whyus-section" className='FooterNavLink'>
+                                        Why Us
+                                    </Link>
+                                </Typography>
+                                <Typography>
+                                    <Link to="/homepage#solutions-section" className='FooterNavLink'>
+                                        Solutions
+                                    </Link>
+                                </Typography>
+                                <Typography>
+                                    <Link to="/homepage#services-section" className='FooterNavLink'>
+                                        Services
+                                    </Link>
+                                </Typography>
+                                <Typography>
+                                    <Link to="/homepage#partners-section" className='FooterNavLink'>
+                                        Partners
+                                    </Link>
                                 </Typography>
                             </Box>
+                            <Box flexGrow={1} sx={{ display: { xs: 'none', md: 'flex' } }} />
                         </Box>
-                    </Box>
 
-                    {/* Explore */}
-                    <Box sx={gridItemStyle}>
-                        <Box>
-                            <Typography variant="h6" sx={{ mb: 3 }}>Explore</Typography>
-
+                        <Box sx={gridItemStyle}>
+                            <Box flexGrow={1} sx={{ display: { xs: 'none', md: 'flex' } }} />
                             <Box>
-                                <Link to="/homepage#whyus-section">
-                                    <Typography sx={{ mb: 0.5 }}>
-                                        Why Us
-                                    </Typography>
-                                </Link>
-                                <Link to="/homepage#solutions-section">
-                                    <Typography sx={{ mb: 0.5 }}>
-                                        Solutions
-                                    </Typography>
-                                </Link>
-                                <Link to="/homepage#services-section">
-                                    <Typography sx={{ mb: 0.5 }}>
-                                        Services
-                                    </Typography>
-                                </Link>
-                                <Link to="/homepage#partners-section">
-                                    <Typography sx={{ mb: 0.5 }}>
-                                        Partners
-                                    </Typography>
-                                </Link>
-                            </Box>
-                        </Box>
-                    </Box>
-
-                    {/* Company */}
-                    <Box sx={gridItemStyle}>
-                        <Box>
-                            <Typography variant="h6" sx={{ mb: 3 }}>Company</Typography>
-
-                            <Box>
-                                <Link to="/contactUs">
-                                    <Typography sx={{ mb: 0.5 }}>
+                                <Typography variant="h5" sx={{ mb: 2 }}>Get In Touch</Typography>
+                                <Typography sx={{ mb: 4 }}>
+                                    Interested in asking a question or getting in touch with support?
+                                </Typography>
+                                <Box>
+                                    <Button
+                                        variant="contained"
+                                        sx={buttonStyle}
+                                        onClick={navigateToContact}>
                                         Contact Us
-                                    </Typography>
-                                </Link>
+                                    </Button>
+                                </Box>
                             </Box>
                         </Box>
                     </Box>
+
+                    {/* Footer Navigation */}
+                    <Box sx={gridContainerStyle2}>
+                        <Box sx={gridItemStyle2}>
+                            {/* Copyright Section */}
+                            <Typography sx={{ textAlign: 'center' }}>
+                                © Gemen Pte Ltd | All Rights Reserved 2018
+                            </Typography>
+                        </Box>
+
+                        <Box sx={gridItemStyle2}>
+                            <Box flexGrow={1} sx={{ display: { xs: 'none', md: 'flex' } }} />
+                            {/* Copyright Section */}
+                            <Typography sx={{ textAlign: 'center' }}>
+                            </Typography>
+                        </Box>
+                    </Box>
+
+
                 </Box>
-
-                <hr />
-
-                {/* Copyright Section */}
-                <Typography sx={{ textAlign: 'center', padding: 2 }}>
-                    © Gemen Pte Ltd | All Rights Reserved 2018
-                </Typography>
-            </Container>
-        </Box>
+            </Container >
+        </Box >
     )
 }
 

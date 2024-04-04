@@ -44,9 +44,9 @@ function ServicesSection() {
             <Container sx={{ padding: { xs: 0, md: 5 } }}>
                 <Box sx={{ mb: 10, textAlign: 'center' }}>
                     <Typography variant="h4">
-                        Discover our services:
+                        <span style={{ color: '#A2C94F' }}>Discover</span> our services:
                         <br />
-                        What we can <span style={{ color: '#EB1287' }}>do for you...</span>
+                        What we can do for you...
                     </Typography>
                 </Box>
 
@@ -59,7 +59,7 @@ function ServicesSection() {
                                 </Box>
                                 <Typography variant="h5" sx={{ mb: 3 }}>API Integration</Typography>
                                 <Typography>
-                                    Facilitates the establishment of a network comprising 
+                                    Facilitates the establishment of a network comprising
                                     interconnected applications through their APIs.
                                     <br />
                                     <br />
@@ -78,11 +78,11 @@ function ServicesSection() {
                                 </Box>
                                 <Typography variant="h5" sx={{ mb: 3 }}>Manpower Resource</Typography>
                                 <Typography>
-                                    Eliminates the hassle of strategic planning, recruitment, training, 
-                                    and development. 
-                                    <br/>
-                                    <br/>
-                                    We ensure that the right people are in the right jobs equipped with 
+                                    Eliminates the hassle of strategic planning, recruitment, training,
+                                    and development.
+                                    <br />
+                                    <br />
+                                    We ensure that the right people are in the right jobs equipped with
                                     the necessary skills and knowledge to perform their tasks efficiently and effectively.
                                 </Typography>
                             </CardContent>
@@ -97,7 +97,7 @@ function ServicesSection() {
                                 </Box>
                                 <Typography variant="h5" sx={{ mb: 3 }}>System Discovery</Typography>
                                 <Typography>
-                                    Automates the manual task of identifying and cataloging 
+                                    Automates the manual task of identifying and cataloging
                                     recorded voice calls from various legacy recorders within your network.
                                     <br />
                                     <br />
@@ -115,12 +115,12 @@ function ServicesSection() {
                                 </Box>
                                 <Typography variant="h5" sx={{ mb: 3 }}>Restacking</Typography>
                                 <Typography>
-                                    Involves reallocating hardware, software, 
+                                    Involves reallocating hardware, software,
                                     and other IT assets to different departments or individuals
                                     based on their specific needs and usage patterns.
                                     <br />
                                     <br />
-                                    This ensures that the utilisation of every resource is optimised, 
+                                    This ensures that the utilisation of every resource is optimised,
                                     increasing efficiency and productivity within your organisation.
                                 </Typography>
                             </CardContent>

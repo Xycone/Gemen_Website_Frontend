@@ -9,7 +9,7 @@ function WhyUsSection() {
                     <Typography variant="h4">
                         Why Gemen?
                         <br />
-                        We're <span style={{ color: '#A2C94F' }}>happy to share...</span>
+                        We're <span style={{ color: '#EB1287' }}>happy to share...</span>
                     </Typography>
                 </Box>
 
@@ -24,7 +24,7 @@ function WhyUsSection() {
                         </Grid>
 
                         <Grid item xs={12} md={6}>
-                            <Typography variant="h5">Experienced collaborating with <span style={{ color: '#EB1287' }}>governments and banks</span></Typography>
+                            <Typography variant="h5">Experienced collaborating with <span style={{ color: '#A2C94F' }}>governments and banks</span></Typography>
                         </Grid>
                     </Grid>
                 </Card>

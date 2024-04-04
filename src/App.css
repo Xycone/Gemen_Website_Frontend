@@ -17,5 +17,18 @@
   box-shadow: none !important;
 }
 
+.FooterNavLink {
+  color: inherit;
+  text-decoration: none;
+}
+
+.FooterNavLink:hover {
+  transform: scale(1.1);
+  color: #89D6FB;
+  display: inline-block;
+}
+
 /* Google Recaptcha V3 badge */
-.grecaptcha-badge { visibility: hidden; }
+.grecaptcha-badge {
+  visibility: hidden;
+}

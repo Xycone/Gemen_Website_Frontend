@@ -133,10 +133,9 @@ function App() {
             <Route path={"/garantia"} element={<Garantia />} />
             <Route path={"/contactUs"} element={<ContactUs />} />
           </Routes>
-        </Box>
 
-        {/* Footer Section */}
-        <Footer />
+          <Footer />
+        </Box>
 
       </ThemeProvider>
     </Router>

@@ -15,7 +15,7 @@ function Partners() {
                 </Box>
 
                 <Grid container spacing={2} sx={{ textAlign: 'center', borderRadius: 4, py: 5 }}>
-                    <Grid item xs={12} lg={4}>
+                    <Grid item xs={12} md={4}>
                         <img src={Logo} alt="Gemen Logo" style={{ height: '80px' }} />
                     </Grid>
                 </Grid>
