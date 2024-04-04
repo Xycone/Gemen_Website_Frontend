@@ -15,7 +15,7 @@ function Footer() {
 
     // Styling 
     const gridContainerStyle = {
-        mb: 6,
+        mb: 8,
         display: 'grid',
         gridTemplateColumns: { xs: '1fr', md: 'repeat(3, 1fr)' },
         gridAutoFlow: "row"
@@ -29,12 +29,12 @@ function Footer() {
     };
 
     const gridItemStyle = {
-        padding: 2,
+        padding: 4,
         display: { xs: 'block', md: 'flex' }
     };
 
     const gridItemStyle2 = {
-        padding: 1,
+        px: 4,
         display: { xs: 'block', md: 'flex' }
     };
 
@@ -43,18 +43,18 @@ function Footer() {
         '&:hover': {
             boxShadow: 'none',
             border: '2px solid transparent',
-            backgroundColor: '#89D6FB',
-            color: '#01303F',
-            transform: 'scale(1.1)'
+            backgroundColor: 'white',
+            color: 'black',
+            transform: 'scale(1.2)'
         },
         textTransform: 'none',
-        border: '2px solid white',
-        background: 'transparent',
-        transition: 'background-color 0.3s ease, color 0.3s ease'
+        border: '2px solid transparent',
+        backgroundColor: 'white',
+        color: 'black'
     };
 
     return (
-        <Box sx={{ backgroundColor: '#01303F', color: 'white' }}>
+        <Box sx={{ backgroundColor: 'black', color: 'white' }}>
             <Container>
                 <Box sx={{ padding: 5 }}>
                     {/* Main Footer Section */}
@@ -62,7 +62,7 @@ function Footer() {
                         {/* About Us */}
                         <Box sx={gridItemStyle}>
                             <Box>
-                                <Typography variant="h5" sx={{ mb: 2 }}>Gemen Technology</Typography>
+                                <Typography variant="h5" sx={{ mb: 2 }}>About Us</Typography>
 
                                 <Box>
                                     <Typography>
@@ -76,22 +76,22 @@ function Footer() {
                             <Box flexGrow={1} sx={{ display: { xs: 'none', md: 'flex' } }} />
                             <Box>
                                 <Typography variant="h5" sx={{ mb: 3 }}>Navigation</Typography>
-                                <Typography>
+                                <Typography sx={{ mb: 1 }}>
                                     <Link to="/homepage#whyus-section" className='FooterNavLink'>
                                         Why Us
                                     </Link>
                                 </Typography>
-                                <Typography>
+                                <Typography sx={{ mb: 1 }}>
                                     <Link to="/homepage#solutions-section" className='FooterNavLink'>
                                         Solutions
                                     </Link>
                                 </Typography>
-                                <Typography>
+                                <Typography sx={{ mb: 1 }}>
                                     <Link to="/homepage#services-section" className='FooterNavLink'>
                                         Services
                                     </Link>
                                 </Typography>
-                                <Typography>
+                                <Typography sx={{ mb: 1 }}>
                                     <Link to="/homepage#partners-section" className='FooterNavLink'>
                                         Partners
                                     </Link>

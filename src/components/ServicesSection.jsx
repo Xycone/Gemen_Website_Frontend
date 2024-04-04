@@ -25,8 +25,8 @@ function ServicesSection() {
     };
 
     const cardStyle = {
-        padding: 2,
-        borderRadius: { xs: 0, md: 4 },
+        padding: 4,
+        borderRadius: { xs: 0, md: 8 },
         backgroundColor: '#F2F5F8',
         boxShadow: 'none',
         display: 'flex',
@@ -40,13 +40,13 @@ function ServicesSection() {
     };
 
     return (
-        <Box sx={{ py: 15 }} id="services-section">
+        <Box sx={{ py: 15, backgroundColor: '#01303F', color: 'white' }} id="services-section">
             <Container sx={{ padding: { xs: 0, md: 5 } }}>
                 <Box sx={{ mb: 10, textAlign: 'center' }}>
                     <Typography variant="h4">
-                        <span style={{ color: '#A2C94F' }}>Discover</span> our services:
+                        Discover our services:
                         <br />
-                        What we can do for you...
+                        What we can <span style={{ color: '#A1E62D' }}>do for you...</span>
                     </Typography>
                 </Box>
 

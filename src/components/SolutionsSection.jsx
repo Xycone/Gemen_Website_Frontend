@@ -30,7 +30,7 @@ function SolutionsSection() {
     };
 
     const cardStyle = {
-        borderRadius: { xs: 0, lg: 4 },
+        borderRadius: { xs: 0, lg: 8 },
         padding: 5,
         backgroundColor: '#F2F5F8',
         boxShadow: 'none',

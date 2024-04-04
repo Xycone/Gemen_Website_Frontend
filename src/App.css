@@ -23,8 +23,7 @@
 }
 
 .FooterNavLink:hover {
-  transform: scale(1.1);
-  color: #89D6FB;
+  transform: scale(1.2);
   display: inline-block;
 }
 
