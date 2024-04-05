@@ -93,7 +93,7 @@ function ServicesSection() {
     ];
 
     return (
-        <Box sx={{ py: 10, backgroundColor: '#002635', color: 'white' }} id="services-section">
+        <Box sx={{ py: 10, backgroundColor: '#011F28', color: 'white' }} id="services-section">
             <Container sx={{ padding: { xs: 0, md: 5 } }}>
                 <Box sx={{ mb: 10, textAlign: 'center' }}>
                     <Typography variant="h4">
