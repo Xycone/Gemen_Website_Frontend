@@ -15,7 +15,7 @@ function Footer() {
 
     // Styling 
     const gridContainerStyle = {
-        mb: 8,
+        mb: 10,
         display: 'grid',
         gridTemplateColumns: { xs: '1fr', md: 'repeat(3, 1fr)' },
         gridAutoFlow: "row"
@@ -50,7 +50,7 @@ function Footer() {
         textTransform: 'none',
         border: '2px solid transparent',
         backgroundColor: 'white',
-        color: 'black'
+        color: 'black',
     };
 
     return (

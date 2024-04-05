@@ -3,13 +3,13 @@ import { Typography, Box, Grid, Card, Container } from '@mui/material';
 
 function WhyUsSection() {
     return (
-        <Box sx={{ py: 15 }} id="whyus-section">
+        <Box sx={{ py: 10 }} id="whyus-section">
             <Container sx={{ padding: { xs: 0, md: 5 } }}>
                 <Box sx={{ mb: 10, textAlign: 'center' }}>
                     <Typography variant="h4">
                         Why Gemen?
                         <br />
-                        We're <span style={{ color: '#EB1287' }}>happy to share...</span>
+                        We're <span style={{ color: '#FF9900' }}>happy to share...</span>
                     </Typography>
                 </Box>
 
@@ -20,7 +20,7 @@ function WhyUsSection() {
                         </Grid>
 
                         <Grid item xs={12} md={6}>
-                            <Typography variant="h5"><span style={{ color: '#FF9900' }}>100+</span> total projects to meet every voice needs</Typography>
+                            <Typography variant="h5"><span style={{ color: '#EB1287' }}>100+</span> total projects to meet every voice needs</Typography>
                         </Grid>
 
                         <Grid item xs={12} md={6}>

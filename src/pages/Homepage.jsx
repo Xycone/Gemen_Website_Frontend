@@ -34,9 +34,9 @@ function Homepage() {
     <Box sx={{ mt: 4, justifyContent: 'center', alignItems: 'center' }}>
       <LandingSection />
       <WhyUsSection id="whyus-section" />
+      <Partners id="partners-section" />
       <SolutionsSection id="solutions-section" />
       <ServicesSection id="services-section" />
-      {/* <Partners id="partners-section" /> */}
     </Box>
   )
 }
