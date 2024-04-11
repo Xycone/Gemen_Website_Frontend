@@ -54,7 +54,7 @@ function SolutionsSection() {
         justifyContent: 'center',
         '&:hover': {
             border: `2px solid black`,
-            transform: 'scale(1.01)'
+            transform: 'scale(1.05)'
         }
     };
 
@@ -79,7 +79,7 @@ function SolutionsSection() {
                     <Typography variant="h4">
                         View our solutions &
                         <br /> 
-                        <span style={{ color: '#E21281' }}>level up</span> your workflow today
+                        <span style={{ color: '#D8137C' }}>level up</span> your workflow today
                     </Typography>
                 </Box>
 

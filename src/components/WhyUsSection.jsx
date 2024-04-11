@@ -3,7 +3,7 @@ import { Typography, Box, Grid, Card, Container } from '@mui/material';
 
 function WhyUsSection() {
     return (
-        <Box sx={{ py: 10, backgroundColor: '#F2F5F8' }} id="whyus-section">
+        <Box sx={{ py: 10, backgroundColor: '#011F28', color: 'white' }} id="whyus-section">
             <Container sx={{ padding: { xs: 0, md: 5 } }}>
                 <Box sx={{ mb: 10, textAlign: 'center' }}>
                     <Typography variant="h4">
