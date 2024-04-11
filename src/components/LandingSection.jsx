@@ -14,7 +14,7 @@ function LandingSection() {
       <Container sx={{ position: 'relative', textAlign: 'center', padding: { xs: 0, md: 5 } }}>
         <Box sx={{ mb: 5 }}>
           <Typography variant="h4" sx={{ mt: 10, mb: 2 }}>
-            Streamlining Your Operations  
+            Streamlining Your Operations
             <br />
             Through Automated Solutions
           </Typography>
@@ -32,15 +32,22 @@ function LandingSection() {
             borderRadius: 2,
             px: 3,
             py: 1,
+            mb: 20,
             boxShadow: 'none',
             '&:hover': {
               boxShadow: 'none',
             },
-            textTransform: 'none',
+            textTransform: 'none',  
           }}
           onClick={navigateToContact}>
           Contact us
         </Button>
+        <Box sx={{ backgroundColor: 'grey', borderRadius: { xs: 0, md: 6 }, minHeight: '60vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <Typography>
+            Placeholder Image
+          </Typography>
+        </Box>
+
       </Container>
     </Box>
   )

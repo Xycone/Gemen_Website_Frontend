@@ -56,11 +56,11 @@ function ServicesSection() {
     });
 
     const imageStyle = {
-        width: '55px',
-        height: '55px'
+        width: '45px',
+        height: '45px'
     };
 
-    // Data for the cards
+    // Data to populate cards
     const services = [
         {
             color: "#00B6DD",
@@ -93,7 +93,7 @@ function ServicesSection() {
     ];
 
     return (
-        <Box sx={{ py: 10 }} id="services-section">
+        <Box sx={{ pt: 5, pb: 10 }} id="services-section">
             <Container sx={{ padding: { xs: 0, md: 5 } }}>
                 <Box sx={{ mb: 10, textAlign: 'center' }}>
                     <Typography variant="h4">
@@ -111,7 +111,7 @@ function ServicesSection() {
                                     <Box sx={{ mb: 3 }}>
                                         <img src={hoveredIndex === index ? service.iconOH : service.iconNH} alt={service.title} style={imageStyle} />
                                     </Box>
-                                    <Typography variant="h6" sx={{ mb: 2 }}>{service.title}</Typography>
+                                    <Typography variant="h5" sx={{ mb: 2 }}>{service.title}</Typography>
                                     <Typography>{service.description}</Typography>
                                 </CardContent>
                             </Card>

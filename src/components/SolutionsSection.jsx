@@ -58,7 +58,7 @@ function SolutionsSection() {
         }
     };
 
-    // Data for the cards
+    // Data to populate cards
     const solutions = [
         {
             name: "Garantia",
@@ -67,13 +67,13 @@ function SolutionsSection() {
         },
         {
             name: "Ace",
-            description: 'Facilitates the establishment of a network comprising interconnected applications through their APIs.',
+            description: "Facilitates the establishment of a network comprising interconnected applications through their APIs.",
             navigation: navigateToAce
         }
     ];
 
     return (
-        <Box sx={{ py: 10 }} id="solutions-section">
+        <Box sx={{ pt: 10, pb: 5 }} id="solutions-section">
             <Container sx={{ padding: { xs: 0, md: 5 } }}>
                 <Box sx={{ mb: 10, textAlign: 'center' }}>
                     <Typography variant="h4">
