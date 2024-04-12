@@ -55,7 +55,7 @@ function App() {
             <Container>
               {/* Navbar Menu */}
               <Toolbar disableGutters={true}>
-                <Link to="/homepage" style={{ display: 'flex', alignItems: 'center' }}>
+                <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
                   <img src={Logo} alt="Gemen Logo" style={{ height: '80px' }} />
                 </Link>
 
@@ -65,11 +65,11 @@ function App() {
 
                   <SolutionsDropdown />
 
-                  <Link to="/homepage#services-section">
+                  <Link to="/#services-section">
                     <Typography>Services</Typography>
                   </Link>
 
-                  <Link to="/homepage#whyus-section">
+                  <Link to="/#whyus-section">
                     <Typography>Why Us</Typography>
                   </Link>
 
@@ -110,10 +110,10 @@ function App() {
                   <Link to="/ace" onClick={handleAppBarClose}>
                     <Typography>ACE</Typography>
                   </Link>
-                  <Link to="/homepage#services-section" onClick={handleAppBarClose}>
+                  <Link to="/#services-section" onClick={handleAppBarClose}>
                     <Typography>Services</Typography>
                   </Link>
-                  <Link to="/homepage#whyus-section" onClick={handleAppBarClose}>
+                  <Link to="/#whyus-section" onClick={handleAppBarClose}>
                     <Typography>Why Us</Typography>
                   </Link>
                   <Link to="/contactUs" onClick={handleAppBarClose}>
@@ -129,7 +129,7 @@ function App() {
         <Box sx={{ display: 'flex', flexDirection: 'column', minWidth: { xs: 'fit-content', md: 0 } }}>
           <Box sx={{ minHeight: '100vh' }}>
             <Routes>
-              <Route path={"/homepage"} element={<Homepage />} />
+              <Route path={"/"} element={<Homepage />} />
               <Route path={"/ace"} element={<Ace />} />
               <Route path={"/garantia"} element={<Garantia />} />
               <Route path={"/contactUs"} element={<ContactUs />} />

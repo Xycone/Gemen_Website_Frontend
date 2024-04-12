@@ -56,8 +56,8 @@ function ServicesSection() {
     });
 
     const imageStyle = {
-        width: '45px',
-        height: '45px'
+        width: '40px',
+        height: '40px'
     };
 
     // Data to populate cards
@@ -93,7 +93,7 @@ function ServicesSection() {
     ];
 
     return (
-        <Box sx={{ pt: 5, pb: 10 }} id="services-section">
+        <Box sx={{ pt: 15, pb: 15 }} id="services-section">
             <Container sx={{ padding: { xs: 0, md: 5 } }}>
                 <Box sx={{ mb: 10, textAlign: 'center' }}>
                     <Typography variant="h4">
