@@ -63,14 +63,14 @@ function App() {
 
                 <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', textAlign: 'center' }}>
 
+                  <Link to="/#whyus-section">
+                    <Typography>Why Us</Typography>
+                  </Link>
+
                   <SolutionsDropdown />
 
                   <Link to="/#services-section">
                     <Typography>Services</Typography>
-                  </Link>
-
-                  <Link to="/#whyus-section">
-                    <Typography>Why Us</Typography>
                   </Link>
 
                   <Button
@@ -104,6 +104,9 @@ function App() {
               {/* Appbar Dropdown */}
               {isAppBarOpen && (
                 <Box sx={{ mt: 2, display: { xs: 'block', md: 'none' }, maxHeight: '40vh', overflowY: 'auto', pr: 2 }}>
+                  <Link to="/#whyus-section" onClick={handleAppBarClose}>
+                    <Typography>Why Us</Typography>
+                  </Link>
                   <Link to="/garantia" onClick={handleAppBarClose}>
                     <Typography>Garantia</Typography>
                   </Link>
@@ -112,9 +115,6 @@ function App() {
                   </Link>
                   <Link to="/#services-section" onClick={handleAppBarClose}>
                     <Typography>Services</Typography>
-                  </Link>
-                  <Link to="/#whyus-section" onClick={handleAppBarClose}>
-                    <Typography>Why Us</Typography>
                   </Link>
                   <Link to="/contactUs" onClick={handleAppBarClose}>
                     <Typography>Contact Us</Typography>

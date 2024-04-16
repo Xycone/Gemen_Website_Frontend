@@ -1,51 +1,56 @@
 import React from 'react';
-import { Typography, Box, Container, Card, CardContent, IconButton } from '@mui/material';
+import { Typography, Box, Container, Grid } from '@mui/material';
+
+// Material UI Icons
+import { RecordVoiceOver, Task, PeopleAltOutlined } from '@mui/icons-material';
 
 function WhyUsSection() {
 
     // Data to populate carousel
     const reasons = [
         {
-            id: 1,
-            content: <Typography variant="h5">Our company owners have over <span style={{ color: '#00B6DD' }}>15 years of experience</span> in the IT Voice industry.</Typography>
+            image: <RecordVoiceOver sx={{ fontSize: '2.5rem' }} />,
+            title: 'For over 15 years',
+            description: 'our company owners have been in the IT voice industry'
         },
         {
-            id: 2,
-            content: <Typography variant="h5"><span style={{ color: '#EB1287' }}>100+</span> total projects to meet every voice needs</Typography>
+            image: <Task sx={{ fontSize: '2.5rem' }} />,
+            title: '100+ total projects',
+            description: 'to meet every voice needs'
         },
         {
-            id: 3,
-            content: <Typography variant="h5">Experienced collaborating with <span style={{ color: '#A2C94F' }}>governments and banks</span></Typography>
+            image: <PeopleAltOutlined sx={{ fontSize: '2.5rem' }} />,
+            title: 'Experienced collaborating',
+            description: 'with governments and banks'
         }
     ];
 
-    const cardStyle = {
-        mb: 5,
-        mx: 15,
-        py: 5,
-        px: 20,
-        borderRadius: { xs: 0, md: 6 },
-        display: 'flex',
-        flexDirection: 'column',
-        flexGrow: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        height: '400px'
-    };
-
     return (
-        <Box sx={{ py: 15, backgroundColor: '#011F28', color: 'white' }} id="whyus-section">
+        <Box sx={{ pt: 15, backgroundColor: '#011F28', color: 'white' }} id="whyus-section">
             <Container sx={{ padding: { xs: 0, md: 5 } }}>
                 <Box sx={{ mb: 10, textAlign: 'center' }}>
                     <Typography variant="h4">
                         Why Gemen?
                         <br />
-                        We're <span style={{ color: '#FF9900' }}>happy to share...</span>
+                        We're <span style={{ color: '#A2C94F' }}>happy to share...</span>
                     </Typography>
                 </Box>
 
-                <Box>
-                </Box>
+                <Grid container spacing={8}>
+                    {reasons.map((reason, index) => (
+                        <Grid key={index} item xs={12} md={6} lg={4} sx={{ padding: 5, textAlign: 'center' }}>
+                            <Box>
+                                {reason.image}
+                                <Typography variant='h5' sx={{ mb: 2, mt: 1 }}>
+                                    {reason.title}
+                                </Typography>
+                            </Box>
+                            <Box>
+                                {reason.description}
+                            </Box>
+                        </Grid>
+                    ))}
+                </Grid>
             </Container >
         </Box >
     )

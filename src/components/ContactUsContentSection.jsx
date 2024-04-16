@@ -25,13 +25,24 @@ function ContactUsContentSection() {
 
     // Styling
     const cardStyle = {
-        padding: 5, 
-        borderRadius: { xs: 0, md: 4 }, 
-        backgroundColor: '#F2F5F8', 
+        padding: 4, 
+        border: '2px solid #E0E0E0',
+        borderRadius: { xs: 0, md: 6 },  
         boxShadow: 'none', 
         display: 'flex', 
         flexDirection: 'column', 
         flexGrow: 1
+    };
+
+    const buttonStyle = {
+        borderRadius: 2,
+        px: 3,
+        py: 1,
+        boxShadow: 'none',
+        '&:hover': {
+            boxShadow: 'none',
+        },
+        textTransform: 'none',
     };
 
     return (
@@ -48,16 +59,7 @@ function ContactUsContentSection() {
                                 </Typography>
                                 <Button
                                     variant="contained"
-                                    sx={{
-                                        borderRadius: 2,
-                                        px: 3,
-                                        py: 1,
-                                        boxShadow: 'none',
-                                        '&:hover': {
-                                            boxShadow: 'none',
-                                        },
-                                        textTransform: 'none',
-                                    }}
+                                    sx={buttonStyle}
                                     onClick={handleContactSupportFormOpen}>
                                     <Typography>Get In Touch</Typography>
                                 </Button>
@@ -73,16 +75,7 @@ function ContactUsContentSection() {
                                 </Typography>
                                 <Button
                                     variant="contained"
-                                    sx={{
-                                        borderRadius: 2,
-                                        px: 3,
-                                        py: 1,
-                                        boxShadow: 'none',
-                                        '&:hover': {
-                                            boxShadow: 'none',
-                                        },
-                                        textTransform: 'none',
-                                    }}
+                                    sx={buttonStyle}
                                     onClick={navigateToFaqSection}>
                                     <Typography>Read FAQ</Typography>
                                 </Button>

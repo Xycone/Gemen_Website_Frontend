@@ -3,9 +3,9 @@ import { Box, Container, Typography } from '@mui/material';
 
 function ContactUsLandingSection() {
     return (
-        <Box>
+        <Box sx={{ pt: 20 }}>
             <Container sx={{ position: 'relative', textAlign: 'center', padding: { xs: 0, md: 5 } }}>
-                <Box sx={{ mb: 5 }}>
+                <Box sx={{ mb: 10 }}>
                     <Typography variant="h4">
                         Let's Talk!
                         <br />

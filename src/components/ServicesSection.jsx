@@ -93,16 +93,15 @@ function ServicesSection() {
     ];
 
     return (
-        <Box sx={{ pt: 15, pb: 15 }} id="services-section">
+        <Box sx={{ pt: 15, pb: 25 }} id="services-section">
             <Container sx={{ padding: { xs: 0, md: 5 } }}>
                 <Box sx={{ mb: 10, textAlign: 'center' }}>
                     <Typography variant="h4">
                         Discover our services:
                         <br />
-                        What we can <span style={{ color: '#7D9D3F' }}>do for you...</span>
+                        What we can <span style={{ color: '#FF9900' }}>do for you...</span>
                     </Typography>
                 </Box>
-
                 <Box sx={gridContainerStyle}>
                     {services.map((service, index) => (
                         <Box key={index} sx={gridItemStyle}>
