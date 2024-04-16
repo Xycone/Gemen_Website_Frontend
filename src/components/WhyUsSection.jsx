@@ -26,7 +26,7 @@ function WhyUsSection() {
     ];
 
     return (
-        <Box sx={{ backgroundColor: '#011F28', color: 'white' }} id="whyus-section">
+        <Box sx={{ backgroundColor: '#011F28', color: 'white' }}>
             <Container sx={{ padding: { xs: 0, md: 5 } }}>
                 <Grid container spacing={10} sx={{ padding: 5 }}>
                     {reasons.map((reason, index) => (

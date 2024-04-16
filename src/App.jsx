@@ -61,11 +61,7 @@ function App() {
 
                 <Box sx={{ flexGrow: 1 }} />
 
-                <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', textAlign: 'center' }}>
-
-                  <Link to="/#whyus-section">
-                    <Typography>Why Us</Typography>
-                  </Link>
+                <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', textAlign: 'center' }}>`
 
                   <SolutionsDropdown />
 
@@ -104,9 +100,6 @@ function App() {
               {/* Appbar Dropdown */}
               {isAppBarOpen && (
                 <Box sx={{ mt: 2, display: { xs: 'block', md: 'none' }, maxHeight: '40vh', overflowY: 'auto', pr: 2 }}>
-                  <Link to="/#whyus-section" onClick={handleAppBarClose}>
-                    <Typography>Why Us</Typography>
-                  </Link>
                   <Link to="/garantia" onClick={handleAppBarClose}>
                     <Typography>Garantia</Typography>
                   </Link>

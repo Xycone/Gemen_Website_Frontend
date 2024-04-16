@@ -77,8 +77,8 @@ function Footer() {
                             <Box>
                                 <Typography variant="h5" sx={{ mb: 3 }}>Navigation</Typography>
                                 <Typography sx={{ mb: 1 }}>
-                                    <Link to="/#whyus-section" className='FooterNavLink'>
-                                        Why Us
+                                    <Link to="/" className='FooterNavLink'>
+                                        Home
                                     </Link>
                                 </Typography>
                                 <Typography sx={{ mb: 1 }}>
@@ -89,11 +89,6 @@ function Footer() {
                                 <Typography sx={{ mb: 1 }}>
                                     <Link to="/#services-section" className='FooterNavLink'>
                                         Services
-                                    </Link>
-                                </Typography>
-                                <Typography sx={{ mb: 1 }}>
-                                    <Link to="/#partners-section" className='FooterNavLink'>
-                                        Partners
                                     </Link>
                                 </Typography>
                             </Box>
