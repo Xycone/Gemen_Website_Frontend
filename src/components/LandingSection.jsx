@@ -13,7 +13,7 @@ function LandingSection() {
   };
 
   return (
-    <Box sx={{ pt: 20 }}>
+    <Box sx={{ pt: 20, pb: 10 }}>
       <Container sx={{ position: 'relative', textAlign: 'center', padding: { xs: 0, md: 5 } }}>
         <Box sx={{ mb: 10 }}>
           <Typography variant="h4" sx={{ mb: 2 }}>
@@ -29,15 +29,15 @@ function LandingSection() {
           </Typography>
         </Box>
 
-        <Box sx={{ backgroundColor: 'grey', borderRadius: 0, minHeight: '60vh', display: 'flex', justifyContent: 'center', alignItems: 'center', mb: 5 }}>
+        <Box sx={{ backgroundColor: 'grey', borderRadius: 0, minHeight: '500px', display: 'flex', justifyContent: 'center', alignItems: 'center', mb: 7 }}>
           <Typography>
             Placeholder Image
           </Typography>
         </Box>
 
         <Grid container spacing={2} sx={{ textAlign: 'center' }}>
-          <Grid item xs={12} md={4}>
-            <img src={Logo} alt="Gemen Logo" style={{ height: '80px', backgroundColor: 'grey' }} />
+          <Grid item xs={12} md={4} lg={3}>
+            <img src={Logo} alt="Gemen Logo" style={{ height: '80px' }} />
           </Grid>
         </Grid>
       </Container>

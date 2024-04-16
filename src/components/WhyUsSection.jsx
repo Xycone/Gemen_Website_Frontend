@@ -26,19 +26,11 @@ function WhyUsSection() {
     ];
 
     return (
-        <Box sx={{ pt: 15, backgroundColor: '#011F28', color: 'white' }} id="whyus-section">
+        <Box sx={{ backgroundColor: '#011F28', color: 'white' }} id="whyus-section">
             <Container sx={{ padding: { xs: 0, md: 5 } }}>
-                <Box sx={{ mb: 10, textAlign: 'center' }}>
-                    <Typography variant="h4">
-                        Why Gemen?
-                        <br />
-                        We're <span style={{ color: '#A2C94F' }}>happy to share...</span>
-                    </Typography>
-                </Box>
-
-                <Grid container spacing={8}>
+                <Grid container spacing={10} sx={{ padding: 5 }}>
                     {reasons.map((reason, index) => (
-                        <Grid key={index} item xs={12} md={6} lg={4} sx={{ padding: 5, textAlign: 'center' }}>
+                        <Grid key={index} item xs={12} md={6} lg={4} sx={{ textAlign: 'center' }}>
                             <Box>
                                 {reason.image}
                                 <Typography variant='h5' sx={{ mb: 2, mt: 1 }}>
