@@ -1,16 +1,26 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Typography, Box, Button, Container, Grid } from '@mui/material';
+import { Typography, Box, Button, Container } from '@mui/material';
 
 // Logo
 import Logo from '../assets/Logo.svg'
 
 function LandingSection() {
-  const navigate = useNavigate();
 
-  const navigateToContact = () => {
-    navigate('/contactUs');
-  };
+  // Data to populate cards
+  const partners = [
+    {
+      logo: <img src={Logo} alt="Gemen Logo" style={{ height: '80px' }} />
+    },
+    {
+      logo: <img src={Logo} alt="Gemen Logo" style={{ height: '80px' }} />
+    },
+    {
+      logo: <img src={Logo} alt="Gemen Logo" style={{ height: '80px' }} />
+    },
+    {
+      logo: <img src={Logo} alt="Gemen Logo" style={{ height: '80px' }} />
+    }
+  ];
 
   return (
     <Box sx={{ pt: 20, pb: 10 }}>
@@ -35,11 +45,18 @@ function LandingSection() {
           </Typography>
         </Box>
 
-        <Grid container spacing={2} sx={{ textAlign: 'center' }}>
-          <Grid item xs={12} md={4} lg={3}>
-            <img src={Logo} alt="Gemen Logo" style={{ height: '80px' }} />
-          </Grid>
-        </Grid>
+
+        <Box class='scroller'>
+          <marquee>
+            <Box class='scroller_inner'>
+              {partners.map((partner, index) => (
+                <Box class='scroller_item' key={index}>
+                  {partner.logo}
+                </Box>
+              ))}
+            </Box>
+          </marquee>
+        </Box>
       </Container>
     </Box>
   )

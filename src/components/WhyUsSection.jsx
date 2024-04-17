@@ -11,7 +11,7 @@ function WhyUsSection() {
         {
             image: <RecordVoiceOver sx={{ fontSize: '2.5rem' }} />,
             title: 'For over 15 years',
-            description: 'our company owners have been in the IT voice industry'
+            description: 'our company owners have been working in the IT voice industry'
         },
         {
             image: <Task sx={{ fontSize: '2.5rem' }} />,
@@ -28,7 +28,7 @@ function WhyUsSection() {
     return (
         <Box sx={{ backgroundColor: '#011F28', color: 'white' }}>
             <Container sx={{ padding: { xs: 0, md: 5 } }}>
-                <Grid container spacing={10} sx={{ padding: 5 }}>
+                <Grid container spacing={10} sx={{ padding: 4 }}>
                     {reasons.map((reason, index) => (
                         <Grid key={index} item xs={12} md={6} lg={4} sx={{ textAlign: 'center' }}>
                             <Box>

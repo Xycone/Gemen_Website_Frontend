@@ -61,7 +61,7 @@ function App() {
 
                 <Box sx={{ flexGrow: 1 }} />
 
-                <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', textAlign: 'center' }}>`
+                <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', textAlign: 'center' }}>
 
                   <SolutionsDropdown />
 
