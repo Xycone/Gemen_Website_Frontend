@@ -8,6 +8,7 @@ import WhyUsSection from '../components/WhyUsSection';
 import ServicesSection from '../components/ServicesSection';
 import SolutionsSection from '../components/SolutionsSection';
 import CallToAction from '../components/CallToAction';
+import Partners from '../components/Partners';
 
 function Homepage() {
   // Scroll to section, scroll to top if there is no section tag
@@ -33,6 +34,7 @@ function Homepage() {
   return (
     <Box sx={{ mt: 4, justifyContent: 'center', alignItems: 'center' }}>
       <LandingSection />
+      <Partners />
       <WhyUsSection />
       <SolutionsSection id="solutions-section" />
       <ServicesSection id="services-section" />

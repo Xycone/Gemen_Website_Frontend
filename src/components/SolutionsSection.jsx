@@ -45,7 +45,7 @@ function SolutionsSection() {
     const cardStyle = {
         padding: 4,
         border: '2px solid #E0E0E0',
-        borderRadius: { xs: 0, md: 6 },
+        borderRadius: { xs: 0, md: 4 },
         background: 'translation',
         boxShadow: 'none',
         display: 'flex',
@@ -75,7 +75,7 @@ function SolutionsSection() {
     return (
         <Box sx={{ pt: 20 }} id="solutions-section">
             <Container sx={{ padding: { xs: 0, md: 5 } }}>
-                <Box sx={{ mb: 10, textAlign: 'center' }}>
+                <Box sx={{ mb: 15, textAlign: 'center' }}>
                     <Typography variant="h4">
                         View our solutions &
                         <br /> 

@@ -45,7 +45,7 @@ function ServicesSection() {
     const cardStyle = (color) => ({
         padding: 4,
         border: '2px solid #E0E0E0',
-        borderRadius: { xs: 0, md: 6 },
+        borderRadius: { xs: 0, md: 4 },
         boxShadow: 'none',
         display: 'flex',
         flexDirection: 'column',
@@ -93,9 +93,9 @@ function ServicesSection() {
     ];
 
     return (
-        <Box sx={{ pt: 15, pb: 20 }} id="services-section">
+        <Box sx={{ pt: 10, pb: 20 }} id="services-section">
             <Container sx={{ padding: { xs: 0, md: 5 } }}>
-                <Box sx={{ mb: 10, textAlign: 'center' }}>
+                <Box sx={{ mb: 15, textAlign: 'center' }}>
                     <Typography variant="h4">
                         Discover our services:
                         <br />

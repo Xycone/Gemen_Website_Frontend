@@ -45,11 +45,10 @@ function Footer() {
             border: '2px solid transparent',
             backgroundColor: 'white',
             color: 'black',
-            transform: 'scale(1.2)'
+            transform: 'scale(1.05)'
         },
         textTransform: 'none',
         border: '2px solid transparent',
-        backgroundColor: 'white',
         color: 'black',
     };
 

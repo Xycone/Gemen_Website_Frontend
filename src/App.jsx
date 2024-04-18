@@ -46,6 +46,22 @@ function App() {
     setIsAppBarOpen(false);
   }
 
+  // Styling
+  const buttonStyle = {
+    mx: 2,
+    boxShadow: 'none',
+    '&:hover': {
+      boxShadow: 'none',
+      color: 'white !important',
+      backgroundColor: '#1A06FF',
+      color: 'black',
+      transform: 'scale(1.05)'
+    },
+    textTransform: 'none',
+    color: 'white !important',
+    backgroundColor: '#1A06FF',
+  };
+
   return (
     <Router>
       <ThemeProvider theme={MyTheme}>
@@ -74,17 +90,7 @@ function App() {
                     className="ContactUsButton"
                     component={Link}
                     to="/contactUs"
-                    sx={{
-                      borderRadius: 2,
-                      mx: 2,
-                      px: 3,
-                      py: 1,
-                      color: 'white !important',
-                      backgroundColor: '#1A06FF',
-                      whiteSpace: 'nowrap',
-                      textTransform: 'none',
-                      boxShadow: 'none',
-                    }}
+                    sx={buttonStyle}
                   >
                     Contact Us
                   </Button>
