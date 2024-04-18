@@ -37,7 +37,7 @@ function Footer() {
         px: 4,
         display: { xs: 'block', md: 'flex' }
     };
-
+    
     const buttonStyle = {
         boxShadow: 'none',
         '&:hover': {

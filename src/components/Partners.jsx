@@ -13,7 +13,7 @@ function Partners() {
     ];
 
     return (
-        <Box sx={{ py: 2 }}>
+        <Box sx={{ py: 3 }}>
             <Container sx={{ position: 'relative', textAlign: 'center', padding: { xs: 0, md: 5 } }}>
                 <Grid container spacing={4}>
                     {partners.map((partner, index) => (

@@ -28,19 +28,31 @@ function WhyUsSection() {
         <Box sx={{ py: 5, backgroundColor: '#011F28', color: 'white' }}>
             <Container sx={{ padding: { xs: 0, md: 5 } }}>
                 <Grid container spacing={10} sx={{ padding: 4 }}>
-                    {reasons.map((reason, index) => (
-                        <Grid key={index} item xs={12} md={6} lg={4} sx={{ textAlign: 'center' }}>
-                            <Box>
-                                {reason.image}
-                                <Typography variant='h5' sx={{ mb: 2, mt: 1 }}>
-                                    {reason.title}
-                                </Typography>
-                            </Box>
-                            <Box>
-                                {reason.description}
-                            </Box>
+                    <Grid item xs={12} md={6}>
+                        <Typography variant='h4' sx={{ textAlign: 'center' }}>
+                            <span style={{ color: '#A2C94F' }}>This</span> is why you
+                            <br />
+                            choose Gemen
+                        </Typography>
+                    </Grid>
+
+                    <Grid item xs={12} md={6}>
+                        <Grid container spacing={10}>
+                            {reasons.map((reason, index) => (
+                                <Grid key={index} item xs={12} md={6} sx={{ textAlign: 'center' }}>
+                                    <Box>
+                                        {reason.image}
+                                        <Typography variant='h5' sx={{ mb: 2, mt: 1 }}>
+                                            {reason.title}
+                                        </Typography>
+                                    </Box>
+                                    <Box>
+                                        {reason.description}
+                                    </Box>
+                                </Grid>
+                            ))}
                         </Grid>
-                    ))}
+                    </Grid>
                 </Grid>
             </Container >
         </Box >

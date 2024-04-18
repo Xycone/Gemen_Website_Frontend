@@ -93,7 +93,7 @@ function ServicesSection() {
     ];
 
     return (
-        <Box sx={{ pt: 10, pb: 20 }} id="services-section">
+        <Box sx={{ py: 15 }} id="services-section">
             <Container sx={{ padding: { xs: 0, md: 5 } }}>
                 <Box sx={{ mb: 15, textAlign: 'center' }}>
                     <Typography variant="h4">
