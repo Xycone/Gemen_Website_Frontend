@@ -5,7 +5,6 @@ import { Typography, Box, Container, Grid } from '@mui/material';
 import { RecordVoiceOver, Task, PeopleAltOutlined } from '@mui/icons-material';
 
 function WhyUsSection() {
-
     // Data to populate carousel
     const reasons = [
         {
@@ -15,7 +14,7 @@ function WhyUsSection() {
         },
         {
             image: <Task sx={{ fontSize: '2.5rem' }} />,
-            title: '100+ total projects',
+            title: '100+ projects',
             description: 'to meet every voice needs'
         },
         {
@@ -26,7 +25,7 @@ function WhyUsSection() {
     ];
 
     return (
-        <Box sx={{ backgroundColor: '#011F28', color: 'white' }}>
+        <Box sx={{ py: 5, backgroundColor: '#011F28', color: 'white' }}>
             <Container sx={{ padding: { xs: 0, md: 5 } }}>
                 <Grid container spacing={10} sx={{ padding: 4 }}>
                     {reasons.map((reason, index) => (

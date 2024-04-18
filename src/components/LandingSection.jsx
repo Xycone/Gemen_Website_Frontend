@@ -1,27 +1,10 @@
 import React from 'react';
-import { Typography, Box, Button, Container } from '@mui/material';
+import { Typography, Box, Container } from '@mui/material';
 
-// Logo
-import Logo from '../assets/Logo.svg'
+// Components
+import Partners from './Partners';
 
 function LandingSection() {
-
-  // Data to populate cards
-  const partners = [
-    {
-      logo: <img src={Logo} alt="Gemen Logo" style={{ height: '80px' }} />
-    },
-    {
-      logo: <img src={Logo} alt="Gemen Logo" style={{ height: '80px' }} />
-    },
-    {
-      logo: <img src={Logo} alt="Gemen Logo" style={{ height: '80px' }} />
-    },
-    {
-      logo: <img src={Logo} alt="Gemen Logo" style={{ height: '80px' }} />
-    }
-  ];
-
   return (
     <Box sx={{ pt: 20, pb: 10 }}>
       <Container sx={{ position: 'relative', textAlign: 'center', padding: { xs: 0, md: 5 } }}>
@@ -39,24 +22,12 @@ function LandingSection() {
           </Typography>
         </Box>
 
-        <Box sx={{ backgroundColor: 'grey', borderRadius: 0, minHeight: '500px', display: 'flex', justifyContent: 'center', alignItems: 'center', mb: 7 }}>
+        <Box sx={{ backgroundColor: 'grey', minHeight: '500px', display: 'flex', justifyContent: 'center', alignItems: 'center', mb: 2 }}>
           <Typography>
             Placeholder Image
           </Typography>
         </Box>
-
-
-        <Box class='scroller'>
-          <marquee>
-            <Box class='scroller_inner'>
-              {partners.map((partner, index) => (
-                <Box class='scroller_item' key={index}>
-                  {partner.logo}
-                </Box>
-              ))}
-            </Box>
-          </marquee>
-        </Box>
+        <Partners />
       </Container>
     </Box>
   )

@@ -31,20 +31,3 @@
 .grecaptcha-badge {
   visibility: hidden;
 }
-
-/* Marquee */
-.scroller {
-  overflow: hidden;
-  max-width: 100vw;
-}
-
-.scroller_inner {
-  display: flex;
-  padding-block: 1rem;
-  gap: 1rem;
-}
-
-.scroller_item {
-  margin-right: 6.25rem;
-  /* flex: 0 0 33.333%; */
-}

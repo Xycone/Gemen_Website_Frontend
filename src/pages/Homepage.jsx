@@ -7,6 +7,7 @@ import LandingSection from '../components/LandingSection';
 import WhyUsSection from '../components/WhyUsSection';
 import ServicesSection from '../components/ServicesSection';
 import SolutionsSection from '../components/SolutionsSection';
+import Partners from '../components/Partners'
 
 function Homepage() {
   // Scroll to section, scroll to top if there is no section tag

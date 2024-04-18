@@ -73,7 +73,7 @@ function SolutionsSection() {
     ];
 
     return (
-        <Box sx={{ pt: 15 }} id="solutions-section">
+        <Box sx={{ pt: 20 }} id="solutions-section">
             <Container sx={{ padding: { xs: 0, md: 5 } }}>
                 <Box sx={{ mb: 10, textAlign: 'center' }}>
                     <Typography variant="h4">
