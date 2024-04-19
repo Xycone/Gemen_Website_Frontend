@@ -4,6 +4,9 @@ import { Typography, Box, Container, Grid } from '@mui/material';
 // Material UI Icons
 import { RecordVoiceOver, Task, PeopleAltOutlined } from '@mui/icons-material';
 
+// Icons
+import Arrow from '../assets/Arrow.svg';
+
 function WhyUsSection() {
     // Data to populate carousel
     const reasons = [
@@ -28,15 +31,18 @@ function WhyUsSection() {
         <Box sx={{ py: 5, backgroundColor: '#011F28', color: 'white' }}>
             <Container sx={{ padding: { xs: 0, md: 5 } }}>
                 <Grid container spacing={10} sx={{ padding: 4 }}>
-                    <Grid item xs={12} md={6}>
-                        <Typography variant='h4' sx={{ textAlign: 'center' }}>
+                    <Grid item xs={12} md={5}>
+                        <Typography variant='h4' sx={{ textAlign: 'center', marginBottom: 5 }}>
                             <span style={{ color: '#A2C94F' }}>This</span> is why you
                             <br />
                             choose Gemen
                         </Typography>
+                        <Box sx={{ display: {xs: 'none', md: 'flex'}, justifyContent: 'right' }}>
+                            <img src={Arrow} alt="Arrow" style={{ height: '120px' }} />
+                        </Box>
                     </Grid>
 
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} md={7}>
                         <Grid container spacing={10}>
                             {reasons.map((reason, index) => (
                                 <Grid key={index} item xs={12} md={6} sx={{ textAlign: 'center' }}>

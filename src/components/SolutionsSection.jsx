@@ -5,6 +5,9 @@ import { Box, Typography, Card, CardContent, Container } from '@mui/material';
 // Material UI Icons
 import { East } from '@mui/icons-material';
 
+// Icons
+import LevelUpArrow from '../assets/LevelUpArrow.svg';
+
 function SolutionsSection() {
     const navigate = useNavigate();
 
@@ -77,9 +80,9 @@ function SolutionsSection() {
             <Container sx={{ padding: { xs: 0, md: 5 } }}>
                 <Box sx={{ mb: 15, textAlign: 'center' }}>
                     <Typography variant="h4">
-                        View our solutions &
-                        <br /> 
-                        <span style={{ color: '#D8137C' }}>level up</span> your workflow today
+                        <span style={{ color: '#D8137C' }}>Level Up <img src={LevelUpArrow} alt="LevelUpArrow" style={{ height: '30px' }} /></span> 
+                        <br />
+                        your workflow with our solutions
                     </Typography>
                 </Box>
 

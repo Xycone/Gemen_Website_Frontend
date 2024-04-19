@@ -1,5 +1,8 @@
-import React, { useState } from 'react';
-import { Box, Typography, Card, CardContent, Container } from '@mui/material';
+import React, { useEffect, useState } from 'react';
+import { Box, Typography, Card, CardContent, Container, Input, IconButton } from '@mui/material';
+
+// Material UI Icons
+import { Clear, Search } from '@mui/icons-material';
 
 // Icons
 import ManpowerIconNH from '../assets/ManpowerIconNH.svg';
@@ -25,6 +28,34 @@ function ServicesSection() {
 
     const handleMouseLeave = () => {
         setHoveredIndex(-1);
+    };
+
+    // Search
+    const [displayItems, setDisplayItems] = useState([]);
+    const [search, setSearch] = useState('');
+
+    const onSearchChange = (e) => {
+        setSearch(e.target.value);
+    };
+
+    const searchServices = () => {
+        setDisplayItems(services.filter(service => service.title.toLowerCase().includes(search.toLowerCase()) ||
+            service.description.toLowerCase().includes(search.toLowerCase())))
+    };
+
+    const onSearchKeyDown = (e) => {
+        if (e.key === "Enter") {
+            searchServices();
+        }
+    };
+
+    const onClickSearch = () => {
+        searchServices();
+    };
+
+    const onClickClear = () => {
+        setSearch('');
+        setDisplayItems(services);
     };
 
     // Styling
@@ -92,6 +123,10 @@ function ServicesSection() {
         }
     ];
 
+    useEffect(() => {
+        setDisplayItems(services);
+    }, []);
+
     return (
         <Box sx={{ py: 15 }} id="services-section">
             <Container sx={{ padding: { xs: 0, md: 5 } }}>
@@ -102,8 +137,24 @@ function ServicesSection() {
                         What we can <span style={{ color: '#FF9900' }}>do for you...</span>
                     </Typography>
                 </Box>
+
+                <Box sx={{ display: 'flex', alignItems: 'center', mb: 5, ml: 2 }}>
+                    <Input value={search} placeholder="Search for services"
+                        onChange={onSearchChange}
+                        onKeyDown={onSearchKeyDown}>
+                    </Input>
+                    <IconButton
+                        onClick={onClickSearch}>
+                        <Search />
+                    </IconButton>
+                    <IconButton
+                        onClick={onClickClear}>
+                        <Clear />
+                    </IconButton>
+                </Box>
+
                 <Box sx={gridContainerStyle}>
-                    {services.map((service, index) => (
+                    {displayItems.map((service, index) => (
                         <Box key={index} sx={gridItemStyle}>
                             <Card sx={cardStyle(service.color)} onMouseEnter={() => handleMouseEnter(index)} onMouseLeave={handleMouseLeave}>
                                 <CardContent>
