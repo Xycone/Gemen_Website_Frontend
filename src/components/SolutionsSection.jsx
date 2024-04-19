@@ -80,7 +80,7 @@ function SolutionsSection() {
             <Container sx={{ padding: { xs: 0, md: 5 } }}>
                 <Box sx={{ mb: 15, textAlign: 'center' }}>
                     <Typography variant="h4">
-                        <span style={{ color: '#D8137C' }}>Level Up <img src={LevelUpArrow} alt="LevelUpArrow" style={{ height: '30px' }} /></span> 
+                        <span style={{ color: '#D8137C' }}>LEVEL UP <img src={LevelUpArrow} alt="LevelUpArrow" style={{ height: '30px' }} /></span> 
                         <br />
                         your workflow with our solutions
                     </Typography>

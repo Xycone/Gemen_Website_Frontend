@@ -45,11 +45,12 @@ function WhyUsSection() {
                 <Grid container spacing={10} sx={{ padding: 4 }}>
                     <Grid item xs={12} md={5}>
                         <Typography variant='h4' sx={{ textAlign: 'center', marginBottom: 5 }} ref={textRef}>
-                            <span style={{ color: '#A2C94F' }}>This</span> is why you
+                            <span style={{ color: '#FF9900' }}>This</span> is why you
                             <br />
-                            choose <span style={{ position: 'relative', display: 'inline-block' }}> Gemen
+                            choose Gemen
+                            {/* <span style={{ position: 'relative', display: 'inline-block' }}> Gemen
                                 <img src={Underline} alt="Underline" style={underlineStyle} />
-                            </span>
+                            </span> */}
                         </Typography>
                         <Box sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'right' }}>
                             <img src={Arrow} alt="Arrow" style={{ height: '120px' }} />

@@ -134,14 +134,15 @@ function ServicesSection() {
                     <Typography variant="h4">
                         Discover our services:
                         <br />
-                        What we can <span style={{ color: '#FF9900' }}>do for you...</span>
+                        What we can <span style={{ color: '#00A2C7' }}>do for you...</span>
                     </Typography>
                 </Box>
 
                 <Box sx={{ display: 'flex', alignItems: 'center', mb: 5, ml: 2 }}>
                     <Input value={search} placeholder="Search for services"
                         onChange={onSearchChange}
-                        onKeyDown={onSearchKeyDown}>
+                        onKeyDown={onSearchKeyDown}
+                    >
                     </Input>
                     <IconButton
                         onClick={onClickSearch}>
