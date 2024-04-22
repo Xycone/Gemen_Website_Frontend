@@ -1,31 +1,39 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Typography, Menu, MenuItem } from '@mui/material';
+import { Box, Button, Typography, Menu, MenuItem } from '@mui/material';
 
 // Material UI Icons
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 function SolutionsDropdown() {
-    const [solutionsMenuAnchorEl, setSolutionsMenuAnchorEl] = useState(null);
-    const handleSolutionsMenuOpen = (event) => {
-        setSolutionsMenuAnchorEl(event.currentTarget);
-    }
-    const handleSolutionsMenuClose = () => {
-        setSolutionsMenuAnchorEl(null);
+    const [anchorEl, setAnchorEl] = useState(null);
+
+    const handleOpen = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
+    //Styling
+    const linkStyle = {
+        textDecoration: 'none',
+        color: 'black',
+
     }
 
     return (
-        <>
+        <Box position="relative">
             <Button
-                onClick={handleSolutionsMenuOpen}
+                onClick={handleOpen}
                 sx={{
                     textTransform: 'none',
-                    mr: 2,
-                    padding: 0,
+                    mr: 3,
                     color: 'black',
                     '&:hover': {
-                        backgroundColor: 'transparent',
-                    },
+                        backgroundColor: 'transparent'
+                    }
                 }}
                 disableRipple
             >
@@ -34,33 +42,51 @@ function SolutionsDropdown() {
                 </Typography>
                 <ArrowDropDownIcon />
             </Button>
+
             <Menu
-                anchorEl={solutionsMenuAnchorEl}
-                open={Boolean(solutionsMenuAnchorEl)}
-                onClose={handleSolutionsMenuClose}
+                anchorEl={anchorEl}
+                open={Boolean(anchorEl)}
+                onClose={handleClose}
                 anchorOrigin={{
                     vertical: 'bottom',
-                    horizontal: 'center',
+                    horizontal: 'left',
                 }}
                 transformOrigin={{
                     vertical: 'top',
-                    horizontal: 'center',
+                    horizontal: 'left',
                 }}
-                sx={{ display: { xs: 'none', md: 'flex' } }}
+                sx={{ mt: 2 }}
             >
-                <Link to="/garantia" className="dropdown-link" style={{ textDecoration: 'none', color: 'black' }}>
-                    <MenuItem onClick={handleSolutionsMenuClose}>
+                <Box sx={{ display: 'flex', flexDirection: 'row' }}>
+                    <MenuItem
+                        onClick={handleClose}
+                        component={Link}
+                        to="/garantia"
+                        sx={{ flex: 1 }}
+                    >
                         <Typography>Garantia</Typography>
                     </MenuItem>
-                </Link>
 
-                <Link to="/ace" className="dropdown-link" style={{ textDecoration: 'none', color: 'black' }}>
-                    <MenuItem onClick={handleSolutionsMenuClose}>
-                        <Typography>ACE</Typography>
+                    <MenuItem
+                        onClick={handleClose}
+                        component={Link}
+                        to="/ace"
+                        sx={{ flex: 1 }}
+                    >
+                        <Typography>Ace</Typography>
                     </MenuItem>
-                </Link>
+
+                    <MenuItem
+                        onClick={handleClose}
+                        component={Link}
+                        to="/mediator"
+                        sx={{ flex: 1 }}
+                    >
+                        <Typography>Mediator</Typography>
+                    </MenuItem>
+                </Box>
             </Menu>
-        </>
+        </Box>
     )
 }
 
