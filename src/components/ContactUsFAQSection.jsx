@@ -3,17 +3,24 @@ import { Box, Container, Typography, Accordion, AccordionSummary, AccordionDetai
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 function ContactUsFAQSection() {
+    // Styling
+    const accordionStyle = {
+        color: 'black',
+        boxShadow: 'none',
+        background: 'transparent',
+        padding: 1, 
+        mb: 0.5
+    };
+
     return (
         <Box sx={{ py: 5 }} id="faq-section">
             <Container sx={{ padding: { xs: 0, md: 5 } }}>
                 <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: 5 }}>
                     <Typography variant="h5" sx={{ mb: 3 }}>Frequently Asked Questions:</Typography>
 
-                    <Accordion sx={{
-                        boxShadow: 'none',
-                    }}>
+                    <Accordion sx={accordionStyle}>
                         <AccordionSummary
-                            expandIcon={<ArrowDropDownIcon />}
+                            expandIcon={<ArrowDropDownIcon sx={{ color: 'black' }} />}
                             aria-controls="panel1-content"
                             id="panel1-header"
                         >
@@ -27,11 +34,9 @@ function ContactUsFAQSection() {
                         </AccordionDetails>
                     </Accordion>
 
-                    <Accordion sx={{
-                        boxShadow: 'none',
-                    }}>
+                    <Accordion sx={accordionStyle}>
                         <AccordionSummary
-                            expandIcon={<ArrowDropDownIcon />}
+                            expandIcon={<ArrowDropDownIcon sx={{ color: 'black' }} />}
                             aria-controls="panel1-content"
                             id="panel1-header"
                         >
@@ -45,11 +50,9 @@ function ContactUsFAQSection() {
                         </AccordionDetails>
                     </Accordion>
 
-                    <Accordion sx={{
-                        boxShadow: 'none',
-                    }}>
+                    <Accordion sx={accordionStyle}>
                         <AccordionSummary
-                            expandIcon={<ArrowDropDownIcon />}
+                            expandIcon={<ArrowDropDownIcon sx={{ color: 'black' }} />}
                             aria-controls="panel1-content"
                             id="panel1-header"
                         >
@@ -63,11 +66,9 @@ function ContactUsFAQSection() {
                         </AccordionDetails>
                     </Accordion>
 
-                    <Accordion sx={{
-                        boxShadow: 'none',
-                    }}>
+                    <Accordion sx={accordionStyle}>
                         <AccordionSummary
-                            expandIcon={<ArrowDropDownIcon />}
+                            expandIcon={<ArrowDropDownIcon sx={{ color: 'black' }} />}
                             aria-controls="panel1-content"
                             id="panel1-header"
                         >
@@ -81,8 +82,8 @@ function ContactUsFAQSection() {
                         </AccordionDetails>
                     </Accordion>
                 </Box>
-            </Container>
-        </Box>
+            </Container >
+        </Box >
     )
 }
 
