@@ -84,17 +84,18 @@ function App() {
                   <Link to="/#services-section">
                     <Typography>Services</Typography>
                   </Link>
-
-                  <Button
-                    variant="contained"
-                    className="ContactUsButton"
-                    component={Link}
-                    to="/contactUs"
-                    sx={buttonStyle}
-                  >
-                    Contact Us
-                  </Button>
                 </Box>
+
+                <Box sx={{ flexGrow: 1 }} />
+                <Button
+                  variant="contained"
+                  className="ContactUsButton"
+                  component={Link}
+                  to="/contactUs"
+                  sx={buttonStyle}
+                >
+                  Contact Us
+                </Button>
 
                 <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
                   <IconButton onClick={handleAppBarToggle}>

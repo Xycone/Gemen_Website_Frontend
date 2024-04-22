@@ -1,32 +1,49 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Box, Button, Typography, Menu, MenuItem } from '@mui/material';
+import { Box, Button, Typography, Card, Popover, CardContent } from '@mui/material';
 
 // Material UI Icons
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 function SolutionsDropdown() {
-    const [anchorEl, setAnchorEl] = useState(null);
+    const [anchor, setAnchor] = useState(null);
 
-    const handleOpen = (event) => {
-        setAnchorEl(event.currentTarget);
+    const handleClick = (event) => {
+        setAnchor(event.currentTarget);
     };
 
     const handleClose = () => {
-        setAnchorEl(null);
+        setAnchor(null);
     };
 
-    //Styling
-    const linkStyle = {
-        textDecoration: 'none',
-        color: 'black',
+    const open = Boolean(anchor);
 
-    }
+    // Styling
+    const gridContainerStyle = {
+        display: 'grid',
+        gridTemplateColumns: { md: 'repeat(3, 1fr)' },
+        gridAutoRows: "1fr",
+        gridAutoFlow: "row",
+        gap: 2
+    };
+
+    const gridItemStyle = {
+        padding: 5,
+        borderRadius: 4,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        textDecoration: 'none',
+        backgroundColor: '#011F28',
+        color: 'white'
+    };
+
 
     return (
-        <Box position="relative">
+        <Box>
             <Button
-                onClick={handleOpen}
+                aria-haspopup="true" onClick={handleClick}
                 sx={{
                     textTransform: 'none',
                     mr: 3,
@@ -43,9 +60,9 @@ function SolutionsDropdown() {
                 <ArrowDropDownIcon />
             </Button>
 
-            <Menu
-                anchorEl={anchorEl}
-                open={Boolean(anchorEl)}
+            <Popover
+                open={open}
+                anchorEl={anchor}
                 onClose={handleClose}
                 anchorOrigin={{
                     vertical: 'bottom',
@@ -55,38 +72,47 @@ function SolutionsDropdown() {
                     vertical: 'top',
                     horizontal: 'left',
                 }}
-                sx={{ mt: 2 }}
+                sx={{ display: { xs: 'none', md: 'block' }, mt: 4, borderRadius: 4 }}
+                PaperProps={{
+                    sx: {
+                        borderRadius: 4,
+                        padding: 5
+                    },
+                }}
             >
-                <Box sx={{ display: 'flex', flexDirection: 'row' }}>
-                    <MenuItem
+                <Typography variant='h6' sx={{ mb: 2, ml: 1 }}>
+                    Products:
+                </Typography>
+                <Box sx={gridContainerStyle}>
+                    <Box
                         onClick={handleClose}
                         component={Link}
                         to="/garantia"
-                        sx={{ flex: 1 }}
+                        sx={gridItemStyle}
                     >
                         <Typography>Garantia</Typography>
-                    </MenuItem>
+                    </Box>
 
-                    <MenuItem
+                    <Box
                         onClick={handleClose}
                         component={Link}
                         to="/ace"
-                        sx={{ flex: 1 }}
+                        sx={gridItemStyle}
                     >
                         <Typography>Ace</Typography>
-                    </MenuItem>
+                    </Box>
 
-                    <MenuItem
+                    <Box
                         onClick={handleClose}
                         component={Link}
-                        to="/mediator"
-                        sx={{ flex: 1 }}
+                        to="/ace"
+                        sx={gridItemStyle}
                     >
                         <Typography>Mediator</Typography>
-                    </MenuItem>
+                    </Box>
                 </Box>
-            </Menu>
-        </Box>
+            </Popover>
+        </Box >
     )
 }
 

@@ -48,7 +48,7 @@ function LandingSection() {
           </Button>
         </Box>
 
-        <Box sx={{ borderRadius: { xs: 0, md: 4 }, backgroundColor: 'grey', minHeight: '450px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <Box sx={{ backgroundColor: 'grey', minHeight: '450px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <Typography>
             Placeholder Image
           </Typography>
