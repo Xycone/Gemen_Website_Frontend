@@ -70,7 +70,7 @@ function SolutionsSection() {
         },
         {
             name: "Ace",
-            description: "Facilitates the establishment of a network comprising interconnected applications through their APIs.",
+            description: "Facilitates the transition of voice data from outdated mediums to more contempory and sustainable storage options.",
             navigation: navigateToAce
         }
     ];

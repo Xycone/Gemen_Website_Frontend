@@ -37,18 +37,19 @@ function Footer() {
         px: 4,
         display: { xs: 'block', md: 'flex' }
     };
-    
+
     const buttonStyle = {
         boxShadow: 'none',
         '&:hover': {
             boxShadow: 'none',
-            border: '2px solid transparent',
             backgroundColor: 'white',
             color: 'black',
             transform: 'scale(1.05)'
         },
+        borderRadius: 6,
+        py: 1,
+        px: 3,
         textTransform: 'none',
-        border: '2px solid transparent',
         backgroundColor: 'white',
         color: 'black',
     };
@@ -79,6 +80,11 @@ function Footer() {
                                 <Typography sx={{ mb: 1 }}>
                                     <Link to="/" className='FooterNavLink'>
                                         Home
+                                    </Link>
+                                </Typography>
+                                <Typography sx={{ mb: 1 }}>
+                                    <Link to="/#whyus-section" className='FooterNavLink'>
+                                        Why Us
                                     </Link>
                                 </Typography>
                                 <Typography sx={{ mb: 1 }}>

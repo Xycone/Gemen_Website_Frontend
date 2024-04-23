@@ -32,11 +32,11 @@ function Homepage() {
   }, [location]);
 
   return (
-    <Box sx={{ mt: 4, justifyContent: 'center', alignItems: 'center' }}>
+    <Box sx={{ mt: 10, justifyContent: 'center', alignItems: 'center' }}>
       <LandingSection />
       <Partners />
+      <WhyUsSection id="whyus-section"/>
       <SolutionsSection id="solutions-section" />
-      <WhyUsSection />
       <ServicesSection id="services-section" />
     </Box>
   )

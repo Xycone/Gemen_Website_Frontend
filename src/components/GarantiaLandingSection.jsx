@@ -29,9 +29,9 @@ function GarantiaLandingSection() {
                 <Button
                     variant="contained"
                     sx={{
-                        borderRadius: 2,
-                        px: 3,
+                        borderRadius: 6,
                         py: 1,
+                        px: 2.5,
                         whiteSpace: 'nowrap',
                         boxShadow: 'none',
                         '&:hover': {

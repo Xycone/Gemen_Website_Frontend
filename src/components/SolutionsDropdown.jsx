@@ -24,7 +24,7 @@ function SolutionsDropdown() {
         gridTemplateColumns: { md: 'repeat(3, 1fr)' },
         gridAutoRows: "1fr",
         gridAutoFlow: "row",
-        gap: 2
+        gap: 4
     };
 
     const gridItemStyle = {
@@ -36,17 +36,20 @@ function SolutionsDropdown() {
         alignItems: 'center',
         textDecoration: 'none',
         backgroundColor: '#011F28',
-        color: 'white'
+        color: 'white',
+        '&:hover': {
+            transform: 'scale(1.05)'
+        }
     };
 
 
     return (
-        <Box>
+        <Box className="AppBarDropdown">
             <Button
                 aria-haspopup="true" onClick={handleClick}
                 sx={{
                     textTransform: 'none',
-                    mr: 3,
+                    mx: 2,
                     color: 'black',
                     '&:hover': {
                         backgroundColor: 'transparent'
@@ -57,7 +60,11 @@ function SolutionsDropdown() {
                 <Typography>
                     Solutions
                 </Typography>
-                <ArrowDropDownIcon />
+                {!open ? (
+                    <ArrowDropDownIcon />
+                ) : (
+                    <ArrowDropDownIcon sx={{ transform: 'rotate(180deg)' }} />
+                )}
             </Button>
 
             <Popover
@@ -66,15 +73,16 @@ function SolutionsDropdown() {
                 onClose={handleClose}
                 anchorOrigin={{
                     vertical: 'bottom',
-                    horizontal: 'left',
+                    horizontal: 'center',
                 }}
                 transformOrigin={{
                     vertical: 'top',
-                    horizontal: 'left',
+                    horizontal: 'center',
                 }}
                 sx={{ display: { xs: 'none', md: 'block' }, mt: 4, borderRadius: 4 }}
                 PaperProps={{
                     sx: {
+                        maxWidth: 'md',
                         borderRadius: 4,
                         padding: 5
                     },
@@ -90,7 +98,8 @@ function SolutionsDropdown() {
                         to="/garantia"
                         sx={gridItemStyle}
                     >
-                        <Typography>Garantia</Typography>
+                        <Typography variant='h6' sx={{ mb: 2 }}>Garantia</Typography>
+                        <Typography sx={{ textAlign: 'center' }}>Our phone call integrity monitoring solution.</Typography>
                     </Box>
 
                     <Box
@@ -99,7 +108,8 @@ function SolutionsDropdown() {
                         to="/ace"
                         sx={gridItemStyle}
                     >
-                        <Typography>Ace</Typography>
+                        <Typography variant='h6' sx={{ mb: 2 }}>Ace</Typography>
+                        <Typography sx={{ textAlign: 'center' }}>Transitions your voice data to modern storage.</Typography>
                     </Box>
 
                     <Box
@@ -109,10 +119,11 @@ function SolutionsDropdown() {
                         sx={gridItemStyle}
                     >
                         <Typography>Mediator</Typography>
+                        <Typography></Typography>
                     </Box>
                 </Box>
             </Popover>
-        </Box >
+        </Box>
     )
 }
 

@@ -40,7 +40,7 @@ function WhyUsSection() {
     ];
 
     return (
-        <Box sx={{ py: 15, backgroundColor: '#011F28', color: 'white' }}>
+        <Box sx={{ py: 15, backgroundColor: '#011F28', color: 'white' }} id="whyus-section">
             <Container sx={{ padding: { xs: 0, md: 5 } }}>
                 <Grid container spacing={10} sx={{ padding: 4 }}>
                     <Grid item xs={12} md={5}>

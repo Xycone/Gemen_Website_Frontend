@@ -48,7 +48,7 @@ function App() {
 
   // Styling
   const buttonStyle = {
-    mx: 2,
+    mx: 3,
     boxShadow: 'none',
     '&:hover': {
       boxShadow: 'none',
@@ -57,6 +57,9 @@ function App() {
       color: 'black',
       transform: 'scale(1.05)'
     },
+    borderRadius: 6,
+    py: 1,
+    px: 2.5,
     textTransform: 'none',
     color: 'white !important',
     backgroundColor: '#1A06FF',
@@ -78,24 +81,31 @@ function App() {
                 <Box sx={{ flexGrow: 1 }} />
 
                 <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', textAlign: 'center' }}>
+                  <Link to="/#whyus-section">
+                    <Typography sx={{ mx: 2 }}>Why Us</Typography>
+                  </Link>
 
                   <SolutionsDropdown />
 
                   <Link to="/#services-section">
-                    <Typography>Services</Typography>
+                    <Typography sx={{ mx: 2 }}>Services</Typography>
                   </Link>
                 </Box>
 
+
                 <Box sx={{ flexGrow: 1 }} />
-                <Button
-                  variant="contained"
-                  className="ContactUsButton"
-                  component={Link}
-                  to="/contactUs"
-                  sx={buttonStyle}
-                >
-                  Contact Us
-                </Button>
+
+                <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+                  <Button
+                    variant="contained"
+                    className="ContactUsButton"
+                    component={Link}
+                    to="/contactUs"
+                    sx={buttonStyle}
+                  >
+                    Contact Us
+                  </Button>
+                </Box>
 
                 <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
                   <IconButton onClick={handleAppBarToggle}>
@@ -107,15 +117,22 @@ function App() {
               {/* Appbar Dropdown */}
               {isAppBarOpen && (
                 <Box sx={{ mt: 2, display: { xs: 'block', md: 'none' }, maxHeight: '40vh', overflowY: 'auto', pr: 2 }}>
+                  <Link to="/#whyus-section" onClick={handleAppBarClose}>
+                    <Typography>Why Us</Typography>
+                  </Link>
+              
                   <Link to="/garantia" onClick={handleAppBarClose}>
                     <Typography>Garantia</Typography>
                   </Link>
+
                   <Link to="/ace" onClick={handleAppBarClose}>
                     <Typography>ACE</Typography>
                   </Link>
+
                   <Link to="/#services-section" onClick={handleAppBarClose}>
                     <Typography>Services</Typography>
                   </Link>
+
                   <Link to="/contactUs" onClick={handleAppBarClose}>
                     <Typography>Contact Us</Typography>
                   </Link>

@@ -8,7 +8,6 @@
 .AppBar a:hover,
 .AppBar button:hover,
 .AppBar button:hover .MuiButton-label {
-  color: #0000EE;
   text-decoration: underline;
 }
 
