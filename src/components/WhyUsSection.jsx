@@ -1,41 +1,35 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React from 'react';
 import { Typography, Box, Container, Grid } from '@mui/material';
-
-// Material UI Icons
-import { RecordVoiceOver, Task, PeopleAltOutlined } from '@mui/icons-material';
 
 // Icons
 import Arrow from '../assets/Arrow.svg';
-import Underline from '../assets/Underline.svg';
+import Projects from '../assets/Projects.svg';
+import Microphone from '../assets/Microphone.svg';
+import Collaborate from '../assets/Collaborate.svg';
 
 function WhyUsSection() {
-    const textRef = useRef(null);
-
-    // Styling
-    const underlineStyle = {
-        width: '120px', 
-        position: 'absolute', 
-        bottom: '-10px', 
-        left: '50%', 
-        transform: 'translateX(-50%)'
+    //Styling
+    const imageStyle = {
+        width: '40px',
+        height: '40px'
     };
 
     // Data to populate carousel
     const reasons = [
         {
-            image: <RecordVoiceOver sx={{ fontSize: '2.5rem' }} />,
-            title: 'For over 15 years',
-            description: 'our company owners have been working in the IT voice industry'
+            image: <img src={Microphone} style={imageStyle} />,
+            title: 'Knowledgeble',
+            description: 'Our company owners have been in the IT voice industry for 15+ years'
         },
         {
-            image: <Task sx={{ fontSize: '2.5rem' }} />,
-            title: '100+ projects',
-            description: 'to meet every voice needs'
+            image: <img src={Projects} style={imageStyle} />,
+            title: 'Projects',
+            description: 'We have 100+ projects completed to meet every voice needs'
         },
         {
-            image: <PeopleAltOutlined sx={{ fontSize: '2.5rem' }} />,
-            title: 'Experienced collaborating',
-            description: 'with governments and banks'
+            image: <img src={Collaborate} style={{ width: '45px', height: '45px' }} />,
+            title: 'Experience Working',
+            description: 'with both governments and banks'
         }
     ];
 
@@ -44,13 +38,10 @@ function WhyUsSection() {
             <Container sx={{ padding: { xs: 0, md: 5 } }}>
                 <Grid container spacing={10} sx={{ padding: 4 }}>
                     <Grid item xs={12} md={5}>
-                        <Typography variant='h4' sx={{ textAlign: 'center', marginBottom: 5 }} ref={textRef}>
-                            <span style={{ color: '#FF9900' }}>This</span> is why you
+                        <Typography variant='h4' sx={{ textAlign: 'center', mb: 5 }}>
+                            <span style={{ color: '#FF9900' }}>This</span> Is Why You
                             <br />
-                            choose Gemen
-                            {/* <span style={{ position: 'relative', display: 'inline-block' }}> Gemen
-                                <img src={Underline} alt="Underline" style={underlineStyle} />
-                            </span> */}
+                            Choose Gemen
                         </Typography>
                         <Box sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'right' }}>
                             <img src={Arrow} alt="Arrow" style={{ height: '120px' }} />

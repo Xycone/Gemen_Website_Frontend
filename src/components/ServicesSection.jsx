@@ -97,9 +97,9 @@ function ServicesSection() {
             <Container sx={{ padding: { xs: 0, md: 5 } }}>
                 <Box sx={{ mb: 15, textAlign: 'center' }}>
                     <Typography variant="h4">
-                        Discover our services:
+                        Discover Our Services:
                         <br />
-                        What we can <span style={{ color: '#00A2C7' }}>do for you...</span>
+                        What We Can <span style={{ color: '#00A2C7' }}>Do For You...</span>
                     </Typography>
                 </Box>
 

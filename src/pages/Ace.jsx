@@ -17,10 +17,10 @@ function Ace() {
       left: 0,
       behavior: "instant",
     });
-  }, [pathname]);
+  }, [pathname]); 
 
   return (
-    <Box sx={{ my: 4, justifyContent: 'center', alignItems: 'center' }}>
+    <Box sx={{ mt: 10, justifyContent: 'center', alignItems: 'center' }}>
       <AceLandingSection />
       <AceContentSection />
     </Box>

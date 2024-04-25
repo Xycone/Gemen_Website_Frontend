@@ -3,13 +3,11 @@ import { Box, Container, Typography } from '@mui/material';
 
 function ContactUsLandingSection() {
     return (
-        <Box sx={{ pt: 20 }}>
+        <Box sx={{ py: 15, backgroundColor: '#011F28', color: 'white' }}>
             <Container sx={{ position: 'relative', textAlign: 'center', padding: { xs: 0, md: 5 } }}>
-                <Box sx={{ mb: 10 }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <Typography variant="h4">
-                        Let's Talk!
-                        <br />
-                        How can we <span style={{ color: '#DD0000' }}>assist you?</span>
+                        Contact Us
                     </Typography>
                 </Box>
             </Container>

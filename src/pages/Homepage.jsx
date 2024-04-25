@@ -7,7 +7,6 @@ import LandingSection from '../components/LandingSection';
 import WhyUsSection from '../components/WhyUsSection';
 import ServicesSection from '../components/ServicesSection';
 import SolutionsSection from '../components/SolutionsSection';
-import CallToAction from '../components/CallToAction';
 import Partners from '../components/Partners';
 
 function Homepage() {

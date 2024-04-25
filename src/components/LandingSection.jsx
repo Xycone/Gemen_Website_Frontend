@@ -11,6 +11,7 @@ function LandingSection() {
 
   // Styling
   const buttonStyle = {
+    padding: 2,
     boxShadow: 'none',
     '&:hover': {
       boxShadow: 'none',
@@ -18,55 +19,53 @@ function LandingSection() {
       color: 'black',
       transform: 'scale(1.05)'
     },
-    borderRadius: 6,
-    py: 1,
-    px: 2.5,
+    height: '100%',
     textTransform: 'none',
     backgroundColor: 'white',
     color: 'black',
   };
   return (
-    <Box sx={{ py: 15, backgroundColor: '#011F28', color: 'white' }}>
+    <Box sx={{ py: 15, backgroundColor: '#011F28', color: 'white', }} >
       <Container sx={{ position: 'relative', padding: { xs: 0, md: 5 } }}>
-        <Box sx={{ mb: 15 }}>
-          <Typography variant="h1" sx={{ mb: 10, textAlign: 'center' }}>
-            G E M E N
-          </Typography>
+        <Box>
+          <Box sx={{ mb: 15, display: 'flex', justifyContent: 'center', width: '100%' }}>
+            <Typography variant="h1" sx={{ width: '20%', textAlign: 'center', fontSize: '15rem' }}>G</Typography>
+            <Typography variant="h1" sx={{ width: '20%', textAlign: 'center', fontSize: '15rem' }}>E</Typography>
+            <Typography variant="h1" sx={{ width: '20%', textAlign: 'center', fontSize: '15rem' }}>M</Typography>
+            <Typography variant="h1" sx={{ width: '20%', textAlign: 'center', fontSize: '15rem' }}>E</Typography>
+            <Typography variant="h1" sx={{ width: '20%', textAlign: 'center', fontSize: '15rem' }}>N</Typography>
+          </Box>
 
           <Grid container spacing={2}>
-            <Grid item xs={12} md={12} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-              <Box sx={{ textAlign: 'center' }}>
-                <Typography variant="h5" sx={{ mb: 5 }}>
-                  We're a software house that...
-                </Typography>
-
-                <Box sx={{ mb: 5 }}>
-                  <Typography sx={{ mb: 1 }}>
-                    Provide software solutions,
-                  </Typography >
-                  <Typography sx={{ mb: 1 }}>
-                    Deliver consultancy services,
-                  </Typography>
-                  <Typography sx={{ mb: 1 }}>
-                    Develop system automation.
-                  </Typography>
-                </Box>
-
-                <Box sx={{ textAlign: 'center' }}>
-                  <Button
-                    variant="contained"
-                    sx={{ ...buttonStyle, mr: 3 }}
-                    onClick={navigateToContact}>
+            <Grid item xs={12} md={3}>
+              <Button
+                fullWidth
+                variant="contained"
+                sx={buttonStyle}
+                onClick={navigateToContact}>
+                <Box>
+                  <Typography variant="h5">
                     Contact Us
-                  </Button>
-
-                  <Button
-                    variant="contained"
-                    sx={buttonStyle}
-                    onClick={navigateToContact}>
-                    View Services
-                  </Button>
+                  </Typography>
+                  <Typography sx={{ color: 'rgba(0, 0, 0, 0.54)' }}>
+                    Questions / Price
+                  </Typography>
                 </Box>
+              </Button>
+            </Grid>
+
+            <Grid item xs={12} md={6}>
+              <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <Typography variant="h6" sx={{ mb: 2 }}>
+                  We're a software house that
+                </Typography>
+                <Typography sx={{ mb: 1 }}>
+                  provide software solutions
+                  <br />
+                  & develop system automation
+                  <br />
+                  for your business needs
+                </Typography >
               </Box>
             </Grid>
           </Grid>

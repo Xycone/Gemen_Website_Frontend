@@ -82,7 +82,7 @@ function SolutionsSection() {
                     <Typography variant="h4">
                         <span style={{ color: '#D8137C' }}>Level Up <img src={LevelUpArrow} alt="LevelUpArrow" style={{ height: '30px' }} /></span> 
                         <br />
-                        your workflow with our solutions
+                        Your Workflow With Our Solutions
                     </Typography>
                 </Box>
 

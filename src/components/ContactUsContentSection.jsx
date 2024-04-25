@@ -25,29 +25,45 @@ function ContactUsContentSection() {
 
     // Styling
     const cardStyle = {
-        padding: 4, 
+        padding: 4,
         border: '2px solid #E0E0E0',
-        borderRadius: { xs: 0, md: 6 },  
-        boxShadow: 'none', 
-        display: 'flex', 
-        flexDirection: 'column', 
+        borderRadius: { xs: 0, md: 6 },
+        boxShadow: 'none',
+        display: 'flex',
+        flexDirection: 'column',
         flexGrow: 1
     };
 
     const buttonStyle = {
-        borderRadius: 2,
-        px: 3,
-        py: 1,
+        display: 'flex',
+        alignItems: 'center',
         boxShadow: 'none',
         '&:hover': {
             boxShadow: 'none',
+            color: 'white !important',
+            backgroundColor: '#1A06FF',
+            color: 'black',
+            transform: 'scale(1.05)'
         },
+        borderRadius: 6,
+        py: 1,
+        px: 2.5,
         textTransform: 'none',
+        color: 'white !important',
+        backgroundColor: '#1A06FF',
     };
 
     return (
-        <Box sx={{ pb: 5 }}>
+        <Box sx={{ pt: 15, pb: 5 }}>
             <Container sx={{ padding: { xs: 0, md: 5 } }}>
+                <Box sx={{ mb: 15, textAlign: 'center' }}>
+                    <Typography variant="h4">
+                        Let's Talk!
+                        <br />
+                        How can we <span style={{ color: '#DD0000' }}>assist you?</span>
+                    </Typography>
+                </Box>
+
                 <Grid container spacing={4}>
                     <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                         {/* Product Support */}

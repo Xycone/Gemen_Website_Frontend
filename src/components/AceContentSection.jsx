@@ -1,7 +1,14 @@
 import React from 'react';
-import { Typography, Box, Card, CardContent, Container } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+import { Typography, Box, Card, CardContent, Container, Button } from '@mui/material';
 
 function AceContentSection() {
+    const navigate = useNavigate();
+
+    const navigateToContact = () => {
+        navigate('/contactUs');
+    };
+
     // Styling
     const gridContainerStyle = {
         display: 'grid',
@@ -24,14 +31,39 @@ function AceContentSection() {
         backgroundColor: '#D9D9D9',
         boxShadow: 'none',
         display: 'flex',
-        flexDirection: 'column', 
-        flexGrow: 1, 
+        flexDirection: 'column',
+        flexGrow: 1,
         justifyContent: 'center'
     };
 
     return (
         <Box sx={{ py: 15 }}>
             <Container sx={{ padding: { xs: 0, md: 5 } }}>
+                <Box sx={{ mb: 15, textAlign: 'center' }}>
+                    <Typography variant="h4" sx={{ mb: 2 }}>
+                        Archive Your Old Voices
+                    </Typography>
+
+                    <Typography sx={{ mb: 4 }}>Ace facilitates the transition of voice data from outdated mediums to more contemporary and sustainable storage options.</Typography>
+
+                    <Button
+                        variant="contained"
+                        sx={{
+                            borderRadius: 6,
+                            py: 1,
+                            px: 2.5,
+                            whiteSpace: 'nowrap',
+                            boxShadow: 'none',
+                            '&:hover': {
+                                boxShadow: 'none',
+                            },
+                            textTransform: 'none',
+                        }}
+                        onClick={navigateToContact}>
+                        Contact us
+                    </Button>
+                </Box>
+
                 <Box sx={gridContainerStyle}>
                     <Box sx={gridItemStyle}>
                         <Card sx={cardStyle}>

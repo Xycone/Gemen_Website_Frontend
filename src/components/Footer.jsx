@@ -39,6 +39,8 @@ function Footer() {
     };
 
     const buttonStyle = {
+        display: 'flex',
+        alignItems: 'center',
         boxShadow: 'none',
         '&:hover': {
             boxShadow: 'none',

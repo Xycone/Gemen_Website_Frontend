@@ -20,7 +20,7 @@ function Garantia() {
   }, [pathname]);
 
   return (
-    <Box sx={{ my: 4, justifyContent: 'center', alignItems: 'center' }}>
+    <Box sx={{ mt: 10, justifyContent: 'center', alignItems: 'center' }}>
       <GarantiaLandingSection />
       <GarantiaContentSection />
     </Box>

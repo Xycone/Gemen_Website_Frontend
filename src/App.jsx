@@ -49,6 +49,8 @@ function App() {
   // Styling
   const buttonStyle = {
     mx: 3,
+    display: 'flex',
+    alignItems: 'center',
     boxShadow: 'none',
     '&:hover': {
       boxShadow: 'none',
