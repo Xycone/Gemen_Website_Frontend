@@ -19,6 +19,10 @@ function SolutionsSection() {
         navigate('/ace');
     };
 
+    const navigateToMediator = () => {
+        navigate('/mediator');
+    };
+
     // State to manage hover effect
     const [hoveredIndex, setHoveredIndex] = useState(-1);
 
@@ -61,6 +65,11 @@ function SolutionsSection() {
         }
     };
 
+    const arrowImageStyle = {
+        height: '30px',
+        animation: 'bounce 2s infinite',
+    };
+
     // Data to populate cards
     const solutions = [
         {
@@ -72,6 +81,11 @@ function SolutionsSection() {
             name: "Ace",
             description: "Facilitates the transition of voice data from outdated mediums to more contempory and sustainable storage options.",
             navigation: navigateToAce
+        },
+        {
+            name: "Mediator",
+            description: "Allows for seamless migration, integration and replay of audio stored in legacy recorders",
+            navigation: navigateToMediator
         }
     ];
 
@@ -80,7 +94,7 @@ function SolutionsSection() {
             <Container sx={{ padding: { xs: 0, md: 5 } }}>
                 <Box sx={{ mb: 15, textAlign: 'center' }}>
                     <Typography variant="h4">
-                        <span style={{ color: '#D8137C' }}>Level Up <img src={LevelUpArrow} alt="LevelUpArrow" style={{ height: '30px' }} /></span> 
+                        <span style={{ color: '#D8137C' }}>Level Up <img src={LevelUpArrow} alt="LevelUpArrow" style={arrowImageStyle} /></span> 
                         <br />
                         Your Workflow With Our Solutions
                     </Typography>

@@ -24,12 +24,12 @@ function ContactUsFAQSection() {
                             aria-controls="panel1-content"
                             id="panel1-header"
                         >
-                            <Typography>FAQ 1</Typography>
+                            <Typography>What offline media storage is supported for digitalisation?</Typography>
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                malesuada lacus ex, sit amet blandit leo lobortis eget.
+                                We previously managed to successfully migrate DDS, AIT, DVD
+                                and LTO into a single system for unified search and replay.
                             </Typography>
                         </AccordionDetails>
                     </Accordion>
@@ -40,12 +40,11 @@ function ContactUsFAQSection() {
                             aria-controls="panel1-content"
                             id="panel1-header"
                         >
-                            <Typography>FAQ 2</Typography>
+                            <Typography>Which legacy recorders would you be able to help migrate?</Typography>
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                malesuada lacus ex, sit amet blandit leo lobortis eget.
+                                We support most legacy recorders available out there on the market
                             </Typography>
                         </AccordionDetails>
                     </Accordion>
@@ -56,28 +55,11 @@ function ContactUsFAQSection() {
                             aria-controls="panel1-content"
                             id="panel1-header"
                         >
-                            <Typography>FAQ 3</Typography>
+                            <Typography>How do you guarantee data integrity during the migration process?</Typography>
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                malesuada lacus ex, sit amet blandit leo lobortis eget.
-                            </Typography>
-                        </AccordionDetails>
-                    </Accordion>
-
-                    <Accordion sx={accordionStyle}>
-                        <AccordionSummary
-                            expandIcon={<ArrowDropDownIcon sx={{ color: 'black' }} />}
-                            aria-controls="panel1-content"
-                            id="panel1-header"
-                        >
-                            <Typography>FAQ 4</Typography>
-                        </AccordionSummary>
-                        <AccordionDetails>
-                            <Typography>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                malesuada lacus ex, sit amet blandit leo lobortis eget.
+                                Our migration tool utilises a checksum mechanism to verify data integrity and the migrated data will remain encrypted at rest
                             </Typography>
                         </AccordionDetails>
                     </Accordion>

@@ -11,7 +11,8 @@ function LandingSection() {
 
   // Styling
   const buttonStyle = {
-    padding: 2,
+    px: 6,
+    py: 3,
     boxShadow: 'none',
     '&:hover': {
       boxShadow: 'none',
@@ -19,7 +20,6 @@ function LandingSection() {
       color: 'black',
       transform: 'scale(1.05)'
     },
-    height: '100%',
     textTransform: 'none',
     backgroundColor: 'white',
     color: 'black',
@@ -28,30 +28,39 @@ function LandingSection() {
     <Box sx={{ py: 15, backgroundColor: '#011F28', color: 'white', }} >
       <Container sx={{ position: 'relative', padding: { xs: 0, md: 5 } }}>
         <Box>
-          <Box sx={{ mb: 15, display: 'flex', justifyContent: 'center', width: '100%' }}>
-            <Typography variant="h1" sx={{ width: '20%', textAlign: 'center', fontSize: '15rem' }}>G</Typography>
-            <Typography variant="h1" sx={{ width: '20%', textAlign: 'center', fontSize: '15rem' }}>E</Typography>
-            <Typography variant="h1" sx={{ width: '20%', textAlign: 'center', fontSize: '15rem' }}>M</Typography>
-            <Typography variant="h1" sx={{ width: '20%', textAlign: 'center', fontSize: '15rem' }}>E</Typography>
-            <Typography variant="h1" sx={{ width: '20%', textAlign: 'center', fontSize: '15rem' }}>N</Typography>
+          <Box sx={{ mb: 15, display: { xs: 'none', md: 'flex' }, justifyContent: 'center', width: '100%' }}>
+            <Typography variant="h1" sx={{ width: '20%', textAlign: 'center', fontSize: '10rem' }}>G</Typography>
+            <Typography variant="h1" sx={{ width: '20%', textAlign: 'center', fontSize: '10rem' }}>E</Typography>
+            <Typography variant="h1" sx={{ width: '20%', textAlign: 'center', fontSize: '10rem' }}>M</Typography>
+            <Typography variant="h1" sx={{ width: '20%', textAlign: 'center', fontSize: '10rem' }}>E</Typography>
+            <Typography variant="h1" sx={{ width: '20%', textAlign: 'center', fontSize: '10rem' }}>N</Typography>
           </Box>
 
-          <Grid container spacing={2}>
-            <Grid item xs={12} md={3}>
-              <Button
-                fullWidth
-                variant="contained"
-                sx={buttonStyle}
-                onClick={navigateToContact}>
-                <Box>
-                  <Typography variant="h5">
-                    Contact Us
-                  </Typography>
-                  <Typography sx={{ color: 'rgba(0, 0, 0, 0.54)' }}>
-                    Questions / Price
-                  </Typography>
-                </Box>
-              </Button>
+          <Box sx={{ mb: 15, display: { xs: 'block', md: 'none' }, justifyContent: 'center', width: '100%' }}>
+            <Typography variant="h1" sx={{ textAlign: 'center', fontSize: '10rem' }}>G</Typography>
+            <Typography variant="h1" sx={{ textAlign: 'center', fontSize: '10rem' }}>E</Typography>
+            <Typography variant="h1" sx={{ textAlign: 'center', fontSize: '10rem' }}>M</Typography>
+            <Typography variant="h1" sx={{ textAlign: 'center', fontSize: '10rem' }}>E</Typography>
+            <Typography variant="h1" sx={{ textAlign: 'center', fontSize: '10rem' }}>N</Typography>
+          </Box>
+
+          <Grid container spacing={4}>
+            <Grid item xs={12} md={4}>
+              <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'right' }, alignItems: 'start' }}>
+                <Button
+                  variant="contained"
+                  sx={buttonStyle}
+                  onClick={navigateToContact}>
+                  <Box>
+                    <Typography variant="h5">
+                      Contact Us
+                    </Typography>
+                    <Typography sx={{ color: 'rgba(0, 0, 0, 0.54)' }}>
+                      Questions / A Quote
+                    </Typography>
+                  </Box>
+                </Button>
+              </Box>
             </Grid>
 
             <Grid item xs={12} md={6}>
@@ -66,6 +75,11 @@ function LandingSection() {
                   <br />
                   for your business needs
                 </Typography >
+              </Box>
+            </Grid>
+            <Grid item xs={12} md={3}>
+              <Box sx={{ display: 'flex', justifyContent: 'right', alignItems: 'start' }}>
+
               </Box>
             </Grid>
           </Grid>

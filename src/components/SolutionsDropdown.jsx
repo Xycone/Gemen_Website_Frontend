@@ -109,17 +109,17 @@ function SolutionsDropdown() {
                         sx={gridItemStyle}
                     >
                         <Typography variant='h6' sx={{ mb: 2 }}>Ace</Typography>
-                        <Typography sx={{ textAlign: 'center' }}>Transitions your voice data to modern storage.</Typography>
+                        <Typography sx={{ textAlign: 'center' }}>Transition your voice data to modern storage.</Typography>
                     </Box>
 
                     <Box
                         onClick={handleClose}
                         component={Link}
-                        to="/ace"
+                        to="/mediator"
                         sx={gridItemStyle}
                     >
-                        <Typography>Mediator</Typography>
-                        <Typography></Typography>
+                        <Typography variant='h6' sx={{ mb: 2 }}>Mediator</Typography>
+                        <Typography sx={{ textAlign: 'center' }}>Migration, Integration, and Playback off voice data.</Typography>
                     </Box>
                 </Box>
             </Popover>

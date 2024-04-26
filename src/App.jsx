@@ -8,10 +8,12 @@ import { ThemeProvider } from '@mui/material/styles';
 import MyTheme from './themes/MyTheme';
 
 // Pages
+import Homepage from './pages/Homepage';
 import Ace from './pages/Ace';
 import Garantia from './pages/Garantia';
-import Homepage from './pages/Homepage';
+import Mediator from './pages/Mediator';
 import ContactUs from './pages/ContactUs';
+
 
 // Components
 import Footer from './components/Footer';
@@ -131,6 +133,10 @@ function App() {
                     <Typography>ACE</Typography>
                   </Link>
 
+                  <Link to="/mediator" onClick={handleAppBarClose}>
+                    <Typography>Mediator</Typography>
+                  </Link>
+
                   <Link to="/#services-section" onClick={handleAppBarClose}>
                     <Typography>Services</Typography>
                   </Link>
@@ -151,6 +157,7 @@ function App() {
               <Route path={"/"} element={<Homepage />} />
               <Route path={"/ace"} element={<Ace />} />
               <Route path={"/garantia"} element={<Garantia />} />
+              <Route path={"/mediator"} element={<Mediator />} />
               <Route path={"/contactUs"} element={<ContactUs />} />
             </Routes>
           </Box>
