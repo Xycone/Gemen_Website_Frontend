@@ -23,7 +23,7 @@ function WhyUsSection() {
         },
         {
             image: <img src={Projects} style={imageStyle} />,
-            title: 'Projects',
+            title: 'Our Projects',
             description: 'We have 100+ projects completed to meet every voice needs'
         },
         {
@@ -34,7 +34,7 @@ function WhyUsSection() {
     ];
 
     return (
-        <Box sx={{ py: 15, backgroundColor: '#011F28', color: 'white' }} id="whyus-section">
+        <Box sx={{ py: 15, backgroundColor: '#031C2E', color: 'white' }} id="whyus-section">
             <Container sx={{ padding: { xs: 0, md: 5 } }}>
                 <Grid container spacing={10} sx={{ padding: 4 }}>
                     <Grid item xs={12} md={5}>

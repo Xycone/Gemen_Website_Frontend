@@ -60,7 +60,7 @@ function ContactUsContentSection() {
                     <Typography variant="h4">
                         Let's Talk!
                         <br />
-                        How can we <span style={{ color: '#DD0000' }}>assist you?</span>
+                        How Can We <span style={{ color: '#00A2C7' }}>Assist</span> You?
                     </Typography>
                 </Box>
 

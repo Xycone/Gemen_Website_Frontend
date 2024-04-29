@@ -67,7 +67,6 @@ function SolutionsSection() {
 
     const arrowImageStyle = {
         height: '30px',
-        animation: 'bounce 2s infinite',
     };
 
     // Data to populate cards

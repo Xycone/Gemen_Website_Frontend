@@ -21,7 +21,7 @@ function Garantia() {
 
   return (
     <Box sx={{ mt: 10, justifyContent: 'center', alignItems: 'center' }}>
-      <GarantiaLandingSection />
+      {/* <GarantiaLandingSection /> */}
       <GarantiaContentSection />
     </Box>
   )

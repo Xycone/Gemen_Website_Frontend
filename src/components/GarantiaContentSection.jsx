@@ -1,70 +1,59 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Typography, Box, Card, CardContent, Container, Button } from '@mui/material';
+import { Typography, Box, Grid, Container } from '@mui/material';
+
+// Icons
+import Sparkle from '../assets/Sparkle.svg';
 
 function GarantiaContentSection() {
-    const navigate = useNavigate();
-
-    const navigateToContact = () => {
-        navigate('/contactUs');
-    };
-
     // Styling 
     const gridContainerStyle = {
-        display: 'grid',
-        gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' },
-        gridAutoRows: "1fr",
-        gridAutoFlow: "row",
-        gap: { xs: 0, md: 4 }
+        padding: 5,
+        borderRadius: 4,
+        backgroundColor: '#031C2E',
+        color: 'white',
+        boxShadow: 'none',
+        display: 'flex',
+        justifyContent: 'center'
     };
 
     const gridItemStyle = {
-        mb: 5,
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center'
-    };
-
-    const cardStyle = {
-        padding: 2,
-        borderRadius: { xs: 0, md: 4 },
-        backgroundColor: '#D9D9D9',
-        boxShadow: 'none',
-        display: 'flex',
-        flexDirection: 'column',
-        flexGrow: 1,
-        justifyContent: 'center'
+        alignItems: 'center',
+        justifyContent: 'center',
+        textAlign: 'center'
     };
 
     return (
         <Box sx={{ py: 15 }}>
-            <Container sx={{ padding: { xs: 0, md: 5 } }}>
-                <Box sx={{ mb: 15, textAlign: 'center' }}>
-                    <Typography variant="h4" sx={{ mb: 2 }}>
-                        Enhance Your Business Communications
-                    </Typography>
-
-                    <Typography sx={{ mb: 4 }}>Garantia ensures integrity, monitoring, and reconciliation of recorded phone calls within your organisation's operations.</Typography>
-
-                    <Button
-                        variant="contained"
-                        sx={{
-                            borderRadius: 6,
-                            py: 1,
-                            px: 2.5,
-                            whiteSpace: 'nowrap',
-                            boxShadow: 'none',
-                            '&:hover': {
-                                boxShadow: 'none',
-                            },
-                            textTransform: 'none',
-                        }}
-                        onClick={navigateToContact}>
-                        Contact us
-                    </Button>
+            <Container>
+                <Box>
+                    <Box sx={{ mb: 15, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+                        <Typography variant="h5" sx={{ mb: 5 }}>
+                            Garantia
+                        </Typography>
+                        <Typography variant="h4" sx={{ mb: 5 }}>
+                            A Guaranteed Way To <span style={{ color: '#D8137C' }}>Enhance<img src={Sparkle} style={{ height: '30px', width: '30px' }} /></span>
+                            <br />
+                            Your Business Communications
+                        </Typography>
+                        <Typography>
+                            Garantia ensures integrity, functionality, and complaince of your organisation's communication
+                            <br />
+                            system through automated checks, real-time monitoring, and call reconciliation.
+                        </Typography>
+                    </Box>
                 </Box>
 
                 <Box sx={gridContainerStyle}>
+                    <Grid container spacing={4}>
+                        <Grid item xs={12} md={4} sx={gridItemStyle}>
+                            
+                        </Grid>
+                    </Grid>
+                </Box>
+
+                {/* <Box sx={gridContainerStyle}>
                     <Box sx={gridItemStyle}>
                         <Card sx={cardStyle}>
                             <CardContent>
@@ -137,7 +126,7 @@ function GarantiaContentSection() {
                             </Typography>
                         </Box>
                     </Box>
-                </Box>
+                </Box> */}
             </Container>
         </Box>
     )

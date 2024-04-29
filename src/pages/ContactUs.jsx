@@ -31,7 +31,7 @@ function ContactUs() {
 
   return (
     <Box sx={{ mt: 10, justifyContent: 'center', alignItems: 'center' }}>
-      <ContactUsLandingSection />
+      {/* <ContactUsLandingSection /> */}
       <ContactUsContentSection />
       <ContactUsFAQSection id="faq-section" />
     </Box >

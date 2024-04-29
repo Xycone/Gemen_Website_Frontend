@@ -12,7 +12,7 @@ function LandingSection() {
   // Styling
   const buttonStyle = {
     px: 6,
-    py: 3,
+    py: 4,
     boxShadow: 'none',
     '&:hover': {
       boxShadow: 'none',
@@ -20,12 +20,14 @@ function LandingSection() {
       color: 'black',
       transform: 'scale(1.05)'
     },
+    borderRadius: 6,
     textTransform: 'none',
     backgroundColor: 'white',
-    color: 'black',
+    color: 'black'
   };
+
   return (
-    <Box sx={{ py: 15, backgroundColor: '#011F28', color: 'white', }} >
+    <Box sx={{ py: 15, backgroundColor: '#031C2E', color: 'white', }} >
       <Container sx={{ position: 'relative', padding: { xs: 0, md: 5 } }}>
         <Box>
           <Box sx={{ mb: 15, display: { xs: 'none', md: 'flex' }, justifyContent: 'center', width: '100%' }}>

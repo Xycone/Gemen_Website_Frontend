@@ -1,87 +1,90 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Typography, Box, Card, CardContent, Container, Button } from '@mui/material';
+import { Typography, Box, Grid, Container } from '@mui/material';
+
+// Icons
+import NextStepArrow from '../assets/NextStepArrow.svg';
 
 function AceContentSection() {
-    const navigate = useNavigate();
-
-    const navigateToContact = () => {
-        navigate('/contactUs');
-    };
-
     // Styling
     const gridContainerStyle = {
-        display: 'grid',
-        gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' },
-        gridAutoRows: "1fr",
-        gridAutoFlow: "row",
-        gap: { xs: 0, md: 4 }
+        padding: 5,
+        borderRadius: 4,
+        backgroundColor: '#031C2E',
+        color: 'white',
+        boxShadow: 'none',
+        display: 'flex',
+        justifyContent: 'center'
     };
 
     const gridItemStyle = {
-        mb: 5,
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center'
-    };
-
-    const cardStyle = {
-        padding: 2,
-        borderRadius: { xs: 0, md: 4 },
-        backgroundColor: '#D9D9D9',
-        boxShadow: 'none',
-        display: 'flex',
-        flexDirection: 'column',
-        flexGrow: 1,
-        justifyContent: 'center'
+        alignItems: 'center',
+        justifyContent: 'center',
+        textAlign: 'center'
     };
 
     return (
         <Box sx={{ py: 15 }}>
-            <Container sx={{ padding: { xs: 0, md: 5 } }}>
-                <Box sx={{ mb: 15, textAlign: 'center' }}>
-                    <Typography variant="h4" sx={{ mb: 2 }}>
-                        Archive Your Old Voices
-                    </Typography>
-
-                    <Typography sx={{ mb: 4 }}>Ace facilitates the transition of voice data from outdated mediums to more contemporary and sustainable storage options.</Typography>
-
-                    <Button
-                        variant="contained"
-                        sx={{
-                            borderRadius: 6,
-                            py: 1,
-                            px: 2.5,
-                            whiteSpace: 'nowrap',
-                            boxShadow: 'none',
-                            '&:hover': {
-                                boxShadow: 'none',
-                            },
-                            textTransform: 'none',
-                        }}
-                        onClick={navigateToContact}>
-                        Contact us
-                    </Button>
-                </Box>
-
-                <Box sx={gridContainerStyle}>
-                    <Box sx={gridItemStyle}>
-                        <Card sx={cardStyle}>
-                            <CardContent>
-                                <Typography sx={{ textAlign: 'center' }}>[ Image Placeholder ]</Typography>
-                            </CardContent>
-                        </Card>
+            <Container>
+                <Box>
+                    <Box sx={{ mb: 15, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+                        <Typography variant="h5" sx={{ mb: 5 }}>
+                            Ace
+                        </Typography>
+                        <Typography variant="h4" sx={{ mb: 5 }}>
+                            Archiving Your Old Voices
+                            <br />
+                            Is <span style={{ color: '#DD0000' }}>No Longer</span> A Hassle
+                        </Typography>
+                        <Typography>
+                            Ace is able to read and extract media records from voice logger tapes and archive them in newer,
+                            <br />
+                            long-term storage solutions, ensuring the preservation and accessibility of your important voice data.
+                        </Typography>
                     </Box>
 
-                    <Box sx={gridItemStyle}>
-                        <Box sx={{ padding: 5 }}>
-                            <Typography variant="h5" sx={{ mb: 3 }}>
-                                Ace
-                            </Typography>
-                            <Typography>
-                                Ace provides voice recording media extraction, digitalisation and conversion into modern long term storage. Ace is able to read and extract media records from voice logger tapes and archive them in newer, long-term storage solutions. This ensures the preservation and accessibility of important voice data.
-                            </Typography>
-                        </Box>
+                    <Box sx={gridContainerStyle}>
+                        <Grid container spacing={4}>
+                            <Grid item xs={12} md={3} sx={gridItemStyle}>
+                                <Typography variant="h5" sx={{ mb: 2 }}>
+                                    Extract
+                                </Typography>
+                                <Typography>
+                                    Ace extracts the voice recording from voice logger tapes
+                                </Typography>
+                            </Grid>
+
+                            <Grid item xs={12} md={1.5} sx={gridItemStyle}>
+                                <Box sx={{ transform: { xs: 'rotate(90deg)', md: 'none' } }}>
+                                    <img src={NextStepArrow} style={{ height: '20px', width: '100%' }} />
+                                </Box>
+                            </Grid>
+
+                            <Grid item xs={12} md={3} sx={gridItemStyle}>
+                                <Typography variant="h5" sx={{ mb: 2 }}>
+                                    Digitalise
+                                </Typography>
+                                <Typography>
+                                    The analog voice recordings are digitised into digital format
+                                </Typography>
+                            </Grid>
+
+                            <Grid item xs={12} md={1.5} sx={gridItemStyle}>
+                                <Box sx={{ transform: { xs: 'rotate(90deg)', md: 'none' } }}>
+                                    <img src={NextStepArrow} style={{ height: '20px', width: '100%' }} />
+                                </Box>
+                            </Grid>
+
+                            <Grid item xs={12} md={3} sx={gridItemStyle}>
+                                <Typography variant="h5" sx={{ mb: 2 }}>
+                                    Convert
+                                </Typography>
+                                <Typography>
+                                    Converted into format suitable for long-term storage
+                                </Typography>
+                            </Grid>
+                        </Grid>
                     </Box>
                 </Box>
             </Container>

@@ -1,4 +1,4 @@
-import React, {  useState } from 'react';
+import React, { useState } from 'react';
 import { Box, Typography, Card, CardContent, Container } from '@mui/material';
 
 // Icons
@@ -69,7 +69,7 @@ function ServicesSection() {
             iconNH: ManpowerIconNH,
             iconOH: ManpowerIconOH
         },
-        {       
+        {
             color: "#A2C94F",
             title: "API Integration",
             description: "Establish a network comprising of interconnected applications through their APIs.",
@@ -99,7 +99,7 @@ function ServicesSection() {
                     <Typography variant="h4">
                         Discover Our Services:
                         <br />
-                        What We Can <span style={{ color: '#00A2C7' }}>Do For You...</span>
+                        What <span style={{ color: '#00A2C7' }}>We Can Do</span> For You...
                     </Typography>
                 </Box>
 

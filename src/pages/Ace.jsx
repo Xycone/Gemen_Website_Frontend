@@ -21,7 +21,7 @@ function Ace() {
 
   return (
     <Box sx={{ mt: 10, justifyContent: 'center', alignItems: 'center' }}>
-      <AceLandingSection />
+      {/* <AceLandingSection /> */}
       <AceContentSection />
     </Box>
   )
