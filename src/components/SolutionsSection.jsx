@@ -53,7 +53,6 @@ function SolutionsSection() {
         padding: 4,
         border: '2px solid #E0E0E0',
         borderRadius: { xs: 0, md: 4 },
-        background: 'translation',
         boxShadow: 'none',
         display: 'flex',
         flexDirection: 'column',

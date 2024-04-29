@@ -8,9 +8,6 @@ function AceContentSection() {
     // Styling
     const gridContainerStyle = {
         padding: 5,
-        borderRadius: 4,
-        backgroundColor: '#031C2E',
-        color: 'white',
         boxShadow: 'none',
         display: 'flex',
         justifyContent: 'center'
@@ -44,8 +41,8 @@ function AceContentSection() {
                         </Typography>
                     </Box>
 
-                    <Box sx={gridContainerStyle}>
-                        <Grid container spacing={4}>
+                    <Box sx={{ backgroundColor: '#031C2E', color: 'white', borderRadius: 4 }}>
+                        <Grid container spacing={4} sx={gridContainerStyle}>
                             <Grid item xs={12} md={3} sx={gridItemStyle}>
                                 <Typography variant="h5" sx={{ mb: 2 }}>
                                     Extract
@@ -81,7 +78,7 @@ function AceContentSection() {
                                     Convert
                                 </Typography>
                                 <Typography>
-                                    Converted into format suitable for long-term storage
+                                    Convert & stores in format suitable for long-term storage
                                 </Typography>
                             </Grid>
                         </Grid>

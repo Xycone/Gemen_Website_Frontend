@@ -1,28 +1,18 @@
 import React from 'react';
-import { Typography, Box, Grid, Container } from '@mui/material';
+import { Typography, Box, Grid, Container, Card } from '@mui/material';
 
 // Icons
 import Sparkle from '../assets/Sparkle.svg';
+import Alarm from '../assets/Alarm.svg';
+import Report from '../assets/Report.svg';
+import Integrity from '../assets/Integrity.svg';
+import AlarmWhiteBG from '../assets/AlarmWhiteBG.svg';
+import ReportWhiteBG from '../assets/ReportWhiteBG.svg';
+import IntegrityWhiteBG from '../assets/IntegrityWhiteBG.svg';
 
 function GarantiaContentSection() {
     // Styling 
-    const gridContainerStyle = {
-        padding: 5,
-        borderRadius: 4,
-        backgroundColor: '#031C2E',
-        color: 'white',
-        boxShadow: 'none',
-        display: 'flex',
-        justifyContent: 'center'
-    };
 
-    const gridItemStyle = {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        textAlign: 'center'
-    };
 
     return (
         <Box sx={{ py: 15 }}>
@@ -43,14 +33,16 @@ function GarantiaContentSection() {
                             system through automated checks, real-time monitoring, and call reconciliation.
                         </Typography>
                     </Box>
-                </Box>
 
-                <Box sx={gridContainerStyle}>
-                    <Grid container spacing={4}>
-                        <Grid item xs={12} md={4} sx={gridItemStyle}>
-                            
+                    <Box sx={{ backgroundColor: '#031C2E', color: 'white', borderRadius: 4 }}>
+                        <Grid container spacing={8}>
+                            <Grid item xs={12} md={4}>
+                            </Grid>
+
+                            <Grid item xs={12} md={6}>
+                            </Grid>
                         </Grid>
-                    </Grid>
+                    </Box>
                 </Box>
 
                 {/* <Box sx={gridContainerStyle}>
