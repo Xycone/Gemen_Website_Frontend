@@ -26,7 +26,7 @@ function ContactUsContentSection() {
     // Styling
     const cardStyle = {
         padding: 4,
-        border: '2px solid #E0E0E0',
+        border: '2px solid black',
         borderRadius: { xs: 0, md: 6 },
         boxShadow: 'none',
         display: 'flex',
