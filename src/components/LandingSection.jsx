@@ -40,8 +40,8 @@ function LandingSection() {
 
           <Box sx={{ mb: 15, display: { xs: 'block', md: 'none' }, justifyContent: 'center', width: '100%' }}>
             <Typography variant="h1" sx={{ textAlign: 'left', fontSize: '10rem' }}>GE</Typography>
-            <Typography variant="h1" sx={{ textAlign: 'center', fontSize: '10rem' }}>M</Typography>
-            <Typography variant="h1" sx={{ textAlign: 'right', fontSize: '10rem' }}>EN</Typography>
+            <Typography variant="h1" sx={{ textAlign: 'center', fontSize: '10rem' }}>ME</Typography>
+            <Typography variant="h1" sx={{ textAlign: 'right', fontSize: '10rem' }}>N</Typography>
           </Box>
 
           <Grid container spacing={8}>
