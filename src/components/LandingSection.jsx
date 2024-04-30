@@ -30,7 +30,7 @@ function LandingSection() {
     <Box sx={{ py: 15, backgroundColor: '#031C2E', color: 'white', }} >
       <Container sx={{ position: 'relative', padding: { xs: 0, md: 5 } }}>
         <Box>
-          <Box sx={{ mb: 15, display: { xs: 'none', md: 'flex' }, justifyContent: 'center', width: '100%' }}>
+          <Box sx={{ mb: 15, display: { xs: 'none', sm: 'none', md: 'flex' }, justifyContent: 'center', width: '100%' }}>
             <Typography variant="h1" sx={{ width: '20%', textAlign: 'center', fontSize: '10rem' }}>G</Typography>
             <Typography variant="h1" sx={{ width: '20%', textAlign: 'center', fontSize: '10rem' }}>E</Typography>
             <Typography variant="h1" sx={{ width: '20%', textAlign: 'center', fontSize: '10rem' }}>M</Typography>
@@ -39,16 +39,14 @@ function LandingSection() {
           </Box>
 
           <Box sx={{ mb: 15, display: { xs: 'block', md: 'none' }, justifyContent: 'center', width: '100%' }}>
-            <Typography variant="h1" sx={{ textAlign: 'center', fontSize: '10rem' }}>G</Typography>
-            <Typography variant="h1" sx={{ textAlign: 'center', fontSize: '10rem' }}>E</Typography>
+            <Typography variant="h1" sx={{ textAlign: 'left', fontSize: '10rem' }}>GE</Typography>
             <Typography variant="h1" sx={{ textAlign: 'center', fontSize: '10rem' }}>M</Typography>
-            <Typography variant="h1" sx={{ textAlign: 'center', fontSize: '10rem' }}>E</Typography>
-            <Typography variant="h1" sx={{ textAlign: 'center', fontSize: '10rem' }}>N</Typography>
+            <Typography variant="h1" sx={{ textAlign: 'right', fontSize: '10rem' }}>EN</Typography>
           </Box>
 
-          <Grid container spacing={4}>
-            <Grid item xs={12} md={4}>
-              <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'right' }, alignItems: 'start' }}>
+          <Grid container spacing={8}>
+            <Grid item xs={12} md={6}>
+              <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'start' }}>
                 <Button
                   variant="contained"
                   sx={buttonStyle}
@@ -66,7 +64,7 @@ function LandingSection() {
             </Grid>
 
             <Grid item xs={12} md={6}>
-              <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+              <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: { xs: 'center', md: 'start' } }}>
                 <Typography variant="h6" sx={{ mb: 2 }}>
                   We're a software house that
                 </Typography>
@@ -77,11 +75,6 @@ function LandingSection() {
                   <br />
                   for your business needs
                 </Typography >
-              </Box>
-            </Grid>
-            <Grid item xs={12} md={3}>
-              <Box sx={{ display: 'flex', justifyContent: 'right', alignItems: 'start' }}>
-
               </Box>
             </Grid>
           </Grid>

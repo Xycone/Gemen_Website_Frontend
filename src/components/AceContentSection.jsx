@@ -6,14 +6,7 @@ import NextStepArrow from '../assets/NextStepArrow.svg';
 
 function AceContentSection() {
     // Styling
-    const gridContainerStyle = {
-        padding: 5,
-        boxShadow: 'none',
-        display: 'flex',
-        justifyContent: 'center'
-    };
-
-    const gridItemStyle = {
+    const boxStyle = {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -23,7 +16,7 @@ function AceContentSection() {
 
     return (
         <Box sx={{ py: 15 }}>
-            <Container>
+            <Container sx={{ padding: { xs: 0, md: 5 } }}>
                 <Box>
                     <Box sx={{ mb: 15, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
                         <Typography variant="h5" sx={{ mb: 5 }}>
@@ -32,18 +25,18 @@ function AceContentSection() {
                         <Typography variant="h4" sx={{ mb: 5 }}>
                             Archiving Your Old Voices
                             <br />
-                            Is <span style={{ color: '#DD0000' }}>No Longer</span> A Hassle
+                            Is <span style={{ textDecoration: 'line-through', textDecorationColor: '#DD0000' }}>Such</span> <span style={{ color: '#DD0000' }}>No Longer</span> A Hassle
                         </Typography>
                         <Typography>
-                            Ace is able to read and extract media records from voice logger tapes and archive them in newer,
+                            Ace is able to read and extract media records from voice logger tapes and archive them in
                             <br />
                             long-term storage solutions, ensuring the preservation and accessibility of your important voice data.
                         </Typography>
                     </Box>
 
-                    <Box sx={{ backgroundColor: '#031C2E', color: 'white', borderRadius: 4 }}>
-                        <Grid container spacing={4} sx={gridContainerStyle}>
-                            <Grid item xs={12} md={3} sx={gridItemStyle}>
+                    <Box sx={{ backgroundColor: '#031C2E', color: 'white', borderRadius: { xs: 0, md: 4 }, padding: 4 }}>
+                        <Grid container spacing={{ xs: 8, md: 2 }}>
+                            <Grid item xs={12} md={3.5} sx={boxStyle}>
                                 <Typography variant="h5" sx={{ mb: 2 }}>
                                     Extract
                                 </Typography>
@@ -52,13 +45,15 @@ function AceContentSection() {
                                 </Typography>
                             </Grid>
 
-                            <Grid item xs={12} md={1.5} sx={gridItemStyle}>
-                                <Box sx={{ transform: { xs: 'rotate(90deg)', md: 'none' } }}>
-                                    <img src={NextStepArrow} style={{ height: '20px', width: '100%' }} />
+                            <Grid item xs={12} md={0.75} sx={boxStyle}>
+                                <Box>
+                                    <Box sx={{ transform: { xs: 'rotate(90deg)', md: 'none' } }}>
+                                        <img src={NextStepArrow} style={{ height: '20px', width: '100%' }} />
+                                    </Box>
                                 </Box>
                             </Grid>
 
-                            <Grid item xs={12} md={3} sx={gridItemStyle}>
+                            <Grid item xs={12} md={3.5} sx={boxStyle}>
                                 <Typography variant="h5" sx={{ mb: 2 }}>
                                     Digitalise
                                 </Typography>
@@ -67,13 +62,15 @@ function AceContentSection() {
                                 </Typography>
                             </Grid>
 
-                            <Grid item xs={12} md={1.5} sx={gridItemStyle}>
-                                <Box sx={{ transform: { xs: 'rotate(90deg)', md: 'none' } }}>
-                                    <img src={NextStepArrow} style={{ height: '20px', width: '100%' }} />
+                            <Grid item xs={12} md={0.75} sx={boxStyle}>
+                                <Box>
+                                    <Box sx={{ transform: { xs: 'rotate(90deg)', md: 'none' } }}>
+                                        <img src={NextStepArrow} style={{ height: '20px', width: '100%' }} />
+                                    </Box>
                                 </Box>
                             </Grid>
 
-                            <Grid item xs={12} md={3} sx={gridItemStyle}>
+                            <Grid item xs={12} md={3.5} sx={boxStyle}>
                                 <Typography variant="h5" sx={{ mb: 2 }}>
                                     Convert
                                 </Typography>

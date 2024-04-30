@@ -44,7 +44,7 @@ function ServicesSection() {
 
     const cardStyle = (color) => ({
         padding: 4,
-        border: '2px solid #E0E0E0',
+        border: '2px solid black',
         borderRadius: { xs: 0, md: 4 },
         boxShadow: 'none',
         display: 'flex',
