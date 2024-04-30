@@ -64,10 +64,10 @@ function ContactUsContentSection() {
                     </Typography>
                 </Box>
 
-                <Grid container spacing={4}>
+                <Grid container spacing={{ xs: 2, md: 8 }}>
                     <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                         {/* Product Support */}
-                        <Card sx={{ ...cardStyle, mb: 4 }}>
+                        <Card sx={{ ...cardStyle, mb: { xs: 2, md: 8 } }}>
                             <CardContent sx={{ margin: 2 }}>
                                 <Typography variant="h5" sx={{ mb: 2 }}>Product Support</Typography>
                                 <Typography sx={{ mb: 4 }}>
