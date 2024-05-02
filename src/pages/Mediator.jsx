@@ -2,6 +2,9 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Box } from '@mui/material';
 
+// Components
+import MediatorContentSection from '../components/MediatorContentSection';
+
 function Mediator() {
     // Scroll to top 
     // Fix for react saving scroll position when navigating to different pages
@@ -17,6 +20,7 @@ function Mediator() {
 
     return (
         <Box sx={{ mt: 10, justifyContent: 'center', alignItems: 'center' }}>
+            <MediatorContentSection />
         </Box>
     )
 }

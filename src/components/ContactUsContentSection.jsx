@@ -26,8 +26,8 @@ function ContactUsContentSection() {
     // Styling
     const cardStyle = {
         padding: 4,
-        border: '2px solid black',
-        borderRadius: { xs: 0, md: 6 },
+        border: { xs: 'none', md: '2px solid black' },
+        borderRadius: 4,
         boxShadow: 'none',
         display: 'flex',
         flexDirection: 'column',
@@ -55,7 +55,7 @@ function ContactUsContentSection() {
 
     return (
         <Box sx={{ pt: 15, pb: 5 }}>
-            <Container sx={{ padding: { xs: 0, md: 5 } }}>
+            <Container sx={{ px: { xs: 0, md: 10 }  }}>
                 <Box sx={{ mb: 15, textAlign: 'center' }}>
                     <Typography variant="h4">
                         Let's Talk!
@@ -64,11 +64,11 @@ function ContactUsContentSection() {
                     </Typography>
                 </Box>
 
-                <Grid container spacing={{ xs: 2, md: 8 }}>
+                <Grid container spacing={{ xs: 2, md: 6 }}>
                     <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                         {/* Product Support */}
-                        <Card sx={{ ...cardStyle, mb: { xs: 2, md: 8 } }}>
-                            <CardContent sx={{ margin: 2 }}>
+                        <Card sx={{ ...cardStyle, mb: { xs: 2, md: 6 } }}>
+                            <CardContent>
                                 <Typography variant="h5" sx={{ mb: 2 }}>Product Support</Typography>
                                 <Typography sx={{ mb: 4 }}>
                                     Send an email to reach support by completing the form.
@@ -84,7 +84,7 @@ function ContactUsContentSection() {
 
                         {/* Questions */}
                         <Card sx={cardStyle}>
-                            <CardContent sx={{ margin: 2 }}>
+                            <CardContent>
                                 <Typography variant="h5" sx={{ mb: 2 }}>Have a question?</Typography>
                                 <Typography sx={{ mb: 4 }}>
                                     Email us or have a look at our FAQ
@@ -102,14 +102,14 @@ function ContactUsContentSection() {
                     {/* Gemen Contact Info */}
                     <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                         <Card sx={cardStyle}>
-                            <CardContent sx={{ margin: 2 }}>
+                            <CardContent>
                                 <Typography variant="h5" sx={{ mb: 2 }}>Contact Us</Typography>
                                 <Typography sx={{ mb: 4 }}>
                                     Reach out to us via phone, email or find us by heading down to our office:
                                 </Typography>
 
                                 {/* Singapore Office */}
-                                <Box sx={{ my: 4 }}>
+                                <Box sx={{ mb: 4 }}>
                                     <Typography variant="h6" sx={{ mb: 2 }}>Singapore</Typography>
                                     <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'left', mb: 1 }}>
                                         <LocationOn sx={{ fontSize: '1.2rem', mr: 1 }} />
@@ -131,7 +131,7 @@ function ContactUsContentSection() {
                                 </Box>
 
                                 {/* Shanghai Office */}
-                                <Box sx={{ my: 4 }}>
+                                <Box sx={{ mb: 4 }}>
                                     <Typography variant="h6" sx={{ mb: 2 }}>Shanghai</Typography>
                                     <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'left', mb: 1 }}>
                                         <LocationOn sx={{ fontSize: '1.2rem', mr: 1 }} />

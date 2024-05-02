@@ -50,8 +50,8 @@ function Partners() {
 
     return (
         <Box sx={{ py: 15 }}>
-            <Container sx={{ padding: { xs: 0, md: 5 } }}>
-                <Grid container spacing={10} sx={{ padding: 4 }}>
+            <Container sx={{ px: { xs: 0, md: 10 } }}>
+                <Grid container spacing={10} sx={{ px: 4 }}>
                     <Grid item xs={12} md={6} sx={{ display: 'flex', alignItems: 'center' }}>
                         <PartnerTree />
                     </Grid>

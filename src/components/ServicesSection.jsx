@@ -33,7 +33,7 @@ function ServicesSection() {
         gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' },
         gridAutoRows: "1fr",
         gridAutoFlow: "row",
-        gap: { xs: 2, md: 8, lg: 4 }
+        gap: { xs: 2, md: 6 }
     };
 
     const gridItemStyle = {
@@ -45,7 +45,7 @@ function ServicesSection() {
     const cardStyle = (color) => ({
         padding: 4,
         border: '2px solid black',
-        borderRadius: { xs: 0, md: 4 },
+        borderRadius: 4,
         boxShadow: 'none',
         display: 'flex',
         flexDirection: 'column',
@@ -94,7 +94,7 @@ function ServicesSection() {
 
     return (
         <Box sx={{ py: 15 }} id="services-section">
-            <Container sx={{ padding: { xs: 0, md: 5 } }}>
+            <Container sx={{ px: { xs: 2, md: 10 } }}>
                 <Box sx={{ mb: 15, textAlign: 'center' }}>
                     <Typography variant="h4">
                         Discover Our Services:

@@ -35,7 +35,7 @@ function WhyUsSection() {
 
     return (
         <Box sx={{ py: 15, backgroundColor: '#031C2E', color: 'white' }} id="whyus-section">
-            <Container sx={{ padding: { xs: 0, md: 5 } }}>
+            <Container sx={{ px: { xs: 0, md: 10 } }}>
                 <Grid container spacing={10} sx={{ padding: 4 }}>
                     <Grid item xs={12} md={5}>
                         <Typography variant='h4' sx={{ textAlign: 'center', mb: 5 }}>
@@ -53,7 +53,7 @@ function WhyUsSection() {
                             {reasons.map((reason, index) => (
                                 <Grid key={index} item xs={12} md={6} sx={{ textAlign: 'center' }}>
                                     <Box>
-                                        {reason.image}
+                                        {/* {reason.image} */}
                                         <Typography variant='h5' sx={{ mb: 2, mt: 1 }}>
                                             {reason.title}
                                         </Typography>

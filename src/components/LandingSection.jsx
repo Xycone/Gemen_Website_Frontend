@@ -28,9 +28,9 @@ function LandingSection() {
 
   return (
     <Box sx={{ py: 15, backgroundColor: '#031C2E', color: 'white', }} >
-      <Container sx={{ position: 'relative', padding: { xs: 0, md: 5 } }}>
+      <Container sx={{ position: 'relative', px: { xs: 0, md: 10 } }}>
         <Box>
-          <Box sx={{ mb: 15, display: { xs: 'none', sm: 'none', md: 'flex' }, justifyContent: 'center', width: '100%' }}>
+          <Box sx={{ mb: 15, display: { xs: 'none', md: 'flex' }, justifyContent: 'center', width: '100%' }}>
             <Typography variant="h1" sx={{ width: '20%', textAlign: 'center', fontSize: '10rem' }}>G</Typography>
             <Typography variant="h1" sx={{ width: '20%', textAlign: 'center', fontSize: '10rem' }}>E</Typography>
             <Typography variant="h1" sx={{ width: '20%', textAlign: 'center', fontSize: '10rem' }}>M</Typography>
@@ -39,9 +39,21 @@ function LandingSection() {
           </Box>
 
           <Box sx={{ mb: 15, display: { xs: 'block', md: 'none' }, justifyContent: 'center', width: '100%' }}>
-            <Typography variant="h1" sx={{ textAlign: 'left', fontSize: '10rem' }}>GE</Typography>
-            <Typography variant="h1" sx={{ textAlign: 'center', fontSize: '10rem' }}>ME</Typography>
-            <Typography variant="h1" sx={{ textAlign: 'right', fontSize: '10rem' }}>N</Typography>
+            <Box sx={{ textAlign: 'center', fontSize: '10rem' }}>
+              <Typography variant="h1">G</Typography>
+            </Box>
+            <Box sx={{ textAlign: 'center', fontSize: '10rem' }}>
+              <Typography variant="h1">E</Typography>
+            </Box>
+            <Box sx={{ textAlign: 'center', fontSize: '10rem' }}>
+              <Typography variant="h1">M</Typography>
+            </Box>
+            <Box sx={{ textAlign: 'center', fontSize: '10rem' }}>
+              <Typography variant="h1">E</Typography>
+            </Box>
+            <Box sx={{ textAlign: 'center', fontSize: '10rem' }}>
+              <Typography variant="h1">N</Typography>
+            </Box>
           </Box>
 
           <Grid container spacing={8}>
