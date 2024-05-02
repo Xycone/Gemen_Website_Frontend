@@ -111,7 +111,7 @@ function ServicesSection() {
                                     <Box sx={{ mb: 3 }}>
                                         <img src={hoveredIndex === index ? service.iconOH : service.iconNH} alt={service.title} style={imageStyle} />
                                     </Box>
-                                    <Typography variant="h5" sx={{ mb: 2 }}>{service.title}</Typography>
+                                    <Typography variant="h6" sx={{ mb: 2 }}>{service.title}</Typography>
                                     <Typography>{service.description}</Typography>
                                 </CardContent>
                             </Card>

@@ -10,7 +10,6 @@ function AceContentSection() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'center',
         textAlign: 'center'
     };
 
@@ -36,8 +35,8 @@ function AceContentSection() {
 
                     <Box sx={{ backgroundColor: '#031C2E', color: 'white', borderRadius: 4, padding: 4 }}>
                         <Grid container spacing={6}>
-                            <Grid item xs={12} md={3} sx={boxStyle}>
-                                <Typography variant="h5" sx={{ mb: 2 }}>
+                            <Grid item xs={12} md={3} sx={{...boxStyle, justifyContent: 'start'}}>
+                                <Typography variant="h6" sx={{ mb: 2 }}>
                                     Extract
                                 </Typography>
                                 <Typography>
@@ -49,7 +48,7 @@ function AceContentSection() {
                                 </Typography>
                             </Grid>
 
-                            <Grid item xs={12} md={1.5} sx={boxStyle}>
+                            <Grid item xs={12} md={1.5} sx={{...boxStyle, justifyContent: 'center'}}>
                                 <Box>
                                     <Box sx={{ transform: { xs: 'rotate(90deg)', md: 'none' } }}>
                                         <img src={NextStepArrow} style={{ height: '20px', width: '100%' }} />
@@ -57,8 +56,8 @@ function AceContentSection() {
                                 </Box>
                             </Grid>
 
-                            <Grid item xs={12} md={3} sx={boxStyle}>
-                                <Typography variant="h5" sx={{ mb: 2 }}>
+                            <Grid item xs={12} md={3} sx={{...boxStyle, justifyContent: 'start'}}>
+                                <Typography variant="h6" sx={{ mb: 2 }}>
                                     Digitalise
                                 </Typography>
                                 <Typography>
@@ -70,7 +69,7 @@ function AceContentSection() {
                                 </Typography>
                             </Grid>
 
-                            <Grid item xs={12} md={1.5} sx={boxStyle}>
+                            <Grid item xs={12} md={1.5} sx={{...boxStyle, justifyContent: 'center'}}>
                                 <Box>
                                     <Box sx={{ transform: { xs: 'rotate(90deg)', md: 'none' } }}>
                                         <img src={NextStepArrow} style={{ height: '20px', width: '100%' }} />
@@ -78,8 +77,8 @@ function AceContentSection() {
                                 </Box>
                             </Grid>
 
-                            <Grid item xs={12} md={3} sx={boxStyle}>
-                                <Typography variant="h5" sx={{ mb: 2 }}>
+                            <Grid item xs={12} md={3} sx={{...boxStyle, justifyContent: 'start'}}>
+                                <Typography variant="h6" sx={{ mb: 2 }}>
                                     Convert
                                 </Typography>
                                 <Typography>

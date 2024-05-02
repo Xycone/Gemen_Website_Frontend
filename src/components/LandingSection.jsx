@@ -64,7 +64,7 @@ function LandingSection() {
                   sx={buttonStyle}
                   onClick={navigateToContact}>
                   <Box>
-                    <Typography variant="h5">
+                    <Typography variant="h6">
                       Contact Us
                     </Typography>
                     <Typography sx={{ color: 'rgba(0, 0, 0, 0.54)' }}>

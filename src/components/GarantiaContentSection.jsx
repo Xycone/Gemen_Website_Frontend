@@ -109,7 +109,7 @@ function GarantiaContentSection() {
                                         <Box sx={{ mb: 2 }}>
                                             <img src={Integrity} style={{ height: '35px', width: '35px' }} />
                                         </Box>
-                                        <Typography variant="h5">
+                                        <Typography variant="h6">
                                             Integrity
                                         </Typography>
                                     </Grid>
@@ -118,7 +118,7 @@ function GarantiaContentSection() {
                                         <Box sx={{ mb: 2 }}>
                                             <img src={Alarm} style={{ height: '35px', width: '35px' }} />
                                         </Box>
-                                        <Typography variant="h5">
+                                        <Typography variant="h6">
                                             Monitoring
                                         </Typography>
                                     </Grid>
@@ -127,7 +127,7 @@ function GarantiaContentSection() {
                                         <Box sx={{ mb: 2 }}>
                                             <img src={Report} style={{ height: '35px', width: '35px' }} />
                                         </Box>
-                                        <Typography variant="h5">
+                                        <Typography variant="h6">
                                             Reconciliation
                                         </Typography>
                                     </Grid>
@@ -135,13 +135,15 @@ function GarantiaContentSection() {
                             </Grid>
 
                             <Grid item xs={12} md={6} sx={{ order: { xs: 1, md: 2 } }}>
-                                <Typography variant='h5' sx={{ textAlign: 'center', mb: 5 }}>
-                                    Explore some of
-                                    <br />
-                                    Garantia's features
-                                </Typography>
-                                <Box sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'center' }}>
-                                    <img src={ArrowLeft} alt="ArrowLeft" style={{ height: '100px' }} />
+                                <Box>
+                                    <Typography variant='h5' sx={{ textAlign: 'center', mb: 5 }}>
+                                        Explore some of
+                                        <br />
+                                        Garantia's features
+                                    </Typography>
+                                    <Box sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'center' }}>
+                                        <img src={ArrowLeft} alt="ArrowLeft" style={{ height: '100px' }} />
+                                    </Box>
                                 </Box>
                             </Grid>
                         </Grid>

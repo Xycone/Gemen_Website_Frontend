@@ -104,7 +104,7 @@ function SolutionsSection() {
                             <Card sx={cardStyle} onMouseEnter={() => handleMouseEnter(index)} onMouseLeave={handleMouseLeave} onClick={solution.navigation}>
                                 {/* Picture */}
                                 <CardContent sx={{ margin: 3 }}>
-                                    <Typography variant="h5" sx={{ mb: 3 }}>{solution.name}</Typography>
+                                    <Typography variant="h6" sx={{ mb: 3 }}>{solution.name}</Typography>
                                     <Typography sx={{ mb: 2 }}>{solution.description}</Typography>
                                     <Box sx={{ display: 'flex', alignItems: 'center' }}>
                                         <Typography sx={{ mr: hoveredIndex === index ? 1 : 0.5, textDecoration: hoveredIndex === index ? 'none' : 'underline' }}>
