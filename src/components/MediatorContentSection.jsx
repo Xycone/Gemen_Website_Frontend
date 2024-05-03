@@ -14,19 +14,19 @@ function MediatorContentSection() {
         },
         {
             name: "Audio Quality Assurance",
-            description: "Implements measures to identify and rectify issues such as poor voice audio quality and missing legacy recordings, mitigating the risk of regulatory compliance breaches and associated fines."
+            description: "Reveals poor voice audio quality and missing legacy recordings, allowing you to take action to avoid regulatory compliance bank fines."
         },
         {
-            name: "Security Compliance Integration",
-            description: "Strengthens security by integrating compliance features and applications, ensuring alignment with regulatory standards."
+            name: "Security Compliance",
+            description: "Compliance security measurement and demanded compliance features and applications"
         },
         {
             name: "Centralised Compliance Data Management",
-            description: "Centralises legacy data from various countries into a unified compliance search and replay platform within the application. User privilege role access control and audit trail logging are also incorporated for enhanced security."
+            description: "Consolidates the legacy data of all countries into a centralised unified compliance search and replay with enabled user privilege role access control and audit trail log."
         },
         {
             name: "Next-Gen Technology Support",
-            description: "Upgrades the application's infrastructure to support the latest technologies, including updates to operating systems, MSSQL, and web browsers, to keep pace with the demands of modern networks."
+            description: "Support for the latest technologies (i.e. OS, MSSQL, Web Browsers etc)."
         }
     ];
 
@@ -103,7 +103,7 @@ function MediatorContentSection() {
                                         2. Audio Quality Assurance
                                         <br />
                                         <br />
-                                        3. Security Compliance Integration
+                                        3. Security Compliance
                                         <br />
                                         <br />
                                         4. Centralised Compliance Data Management
