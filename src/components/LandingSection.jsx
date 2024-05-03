@@ -2,6 +2,9 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Typography, Box, Container, Button, Grid } from '@mui/material';
 
+// Icons
+import Gemen from '../assets/Gemen.svg';
+
 function LandingSection() {
   const navigate = useNavigate();
 
@@ -12,7 +15,7 @@ function LandingSection() {
   // Styling
   const buttonStyle = {
     px: 6,
-    py: 4,
+    py: 3,
     boxShadow: 'none',
     '&:hover': {
       boxShadow: 'none',
@@ -30,34 +33,12 @@ function LandingSection() {
     <Box sx={{ py: 15, backgroundColor: '#031C2E', color: 'white', }} >
       <Container sx={{ position: 'relative', px: { xs: 0, md: 10 } }}>
         <Box>
-          <Box sx={{ mb: 15, display: { xs: 'none', md: 'flex' }, justifyContent: 'center', width: '100%' }}>
-            <Typography variant="h1" sx={{ width: '20%', textAlign: 'center', fontSize: '10rem' }}>G</Typography>
-            <Typography variant="h1" sx={{ width: '20%', textAlign: 'center', fontSize: '10rem' }}>E</Typography>
-            <Typography variant="h1" sx={{ width: '20%', textAlign: 'center', fontSize: '10rem' }}>M</Typography>
-            <Typography variant="h1" sx={{ width: '20%', textAlign: 'center', fontSize: '10rem' }}>E</Typography>
-            <Typography variant="h1" sx={{ width: '20%', textAlign: 'center', fontSize: '10rem' }}>N</Typography>
-          </Box>
-
-          <Box sx={{ mb: 15, display: { xs: 'block', md: 'none' }, justifyContent: 'center', width: '100%' }}>
-            <Box sx={{ textAlign: 'center', fontSize: '10rem' }}>
-              <Typography variant="h1">G</Typography>
-            </Box>
-            <Box sx={{ textAlign: 'center', fontSize: '10rem' }}>
-              <Typography variant="h1">E</Typography>
-            </Box>
-            <Box sx={{ textAlign: 'center', fontSize: '10rem' }}>
-              <Typography variant="h1">M</Typography>
-            </Box>
-            <Box sx={{ textAlign: 'center', fontSize: '10rem' }}>
-              <Typography variant="h1">E</Typography>
-            </Box>
-            <Box sx={{ textAlign: 'center', fontSize: '10rem' }}>
-              <Typography variant="h1">N</Typography>
-            </Box>
+          <Box sx={{ mb: 15, display: 'flex', justifyContent: 'center', width: '100%' }}>
+            <img src={Gemen} style={{ height: '95%', width: '95%' }} />
           </Box>
 
           <Grid container spacing={8}>
-            <Grid item xs={12} md={6}>
+            <Grid item xs={12} md={6} sx={{ order: { xs: 1, md: 0 } }}>
               <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'start' }}>
                 <Button
                   variant="contained"
@@ -76,7 +57,7 @@ function LandingSection() {
             </Grid>
 
             <Grid item xs={12} md={6}>
-              <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: { xs: 'center', md: 'start' } }}>
+              <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: { xs: 'center', md: 'start' }, textAlign: { xs: 'center', md: 'left' } }}>
                 <Typography variant="h6" sx={{ mb: 2 }}>
                   We're a software house that
                 </Typography>

@@ -30,7 +30,7 @@ function GarantiaContentSection() {
                 </Typography>
         },
         {
-            name: "Monitoring",
+            name: "Progressive Monitoring",
             description:
                 <Typography>
                     Conducts scheduled tasks designated by you to assess your recording system's functionality .
@@ -60,7 +60,7 @@ function GarantiaContentSection() {
     // Styling
     const gridContainerStyle = {
         display: 'grid',
-        gridTemplateColumns: { xs: '1fr', md: 'repeat(3, 1fr)' },
+        gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' },
         gridAutoRows: "1fr",
         gridAutoFlow: "row",
         gap: { xs: 2, md: 6 }
@@ -151,8 +151,8 @@ function GarantiaContentSection() {
 
                     <Box sx={gridContainerStyle}>
                         {features.map((feature, index) => (
-                            <Box sx={gridItemStyle}>
-                                <Card key={index} sx={cardStyle}>
+                            <Box key={index} sx={gridItemStyle}>
+                                <Card sx={cardStyle}>
                                     <Typography variant="h5" sx={{ mb: 2 }}>
                                         {feature.name}
                                     </Typography>

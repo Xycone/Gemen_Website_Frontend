@@ -30,26 +30,3 @@
 .grecaptcha-badge {
   visibility: hidden;
 }
-
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-    opacity: 1; /* Start fully visible */
-  }
-  50% {
-    transform: translateY(-1px);
-    opacity: 0.9;
-  }
-  80% {
-    transform: translateY(-2.5px);
-    opacity: 0.5;
-  }
-  90% {
-    transform: translateY(-2.5px);
-    opacity: 0.2;
-  }
-  100% {
-    transform: translateY(-3px);
-    opacity: 0; /* Fade out */
-  }
-}

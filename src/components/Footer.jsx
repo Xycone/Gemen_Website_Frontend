@@ -69,7 +69,13 @@ function Footer() {
 
                                 <Box>
                                     <Typography>
-                                        Lorem ipsum dolor sit amet. Est suscipit Quis ad animi nostrum ex reprehenderit veniam hic blanditiis ipsa et earum provident in doloremque exercitationem est consequatur voluptas.
+                                        Established in 2018, our founders bring over two decades of experience in the IT voice sector to our
+                                        company.
+                                        <br />
+                                        <br />
+                                        Throughout our journey, we've consistently leveraged our wealth of expertise to deliver
+                                        innovative solutions while staying true to our goal of providing exceptional service to 
+                                        our clients.
                                     </Typography>
                                 </Box>
                             </Box>

@@ -3,6 +3,7 @@ import { Typography, Box, Container, Grid } from '@mui/material';
 
 // Icons
 import Arrow from '../assets/Arrow.svg';
+import ArrowLeftYellow from '../assets/ArrowLeftYellow.svg';
 import Projects from '../assets/Projects.svg';
 import Microphone from '../assets/Microphone.svg';
 import Collaborate from '../assets/Collaborate.svg';
@@ -45,6 +46,9 @@ function WhyUsSection() {
                         </Typography>
                         <Box sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'right' }}>
                             <img src={Arrow} alt="Arrow" style={{ height: '120px' }} />
+                        </Box>
+                        <Box sx={{ display: { xs: 'flex', md: 'none' }, justifyContent: 'center' }}>
+                            <img src={ArrowLeftYellow} alt="ArrowLeftYellow" style={{ height: '120px', transform: 'rotate(-30deg)' }} />
                         </Box>
                     </Grid>
 

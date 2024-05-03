@@ -98,7 +98,7 @@ function SolutionsDropdown() {
                         to="/garantia"
                         sx={gridItemStyle}
                     >
-                        <Typography variant='h6' sx={{ mb: 2 }}>Garantia</Typography>
+                        <Typography variant='h6' sx={{ mb: 1 }}>Garantia</Typography>
                         <Typography sx={{ textAlign: 'center' }}>Our phone call integrity monitoring solution.</Typography>
                     </Box>
 
@@ -108,7 +108,7 @@ function SolutionsDropdown() {
                         to="/ace"
                         sx={gridItemStyle}
                     >
-                        <Typography variant='h6' sx={{ mb: 2 }}>Ace</Typography>
+                        <Typography variant='h6' sx={{ mb: 1 }}>Ace</Typography>
                         <Typography sx={{ textAlign: 'center' }}>Transition your voice data to modern storage.</Typography>
                     </Box>
 
@@ -118,7 +118,7 @@ function SolutionsDropdown() {
                         to="/mediator"
                         sx={gridItemStyle}
                     >
-                        <Typography variant='h6' sx={{ mb: 2 }}>Mediator</Typography>
+                        <Typography variant='h6' sx={{ mb: 1 }}>Mediator</Typography>
                         <Typography sx={{ textAlign: 'center' }}>Migration, Integration, and Playback off voice data.</Typography>
                     </Box>
                 </Box>
