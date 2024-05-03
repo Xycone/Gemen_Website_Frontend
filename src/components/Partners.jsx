@@ -1,5 +1,4 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import { Box, Container, Grid, Typography } from '@mui/material';
 
 // Icons
@@ -7,15 +6,12 @@ import Underline from '../assets/Underline.svg';
 
 // Logo
 import Logo from '../assets/Logo.svg'
+import GEMVoice from '../assets/GEMVoice.svg'
 
 // Components
 import PartnerTree from './PartnerTree';
 
 function Partners() {
-    const navigate = useNavigate();
-    const navigateToGemen = () => {
-        navigate('/');
-    };
 
     // Styling
     const underlineStyle = {
@@ -37,14 +33,17 @@ function Partners() {
     const gridItemStyle = {
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        alignItems: 'center'
     };
 
     // Data to populate
     const services = [
         {
-            logo: <img src={Logo} alt="Logo" style={{ height: '80px' }} />,
-            url: navigateToGemen
+            logo: <a href="https://www.gemen.tech/" target="_blank" rel="noopener noreferrer"><img src={Logo} alt="Logo" style={{ height: '80px' }} /></a>
+        },
+        {
+            logo: <a href="https://gemvoice.tech/" target="_blank" rel="noopener noreferrer"><img src={GEMVoice} alt="GEMVoice" style={{ height: '90px' }} /></a>
         }
     ];
 
@@ -67,7 +66,7 @@ function Partners() {
 
                         <Box sx={gridContainerStyle}>
                             {services.map((service, index) => (
-                                <Box onClick={navigateToGemen} key={index} sx={gridItemStyle}>
+                                <Box key={index} sx={gridItemStyle}>
                                     {service.logo}
                                 </Box>
                             ))}
