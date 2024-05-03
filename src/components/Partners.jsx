@@ -40,7 +40,7 @@ function Partners() {
     // Data to populate
     const services = [
         {
-            logo: <a href="https://www.gemen.tech/" target="_blank" rel="noopener noreferrer"><img src={Logo} alt="Logo" style={{ height: '80px' }} /></a>
+            logo: <a href="https://www.gemen.tech/" rel="noopener noreferrer"><img src={Logo} alt="Logo" style={{ height: '80px' }} /></a>
         },
         {
             logo: <a href="https://gemvoice.tech/" target="_blank" rel="noopener noreferrer"><img src={GEMVoice} alt="GEMVoice" style={{ height: '90px' }} /></a>
