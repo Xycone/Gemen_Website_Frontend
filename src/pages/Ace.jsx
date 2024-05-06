@@ -5,6 +5,7 @@ import { Box } from '@mui/material';
 // Components
 import AceLandingSection from '../components/AceLandingSection';
 import AceContentSection from '../components/AceContentSection';
+import SolutionSelectionSection from '../components/SolutionSelectionSection';
 
 function Ace() {
   // Scroll to top 
@@ -17,12 +18,13 @@ function Ace() {
       left: 0,
       behavior: "instant",
     });
-  }, [pathname]); 
+  }, [pathname]);
 
   return (
     <Box sx={{ mt: 10, justifyContent: 'center', alignItems: 'center' }}>
       {/* <AceLandingSection /> */}
       <AceContentSection />
+      {/* <SolutionSelectionSection /> */}
     </Box>
   )
 }

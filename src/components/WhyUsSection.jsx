@@ -20,7 +20,7 @@ function WhyUsSection() {
         {
             image: <img src={Microphone} style={imageStyle} />,
             title: 'Knowledgeble',
-            description: 'Our company owners have been in the IT voice industry for 15+ years'
+            description: 'Our company owners have been in the IT voice industry for over 20 years'
         },
         {
             image: <img src={Projects} style={imageStyle} />,
