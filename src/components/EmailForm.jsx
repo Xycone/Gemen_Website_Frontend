@@ -60,13 +60,13 @@ function EmailForm({ setIsDisabled, isDisabled, setContactSupportOpen }) {
             data.token = recaptchaToken;
 
             const response = await http.post("/mailAPI.php", data);
+            console.log("Response from server", response.data)
             if (response.data.success) {
                 handleContactSupportFormClose();
                 setIsDisabled(false);
                 console.log("Email sent successfully");
             } else {
                 setIsDisabled(false);
-                console.error("Error:", response.data.error);
             }
 
         } catch (error) {
