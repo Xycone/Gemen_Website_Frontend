@@ -59,23 +59,15 @@ function EmailForm({ setIsDisabled, isDisabled, setContactSupportOpen }) {
             data.message = data.message.trim();
             data.token = recaptchaToken;
 
-            http.post("/mailAPI.php", data).then(() => {
-                console.log("Email sent successfully");
+            const response = await http.post("/mailAPI.php", data);
+            if (response.data.success) {
                 handleContactSupportFormClose();
                 setIsDisabled(false);
-            })
-                .catch((error) => {
-                    if (error.response) {
-                        console.error('Error data:', error.response.data);
-                        console.error('Error status:', error.response.status);
-                        console.error('Error headers:', error.response.headers);
-                    } else if (error.request) {
-                        console.error('Error request:', error.request);
-                    } else {
-                        console.error('Error message:', error.message);
-                    }
-                    setIsDisabled(false);
-                });
+                console.log("Email sent successfully");
+            } else {
+                setIsDisabled(false);
+                console.error("Error:", response.data.error);
+            }
 
         } catch (error) {
             setIsDisabled(false);
